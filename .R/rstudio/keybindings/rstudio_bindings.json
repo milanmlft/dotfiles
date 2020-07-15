@@ -1,0 +1,11 @@
+{
+    "activateBuild" : "Ctrl+0",
+    "activatePackages" : "",
+    "activateVcs" : "Ctrl+9",
+    "activateViewer" : "Ctrl+7",
+    "cleanAll" : "Shift+Alt+C",
+    "layoutZoomViewer" : "Ctrl+Shift+7",
+    "rebuildAll" : "Ctrl+Shift+Cmd+B",
+    "reformatCode" : "",
+    "viewerPopout" : ""
+}

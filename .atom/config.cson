@@ -1,0 +1,235 @@
+"*":
+  "atom-beautify":
+    general:
+      _analyticsUserId: "a09846ca-701e-4912-8405-fb6da5bc8c12"
+  "atom-clock":
+    showClockIcon: true
+    showOnlyInFullscreen: true
+    showTooltip: true
+  "atom-html-preview":
+    enableMathJax: true
+  "atom-ide-ui":
+    "atom-ide-diagnostics-ui":
+      autoVisibility: true
+    "atom-ide-terminal":
+      cursorBlink: true
+      fontFamily: "Meslo"
+  "atom-material-ui":
+    colors:
+      paintCursor: true
+    fonts: {}
+    tabs:
+      compactTabs: true
+      stretchedTabs: true
+    ui:
+      panelContrast: true
+      panelShadows: true
+  "autocomplete-plus":
+    strictMatching: true
+    useCoreMovementCommands: false
+  build:
+    panelVisibility: "Show on Error"
+  core:
+    disabledPackages: [
+      "language-gfm"
+      "atom-ide-outline"
+      "minimap-hide"
+      "minimap-autohide"
+      "minimap"
+      "r-exec"
+      "autocomplete-R"
+    ]
+    packagesWithKeymapsDisabled: [
+      "autocomplete-plus"
+    ]
+    packagesWithSnippetsDisabled: [
+      "atom-language-r"
+    ]
+    telemetryConsent: "limited"
+    themes: [
+      "atom-material-ui"
+      "atom-material-syntax-dark"
+    ]
+  "document-outline":
+    collapseByDefault: true
+    showByDefault: false
+  editor:
+    fontFamily: "JetBrains mono"
+    scrollPastEnd: true
+    showIndentGuide: true
+    softWrap: true
+  "ex-mode":
+    splitbelow: true
+    splitright: true
+  "exception-reporting":
+    userId: "e499dc05-196f-4306-8b1e-05e0970d20dc"
+  fonts:
+    fontFamily: "JetBrains Mono Medium"
+  "git-plus":
+    general:
+      splitPane: "Right"
+  "hey-pane":
+    expandedWidth: 80
+  "ide-r":
+    RPath: "/usr/local/bin/R"
+  latex:
+    cleanPatterns: [
+      "**/*.aux"
+      "**/*.aux.bak"
+      "**/*.bbl"
+      "**/*.bcf"
+      "**/*.blg"
+      "**/*.dvi"
+      "**/*.fdb_latexmk"
+      "**/*.fls"
+      "**/*.idx"
+      "**/*.idx.bak"
+      "**/*.ilg"
+      "**/*.ind"
+      "**/*.lof"
+      "**/*.log"
+      "**/*.lol"
+      "**/*.lot"
+      "**/*.nav"
+      "**/*.out"
+      "**/*.ps"
+      "**/*.snm"
+      "**/*.synctex.gz"
+      "**/*.toc"
+      "/**/_minted-{jobname}"
+      "/{output_dir}/sage-plots-for-{jobname}.tex"
+      "/missfont.log"
+      "/texput.log"
+      "/texput.aux"
+      "**/*.xdv"
+    ]
+    engine: "xelatex"
+    opener: "pdf-view"
+  linter:
+    lintPreviewTabs: false
+  "linter-ui-default":
+    alwaysTakeMinimumSpace: true
+    panelHeight: 256
+    showDecorations: false
+  "markdown-preview":
+    grammars: [
+      "source.gfm"
+      "source.litcoffee"
+      "text.html.basic"
+      "text.md"
+      "text.plain"
+      "text.plain.null-grammar"
+      "source.gfm.rmd"
+    ]
+  "markdown-preview-enhanced":
+    automaticallyShowPreviewOfMarkdownBeingEdited: false
+    breakOnSingleNewLine: false
+    codeBlockTheme: "atom-material.css"
+    enableZenMode: true
+    mathRenderingOption: "MathJax"
+    openPreviewPaneAutomatically: false
+    previewTheme: "atom-material.css"
+    revealjsTheme: "night.css"
+    usePandocParser: true
+  minimap:
+    plugins:
+      "minimap-autohide": true
+      "minimap-autohideDecorationsZIndex": 0
+      "minimap-hide": true
+      "minimap-hideDecorationsZIndex": 0
+  "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        black: "#2e3440"
+        blue: "#5e81ac"
+        cyan: "#8fbcbb"
+        green: "#a3be8c"
+        magenta: "#b48ead"
+        red: "#bf616a"
+        yellow: "#ebcb8b"
+    style:
+      fontFamily: "Meslo LG S for Powerline"
+  "r-exec":
+    whichApp: "iTerm2"
+  "spell-check":
+    grammars: [
+      "source.asciidoc"
+      "source.gfm"
+      "text.git-commit"
+      "text.plain"
+      "text.plain.null-grammar"
+      "source.rst"
+      "text.restructuredtext"
+      "text.tex.latex"
+      "source.gfm.rmd"
+      "text.md"
+    ]
+    useLocales: false
+  "tree-view":
+    hideIgnoredNames: true
+  typewriter:
+    scopes: "text.md,source.gfm,text.html.mediawiki,text.tex.latex,source.gfm.rmd"
+    showGutter: true
+  "vim-mode-plus":
+    automaticallyEscapeInsertModeOnActivePaneItemChange: true
+    hideCommandsFromCommandPalette: true
+    keymapPToPutWithAutoIndent: true
+    smoothScrollOnFullScrollMotion: true
+    smoothScrollOnMiniScroll: true
+    wrapLeftRightMotion: true
+  welcome:
+    showOnStartup: false
+  whitespace:
+    removeTrailingWhitespace: false
+  wordcount:
+    extensions: [
+      "md"
+      "markdown"
+      "readme"
+      "txt"
+      "rst"
+      "adoc"
+      "log"
+      "msg"
+      "tex"
+    ]
+    ignorecode: true
+    ignorecomments: true
+".beamer.latex.tex.text":
+  editor:
+    softWrap: true
+    softWrapAtPreferredLineLength: false
+".bibtex.text":
+  editor:
+    softWrapAtPreferredLineLength: true
+".dockerfile.source":
+  editor:
+    preferredLineLength: 80
+    showInvisibles: false
+".dockerignore.source":
+  editor:
+    preferredLineLength: 80
+".gfm.source":
+  "wrap-guide":
+    enabled: false
+".latex.memoir.tex.text":
+  editor:
+    preferredLineLength: 100
+".latex.tex.text":
+  editor:
+    softWrap: true
+    softWrapAtPreferredLineLength: false
+".md.text":
+  editor:
+    preferredLineLength: 100
+".r.source":
+  editor:
+    softWrap: true
+    tabLength: 2
+"text.latex.tex":
+  "wrap-guide":
+    enabled: true
+"wrap-guide":
+  columns: [
+    80
+  ]

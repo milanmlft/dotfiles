@@ -1,0 +1,81 @@
+# Your keymap
+#
+# Atom keymaps work similarly to style sheets. Just as style sheets use
+# selectors to apply styles to elements, Atom keymaps use selectors to associate
+# keystrokes with events in specific contexts. Unlike style sheets however,
+# each selector can only be declared once.
+#
+# You can create a new keybinding in this file by typing "key" and then hitting
+# tab.
+#
+# Here's an example taken from Atom's built-in keymap:
+#
+# 'atom-text-editor':
+#   'enter': 'editor:newline'
+#
+# 'atom-workspace':
+#   'ctrl-shift-p': 'core:move-up'
+#   'ctrl-p': 'core:move-down'
+#
+# You can find more information about keymaps in these guides:
+# * http://flight-manual.atom.io/using-atom/sections/basic-customization/#customizing-keybindings
+# * http://flight-manual.atom.io/behind-atom/sections/keymaps-in-depth/
+#
+# If you're having trouble with your keybindings not working, try the
+# Keybinding Resolver: `Cmd+.` on macOS and `Ctrl+.` on other platforms. See the
+# Debugging Guide for more information:
+# * http://flight-manual.atom.io/hacking-atom/sections/debugging/#check-the-keybindings
+#
+# This file uses CoffeeScript Object Notation (CSON).
+# If you are unfamiliar with CSON, you can read more about it in the
+# Atom Flight Manual:
+# http://flight-manual.atom.io/using-atom/sections/basic-customization/#configuring-with-cson
+
+
+# -------------------------- Workspace keybindings --------------------------
+'atom-workspace':
+  'cmd-o': 'advanced-open-file:toggle' # open files from path
+  'ctrl-i': 'cursor-history:next'      # enable vim-like keybindings for cursor jumps
+  'ctrl-o': 'cursor-history:prev'
+ 
+'.advanced-open-file atom-text-editor':
+  'j': 'advanced-open-file:move-cursor-down'
+  'k': 'advanced-open-file:move-cursor-up'
+  
+# -------------------------- Editor keybindings --------------------------
+# Focus panes
+'atom-text-editor':
+  'ctrl-j': 'window:focus-pane-below'
+  'ctrl-k': 'window:focus-pane-above'
+  'ctrl-h': 'window:focus-pane-on-left'
+  'ctrl-l': 'window:focus-pane-on-right'
+  'shift-tab': 'autocomplete-plus:activate'  # activate autcompletion+ menu
+  'ctrl-enter': 'platformio-ide-terminal:insert-selected-text'
+  'shift-cmd-m': 'custom:piper'  # mimic RStudio shortcut for pipes
+  'alt--': 'custom:assign'       # mimic RStudio shortcut for assignment
+  # 'ctrl-enter': 'r-exec:send-command'  # send R code with r-exec
+
+# toggle tree-view similar to vim's nerdtree keybinding
+'.platform-darwin':
+  'ctrl-n': 'tree-view:toggle'
+
+# Not insert mode
+'atom-text-editor.vim-mode:not(.insert-mode)':
+  # cursor history
+  'ctrl-i': 'cursor-history:next'
+  'ctrl-o': 'cursor-history:prev'
+
+# when focused on tree view
+'.tree-view':
+  's': 'tree-view:open-selected-entry-down'
+  'v': 'tree-view:open-selected-entry-right'
+
+
+# -------------------------- Terminal keybindings --------------------------
+'.platform-darwin atom-workspace':
+  'ctrl-enter': 'platformio-ide-terminal:insert-selected-text'
+  
+# -------------------------- Autocomplete keybindings --------------------------
+'body atom-text-editor.autocomplete-active':
+  'ctrl-k': 'autocomplete-plus:move-up'
+  'ctrl-j': 'autocomplete-plus:move-down'
