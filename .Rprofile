@@ -56,3 +56,7 @@ if (length(.libPaths()) > 1) {
 libs <- paste("-", .libPaths(), collapse = "\n")
 message(msg, libs, sep = "")
 
+# Return error for if statements with length(condition) > 1
+# See https://adv-r.hadley.nz/control-flow.html 5.2.1
+Sys.setenv("_R_CHECK_LENGTH_1_CONDITION_" = "true")
+
