@@ -1,0 +1,5 @@
+changeps1: true
+channels:
+  - conda-forge
+  - bioconda
+  - defaults
