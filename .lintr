@@ -1,0 +1,10 @@
+# See https://github.com/jimhester/lintr#project-configuration
+linters: with_defaults(
+            # Disable linters below
+            camel_case_linter = NULL,
+            object_name_linter = NULL,
+            object_length_linter = NULL,
+						object_usage_linter = NULL,
+            commented_code_linter = NULL
+            # trailing_whitespace_linter = NULL
+         )
