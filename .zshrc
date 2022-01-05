@@ -9,7 +9,6 @@ export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
 alias ls='ls -GFhp'
 alias ll='ls -lhp'
 alias cp='cp -i'
-alias mdlabbook='perl /Users/milan/Software/mdlabbook/src/mdlabbook.pl -c ~/lab-notebook/mdlabbook.config'
 alias tree='tree -shC'   # show filesizes in tree output and colorize output
 alias grep='grep -E'		# force grep to always use extended regexp
 alias weather='curl http://wttr.in/brussels'
@@ -25,7 +24,6 @@ alias R='R --no-save --no-restore-data'		# never save or restore R workspace
 alias bioc-devel='R_LIBS_USER=~/Library/R/x86_64/4.1-Bioc-3.14/library radian' # launch R with bioc-devel library
 
 alias vsc-login='ssh vsc43603@login.hpc.ugent.be'
-alias vsc-qstat='watch --interval=10 ssh -t vsc43603@login.hpc.ugent.be "qstat"'
 
 alias rad='radian'
 alias ls-dot='ls -a | grep "^\."'   # List dot-files
