@@ -1,0 +1,11 @@
+# Set editing mode to vim
+options(radian.editing_mode = "vi")
+# custom prompt for different modes
+options(radian.prompt = "\033[0;34m>\033[0m ")
+
+# Custom keybinds: need to be escaped (escape key in iTerm set to 'Alt')
+options(radian.escape_key_map = list(
+    list(key = "-", value = " <- "),
+    list(key = "m", value = " %>% ")
+))
+

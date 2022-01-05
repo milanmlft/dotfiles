@@ -1,0 +1,5 @@
+{
+    "styler::style_selection": "Shift+Cmd+A",
+    "lintr::addin_lint": "Alt+Shift+L",
+    "lintr::addin_lint_package": "Alt+Shift+Cmd+L"
+}

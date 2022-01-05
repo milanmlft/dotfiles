@@ -1,0 +1,19 @@
+{
+    "activateBuild": "Ctrl+8",
+    "activatePackages": "",
+    "activateVcs": "Ctrl+9",
+    "activateViewer": "Ctrl+7",
+    "cleanAll": "Shift+Alt+C",
+    "layoutZoomViewer": "Ctrl+Shift+7",
+    "rebuildAll": "Ctrl+Shift+Cmd+B",
+    "reformatCode": "",
+    "viewerPopout": "",
+    "activateEnvironment": "",
+    "roxygenizePackage": "Shift+Cmd+D",
+    "openSourceDocNewColumn": "Shift+Cmd+F7",
+    "layoutZoomLeftColumn": "",
+    "layoutZoomRightColumn": "",
+    "focusLeftSeparator": "",
+    "focusNextPane": "",
+    "focusPreviousPane": ""
+}
