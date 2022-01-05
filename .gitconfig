@@ -1,0 +1,39 @@
+[user]
+	name = Milan Malfait
+	email = milan.malfait94@gmail.com
+[core]
+	autocrlf = input
+	safecrlf = true
+	excludesfile = /Users/milan/.gitignore_global
+
+[alias]
+	co = checkout
+	st = status
+	br = branch
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  type = cat-file -t
+  dump = cat-file -p
+	unstage = reset HEAD --
+	last = log -p -n 1
+	ci = commit -v
+	can = commit -v --amend --no-edit
+[commit]
+	template = /Users/milan/.stCommitMsg
+[push]
+	default = current
+[merge]
+	tool = vimdiff
+[diff]
+	tool = vimdiff
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+[filesystem "AdoptOpenJDK|1.8.0_232|/dev/disk1s2"]
+	timestampResolution = 1001 milliseconds
+	minRacyThreshold = 0 nanoseconds
+[pull]
+	rebase = false
+[init]
+	defaultBranch = master

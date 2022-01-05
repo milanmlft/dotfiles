@@ -1,0 +1,36 @@
+*~
+.DS_Store
+.*.swp  # vim backup files
+
+# MS Office files
+~$*
+*.doc
+*.docx
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+
+# iWork files
+*.pages
+*.key
+*.numbers
+
+# to do lists
+todo.md
+_todo.md
+
+# backup files
+*.bkup
+*.bkup.tar.gz
+
+# R stuff
+.Rhistory
+.Rproj.user/
+
+# VSCode
+.vscode/
+*.code-workspace
+
+# dev/ folder
+dev/
