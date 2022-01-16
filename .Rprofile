@@ -109,5 +109,8 @@ if (interactive() && Sys.getenv("RSTUDIO") == "") {
     options(vsc.use_httpgd = TRUE)
   }
 
-  source(file.path(Sys.getenv(if (.Platform$OS.type == "windows") "USERPROFILE" else "HOME"), ".vscode-R", "init.R"))
+	vscodeR_init <- file.path(Sys.getenv(if (.Platform$OS.type == "windows") "USERPROFILE" else "HOME"), ".vscode-R", "init.R")
+	if (file.exists(vscodeR_init)) {
+			source(vscodeR_init)
+	}
 }
