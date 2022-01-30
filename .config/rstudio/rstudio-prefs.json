@@ -34,7 +34,7 @@
     "syntax_color_console": true,
     "scroll_past_end_of_document": true,
     "font_size_points": 11,
-    "default_project_location": "/Volumes/GoogleDrive/My Drive/Side-projects",
+    "default_project_location": "~/Projects",
     "rmd_preferred_template_path": "/Users/milan/Library/R/x86_64/4.1/library/MMmotley/rmarkdown/templates/latex-pdf-template",
     "wrap_tab_navigation": false,
     "save_workspace": "never",
@@ -61,6 +61,5 @@
     "rmd_chunk_output_inline": false,
     "show_help_tooltip_on_idle": true,
     "editor_theme": "Brogrammer",
-    "highlight_r_function_calls": true,
-    "new_proj_use_renv": true
+    "highlight_r_function_calls": true
 }
