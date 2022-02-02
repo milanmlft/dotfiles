@@ -73,7 +73,7 @@ options(
 # Options for reprex
 options(
   reprex.advertise = FALSE,
-  reprex.si = TRUE,
+  reprex.session_info = TRUE,
   reprex.style = TRUE
 )
 
