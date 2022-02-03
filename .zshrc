@@ -166,6 +166,7 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-export PATH="/usr/local/opt/gcc/bin:$PATH"
-export PATH="/usr/local/opt/ccache/libexec:$PATH"
+# export PATH="/usr/local/opt/llvm/bin:$PATH"
+# export PATH="/usr/local/opt/gcc/bin:$PATH"
+# export PATH="/usr/local/opt/ccache/libexec:$PATH"
+

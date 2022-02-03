@@ -113,4 +113,6 @@ if (interactive() && Sys.getenv("RSTUDIO") == "") {
 	if (file.exists(vscodeR_init)) {
 			source(vscodeR_init)
 	}
+	## Clean up
+	rm(vscodeR_init)
 }
