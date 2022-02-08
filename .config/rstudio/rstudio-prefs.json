@@ -11,7 +11,6 @@
             "History",
             "Connections",
             "Packages",
-            "Build",
             "VCS",
             "Presentation"
         ],
@@ -19,6 +18,7 @@
             "Files",
             "Plots",
             "Help",
+            "Build",
             "Tutorial",
             "Viewer"
         ],
@@ -46,7 +46,7 @@
     "num_spaces_for_tab": 4,
     "check_arguments_to_r_function_calls": true,
     "style_diagnostics": true,
-    "initial_working_directory": "~/R-packages",
+    "initial_working_directory": "~",
     "enable_text_drag": false,
     "document_author": "Milan Malfait",
     "restore_last_project": false,
