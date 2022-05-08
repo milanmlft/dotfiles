@@ -1,10 +1,10 @@
 {
     "panes": {
         "quadrants": [
-            "Console",
-            "TabSet2",
             "Source",
-            "TabSet1"
+            "Console",
+            "TabSet1",
+            "TabSet2"
         ],
         "tabSet1": [
             "Environment",
@@ -24,7 +24,7 @@
             "Presentations"
         ],
         "hiddenTabSet": [],
-        "console_left_on_top": true,
+        "console_left_on_top": false,
         "console_right_on_top": true,
         "additional_source_columns": 0
     },
@@ -35,7 +35,7 @@
     "syntax_color_console": true,
     "scroll_past_end_of_document": true,
     "font_size_points": 11,
-    "default_project_location": "~/Projects",
+    "default_project_location": "~/R-packages",
     "rmd_preferred_template_path": "/Users/milan/Library/R/x86_64/4.1/library/MMmotley/rmarkdown/templates/latex-pdf-template",
     "wrap_tab_navigation": false,
     "save_workspace": "never",
@@ -53,14 +53,13 @@
     "warn_variable_defined_but_not_used": true,
     "hide_console_on_chunk_execute": false,
     "rainbow_parentheses": true,
-    "source_with_echo": true,
     "default_latex_program": "XeLaTeX",
     "use_tinytex": true,
     "visual_markdown_editing_wrap_at_column": 100,
     "visual_markdown_editing_wrap": "column",
-    "rmd_chunk_output_inline": false,
     "show_help_tooltip_on_idle": true,
-    "editor_theme": "Material",
+    "editor_theme": "Monokai",
     "highlight_r_function_calls": true,
-    "doc_outline_show": "sections_and_chunks"
+    "doc_outline_show": "sections_and_chunks",
+    "source_with_echo": true
 }
