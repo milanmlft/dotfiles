@@ -22,12 +22,14 @@ alias vi='nvim'
 ## R
 alias R='R --no-save --no-restore-data'		# never save or restore R workspace
 alias bioc-devel='R_LIBS_USER=~/Library/R/x86_64/4.1-Bioc-3.14/library radian' # launch R with bioc-devel library
-
-alias vsc-login='ssh vsc43603@login.hpc.ugent.be'
-
 alias rad='radian'
-alias ls-dot='ls -a | grep "^\."'   # List dot-files
 
+## Python
+alias python='python3'
+
+## Misc
+alias vsc-login='ssh vsc43603@login.hpc.ugent.be'
+alias ls-dot='ls -a | grep "^\."'   # List dot-files
 alias homepath='realpath --relative-to=$HOME'
 
 # If you come from bash you might have to change your $PATH.
