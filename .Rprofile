@@ -96,8 +96,7 @@ if (requireNamespace("languageserversetup", quietly = TRUE)) {
 # LanguageServer Setup End
 
 # From https://github.com/REditorSupport/vscode-R/wiki/Interacting-with-R-terminals
-if (interactive() && Sys.getenv("RSTUDIO") == "") {
-  Sys.setenv(TERM_PROGRAM = "vscode")
+if (interactive() && Sys.getenv("TERM_PROGRAM") == "vscode") {
 
   # https://github.com/REditorSupport/vscode-R/wiki/Plot-viewer#svg-in-httpgd-webpage
   if ("httpgd" %in% .packages(all.available = TRUE)) {
@@ -110,7 +109,7 @@ if (interactive() && Sys.getenv("RSTUDIO") == "") {
   }
 
 	vscodeR_init <- file.path(Sys.getenv(if (.Platform$OS.type == "windows") "USERPROFILE" else "HOME"), ".vscode-R", "init.R")
-	if (file.exists(vscodeR_init)) {
+	if (file.exists(vscodeR_init)) { # nolint
 			source(vscodeR_init)
 	}
 	## Clean up
