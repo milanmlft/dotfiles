@@ -14,12 +14,44 @@ options(width = 120)
 # set Ncpus for install.packages()
 options(Ncpus = 4L)
 
+# set custom options for package dev
+options(
+  usethis.full_name = "Milan Malfait",
+  usethis.description = list(
+    `Authors@R` = 'person("Milan", "Malfait",
+    email = "milan.malfait94@gmail.com", role = c("aut", "cre"),
+    comment = c(ORCID = "0000-0001-9144-3701"))',
+    Version = "0.0.1"
+  ),
+  usethis.protocol  = "ssh"
+)
+
+# Options for reprex
+options(
+  reprex.advertise = FALSE,
+  reprex.session_info = TRUE,
+  reprex.style = TRUE
+)
+
+# Read global .Renviron file, if it exists
+if (file.exists("~/.Renviron")) {
+  readRenviron("~/.Renviron")
+}
+
+# Return error for if statements with length(condition) > 1
+# See https://adv-r.hadley.nz/control-flow.html 5.2.1
+Sys.setenv("_R_CHECK_LENGTH_1_CONDITION_" = "true")
+
+# Options for pak: set correct Bioc version
+Sys.setenv("R_BIOC_VERSION" = "3.16")
+
 # Settings for interactive sessions only
 if (interactive()) {
   # load devtools in interactive session
   suppressMessages(require(devtools))
   suppressMessages(require(usethis))
-  # suppressMessages(require(pak))
+  suppressMessages(require(pak))
+
   # print max. 100 lines
   options(max.print = 100)
   # warn about partial matching with `$`
@@ -57,34 +89,6 @@ if (interactive()) {
   ## Clean up
   rm(list = ls())
 }
-
-# set custom options for package dev
-options(
-  usethis.full_name = "Milan Malfait",
-  usethis.description = list(
-    `Authors@R` = 'person("Milan", "Malfait",
-    email = "milan.malfait94@gmail.com", role = c("aut", "cre"),
-    comment = c(ORCID = "0000-0001-9144-3701"))',
-    Version = "0.0.1"
-  ),
-  usethis.protocol  = "ssh"
-)
-
-# Options for reprex
-options(
-  reprex.advertise = FALSE,
-  reprex.session_info = TRUE,
-  reprex.style = TRUE
-)
-
-# Read global .Renviron file, if it exists
-if (file.exists("~/.Renviron")) {
-  readRenviron("~/.Renviron")
-}
-
-# Return error for if statements with length(condition) > 1
-# See https://adv-r.hadley.nz/control-flow.html 5.2.1
-Sys.setenv("_R_CHECK_LENGTH_1_CONDITION_" = "true")
 
 # LanguageServer Setup Start (do not change this chunk)
 # to remove this, run languageserversetup::remove_from_rprofile
