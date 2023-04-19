@@ -1,5 +1,3 @@
-echo "Welcome, Milan"
-
 # set default text editor to nvim
 export EDITOR='/usr/local/bin/nvim'
 export VISUAL='/usr/local/bin/nvim'
