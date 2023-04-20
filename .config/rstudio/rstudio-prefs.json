@@ -28,7 +28,6 @@
         "console_right_on_top": true,
         "additional_source_columns": 0
     },
-    "show_indent_guides": true,
     "editor_keybindings": "vim",
     "auto_append_newline": true,
     "strip_trailing_whitespace": true,
@@ -64,5 +63,7 @@
     "insert_native_pipe_operator": true,
     "rmd_viewer_type": "pane",
     "rmd_auto_date": true,
-    "editor_theme": "Night Owl"
+    "editor_theme": "Night Owl",
+    "highlight_selected_line": true,
+    "indent_guides": "gray"
 }
