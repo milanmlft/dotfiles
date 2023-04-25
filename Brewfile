@@ -1,19 +1,45 @@
-brew "ccache"     # Object-file caching compiler wrapper
-brew "coreutils"  # GNU File, Shell, and Text utilities
-brew "gfortran"   # GNU compiler collection
-brew "graphviz"   # Graph visualization software from AT&T and Bell Labs
-brew "libgit2"    # C library of Git core methods that is re-entrant and linkable
-brew "libjpeg"    # Image manipulation library
-brew "libomp"     # LLVM's OpenMP runtime library
-brew "libxml2"    # GNOME XML library
-brew "llvm"       # Next-gen compiler infrastructure
-brew "openblas"   # Optimized BLAS library
-brew "openssl"    # OpenSSL GIO module for glib
-brew "poppler"    # PDF rendering library (based on the xpdf-3.0 code base)
-brew "readline"   # Library for command-line editing
-brew "unixodbc"   # ODBC 3 connectivity for UNIX
-brew "xz"         # General-purpose data compression with high compression ratio
-brew "zlib"       # General-purpose lossless data-compression library
+tap "homebrew/bundle"
+tap "homebrew/cask-fonts"
+tap "r-lib/rig"
+tap "romkatv/powerlevel10k"
+brew "ccache"
+brew "coreutils"
+brew "gcc"
+brew "gh"
+brew "git"
+brew "graphviz"
+brew "htop"
+brew "jpeg"
+brew "libgit2"
+brew "libomp"
+brew "libxml2"
+brew "llvm"
+brew "neovim"
+brew "openblas"
+brew "openssl@3"
+brew "pandoc"
+brew "poppler"
+brew "pyenv"
 brew "r"
+brew "tldr"
+brew "tmux"
+brew "tree"
+brew "unixodbc"
+brew "vim"
+brew "yadm"
+brew "zlib"
+brew "zsh"
+brew "zsh-syntax-highlighting"
+brew "romkatv/powerlevel10k/powerlevel10k"
+cask "alfred"
+cask "dozer"
+cask "flycut"
+cask "font-hack-nerd-font"
+cask "obsidian"
+cask "rectangle"
+cask "rig"
 cask "rstudio"
-
+cask "slack"
+cask "stats"
+cask "visual-studio-code"
+cask "zotero"
