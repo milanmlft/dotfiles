@@ -16,7 +16,7 @@ export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
 alias ls='ls -GFhp'
 alias ll='ls -lhp'
 alias cp='cp -i'
-alias tree='tree -shC'   # show filesizes in tree output and colorize output
+alias tree='tree -C'   # show filesizes in tree output and colorize output
 alias grep='grep -E'		# force grep to always use extended regexp
 alias weather='curl http://wttr.in/brussels'
 
