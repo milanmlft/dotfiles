@@ -43,7 +43,7 @@ if (file.exists("~/.Renviron")) {
 Sys.setenv("_R_CHECK_LENGTH_1_CONDITION_" = "true")
 
 # Options for pak: set correct Bioc version
-Sys.setenv("R_BIOC_VERSION" = "3.16")
+# Sys.setenv("R_BIOC_VERSION" = "3.16")
 
 # Settings for interactive sessions only
 if (interactive()) {

@@ -7,16 +7,7 @@
 	<key>AboutToPasteTabsWithCancel_selection</key>
 	<integer>2</integer>
 	<key>Actions</key>
-	<array>
-		<dict>
-			<key>action</key>
-			<integer>26</integer>
-			<key>parameter</key>
-			<string>DC1B17FC-BCE3-4C9B-B042-002D6AF70C1A</string>
-			<key>title</key>
-			<string>New Window</string>
-		</dict>
-	</array>
+	<array/>
 	<key>AlternateMouseScroll</key>
 	<true/>
 	<key>AutoHideTmuxClientSession</key>
@@ -2113,7 +2104,7 @@
 			<key>Blur</key>
 			<true/>
 			<key>Blur Radius</key>
-			<real>2.3296399111675123</real>
+			<real>14.592364312763257</real>
 			<key>Bold Color</key>
 			<dict>
 				<key>Alpha Component</key>
@@ -2930,7 +2921,20 @@
 			<key>Title Components</key>
 			<integer>517</integer>
 			<key>Transparency</key>
-			<real>0.070017313219837313</real>
+			<real>0.2119139222623905</real>
+			<key>Triggers</key>
+			<array>
+				<dict>
+					<key>action</key>
+					<string>PasswordTrigger</string>
+					<key>parameter</key>
+					<string></string>
+					<key>partial</key>
+					<false/>
+					<key>regex</key>
+					<string>password</string>
+				</dict>
+			</array>
 			<key>Unlimited Scrollback</key>
 			<false/>
 			<key>Use Bold Font</key>
