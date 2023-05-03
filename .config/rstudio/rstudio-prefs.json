@@ -64,7 +64,5 @@
     "rmd_auto_date": true,
     "editor_theme": "Night Owl",
     "highlight_selected_line": true,
-    "indent_guides": "gray",
-    "new_proj_git_init": true,
-    "new_proj_use_renv": true
+    "indent_guides": "gray"
 }
