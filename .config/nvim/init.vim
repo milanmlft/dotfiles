@@ -64,8 +64,11 @@ set shiftwidth=2
 set noexpandtab
 set mouse=nv	" enable mouse support in Normal and Visual mode
 
+" https://github.com/vim-pandoc/vim-pandoc-syntax/issues/185
+set termguicolors
+
 " enable Nord colorscheme
-colorscheme nord
+" colorscheme nord
 
 " split navigations
 nnoremap <C-J> <C-W><C-J>

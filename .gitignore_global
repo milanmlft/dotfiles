@@ -34,3 +34,6 @@ _todo.md
 
 # dev/ folder
 dev/
+.Rproj.user
+.Rdata
+.httr-oauth

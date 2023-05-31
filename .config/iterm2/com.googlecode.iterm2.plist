@@ -10,7 +10,11 @@
 	<array/>
 	<key>AlternateMouseScroll</key>
 	<true/>
+	<key>AlwaysWarnBeforePastingOverSize</key>
+	<integer>-1</integer>
 	<key>AutoHideTmuxClientSession</key>
+	<true/>
+	<key>BracketedPasteMode</key>
 	<true/>
 	<key>ClosingTmuxTabKillsTmuxWindows</key>
 	<true/>
@@ -20,6 +24,8 @@
 	<true/>
 	<key>ClosingTmuxWindowKillsTmuxWindows_selection</key>
 	<integer>1</integer>
+	<key>ConvertDosNewlines</key>
+	<true/>
 	<key>Custom Color Presets</key>
 	<dict>
 		<key>Darkside</key>
@@ -1727,6 +1733,8 @@
 	<false/>
 	<key>EnableProxyIcon</key>
 	<false/>
+	<key>EscapeShellCharsWithBackslash</key>
+	<false/>
 	<key>FixMouseWheel</key>
 	<false/>
 	<key>GlobalKeyMap</key>
@@ -2565,6 +2573,8 @@
 			<string>MesloLGS-NF-Bold 12</string>
 			<key>Only The Default BG Color Uses Transparency</key>
 			<true/>
+			<key>Open Password Manager Automatically</key>
+			<false/>
 			<key>Option Key Sends</key>
 			<integer>2</integer>
 			<key>Prevent Opening in a Tab</key>
@@ -6364,6 +6374,12 @@
 	<false/>
 	<key>PMPrintingExpandedStateForPrint2</key>
 	<false/>
+	<key>PasteSpecialRegex</key>
+	<string></string>
+	<key>PasteSpecialSubstitution</key>
+	<string></string>
+	<key>PasteSpecialUseRegexSubstitution</key>
+	<false/>
 	<key>PasteTabToStringTabStopSize</key>
 	<integer>4</integer>
 	<key>PointerActions</key>
@@ -6425,6 +6441,10 @@
 	<integer>1</integer>
 	<key>StretchTabsToFillBar</key>
 	<true/>
+	<key>SuppressMultilinePasteWarningWhenNotAtShellPrompt</key>
+	<false/>
+	<key>SuppressMultilinePasteWarningWhenPastingOneLineWithTerminalNewline</key>
+	<false/>
 	<key>TabStyleWithAutomaticOption</key>
 	<integer>5</integer>
 	<key>ToolbeltTools</key>

@@ -1,6 +1,7 @@
 [user]
 	name = Milan Malfait
-	email = milan.malfait94@gmail.com
+	email = m.malfait@ucl.ac.uk
+	signingkey = 407EA34B4A27A1E7
 [core]
 	autocrlf = input
 	safecrlf = true
@@ -19,6 +20,7 @@
 	can = commit -v --amend --no-edit
 [commit]
 	template = /Users/milan/.stCommitMsg
+	gpgsign = true
 [push]
 	default = current
 [merge]

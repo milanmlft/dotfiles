@@ -162,14 +162,14 @@ export PATH="/usr/local/opt/libxml2/bin:$PATH"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/milan/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/Users/milan/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/Users/milan/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/milan/miniconda3/etc/profile.d/conda.sh"
+    if [ -f "/Users/milan/anaconda3/etc/profile.d/conda.sh" ]; then
+        . "/Users/milan/anaconda3/etc/profile.d/conda.sh"
     else
-        export PATH="/Users/milan/miniconda3/bin:$PATH"
+        export PATH="/Users/milan/anaconda3/bin:$PATH"
     fi
 fi
 unset __conda_setup
@@ -185,4 +185,11 @@ source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+
+export GPG_TTY=$TTY
 

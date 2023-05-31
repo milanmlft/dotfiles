@@ -33,7 +33,6 @@
     "strip_trailing_whitespace": true,
     "syntax_color_console": true,
     "scroll_past_end_of_document": true,
-    "font_size_points": 11,
     "default_project_location": "~/Projects",
     "rmd_preferred_template_path": "/Users/milan/Library/R/x86_64/4.1/library/MMmotley/rmarkdown/templates/latex-pdf-template",
     "wrap_tab_navigation": false,
@@ -59,10 +58,12 @@
     "show_help_tooltip_on_idle": true,
     "highlight_r_function_calls": true,
     "doc_outline_show": "sections_and_chunks",
-    "source_with_echo": true,
     "insert_native_pipe_operator": true,
     "rmd_auto_date": true,
     "editor_theme": "Night Owl",
     "highlight_selected_line": true,
-    "indent_guides": "gray"
+    "indent_guides": "gray",
+    "margin_column": 100,
+    "save_files_before_build": true,
+    "source_with_echo": true
 }
