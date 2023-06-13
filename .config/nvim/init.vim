@@ -8,14 +8,8 @@ set clipboard+=unnamedplus  " copy to system clipboard
 " Plugins
 call plug#begin()
 
-" Keep Plugin commands between vundle#begin/end.
-" vim-fugitive: git-wrapper for vim
-Plug 'tpope/vim-fugitive'
-
-" Enable sidebar file view
-Plug 'scrooloose/nerdtree'
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'preservim/nerdtree'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " Statusbar plugin
 Plug 'vim-airline/vim-airline'
@@ -24,19 +18,9 @@ Plug 'vim-airline/vim-airline-themes'
 " surrounding with parentheses, brackets, quotes and more
 Plug 'tpope/vim-surround'
 
-" Code completion with NCM
-" Plug 'ncm2/ncm2'
-" Plug 'ncm2/ncm2-bufword'
-" Plug 'ncm2/ncm2-path'
-" Plug 'roxma/nvim-yarp'
-
 " R stuff
 Plug 'godlygeek/tabular'
 Plug 'jalvesaq/Nvim-R'
-" Plug 'gaalcaras/ncm-R' " code completion
-
-" linting
-Plug 'dense-analysis/ale'
 
 " bracket completion
 Plug 'jiangmiao/auto-pairs'
@@ -50,8 +34,7 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
-" Nord colorscheme
-Plug 'arcticicestudio/nord-vim'
+Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -67,8 +50,8 @@ set mouse=nv	" enable mouse support in Normal and Visual mode
 " https://github.com/vim-pandoc/vim-pandoc-syntax/issues/185
 set termguicolors
 
-" enable Nord colorscheme
-" colorscheme nord
+" spaceduck theme
+colors spaceduck
 
 " split navigations
 nnoremap <C-J> <C-W><C-J>
@@ -78,11 +61,6 @@ nnoremap <C-H> <C-W><C-H>
 
 " Terminal mode settings
 tnoremap <Esc> <C-\><C-n>
-
-" omnicompletion
-" set omnifunc=ale#completion#OmniFunc
-" Use Ctrl-Space to do omnicompletion
-" inoremap <C-Space> <C-x><C-o>
 
 " PEP 8 indentation rules for Python
 au BufNewFile,BufRead *.py
@@ -100,8 +78,8 @@ syntax on
 
 " Settings for R files
 au BufNewFile,BufRead *.R
-    \ set tabstop=2 |
-    \ set softtabstop=2 |
+    \ set tabstop=4 |
+    \ set softtabstop=4 |
     \ set shiftwidth=2 |
     \ set textwidth=79 |
     \ set expandtab |
@@ -172,23 +150,6 @@ let g:goyo_width = 120
 autocmd BufRead,BufNewFile *.Rmd set filetype=rmarkdown
 let g:pandoc#modules#disabled = ["folding"]
 let g:pandoc#syntax#conceal#use = 0
-
-" " ncm2 settings
-" " =============
-" " set python executable
-" let g:python3_host_prog='/opt/miniconda3/bin/python'
-" " enable ncm2 for all buffers
-" autocmd BufEnter * call ncm2#enable_for_buffer()
-" " Important : help Ncm2PopupOpen for more information
-" set completeopt=noinsert,menuone,noselect
-" " suppress the annoying 'match x of y', 'The only match' and 'Pattern not
-" " found' messages
-" set shortmess+=c
-" " CTRL-C doesn't trigger the InsertLeave autocmd,  map to <ESC> instead
-" inoremap <c-c> <ESC
-" " Use <TAB> to select the popup menu:
-" inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-" inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " Nvim-R support for radian console
 " =================================
