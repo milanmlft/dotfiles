@@ -3,7 +3,7 @@
 	email = m.malfait@ucl.ac.uk
 	signingkey = 407EA34B4A27A1E7
 [core]
-	autocrlf = input
+	autocrlf = false
 	safecrlf = true
 	excludesfile = /Users/milan/.gitignore_global
 
@@ -39,3 +39,5 @@
 	rebase = false
 [init]
 	defaultBranch = master
+[gpg]
+	program = /opt/homebrew/bin/gpg

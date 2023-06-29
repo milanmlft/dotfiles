@@ -193,3 +193,9 @@ eval "$(pyenv init -)"
 
 export GPG_TTY=$TTY
 
+## aws code completion
+autoload bashcompinit && bashcompinit
+autoload -Uz compinit && compinit
+complete -C '/opt/homebrew/bin/aws_completer' aws
+
+export AWS_PROFILE=playpen
