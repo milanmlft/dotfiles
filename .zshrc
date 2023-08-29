@@ -199,3 +199,11 @@ autoload -Uz compinit && compinit
 complete -C '/opt/homebrew/bin/aws_completer' aws
 
 export AWS_PROFILE=playpen
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# >>>> Vagrant command completion (start)
+fpath=(/opt/vagrant/embedded/gems/gems/vagrant-2.3.7/contrib/zsh $fpath)
+compinit
+# <<<<  Vagrant command completion (end)
