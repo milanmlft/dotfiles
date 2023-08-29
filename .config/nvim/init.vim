@@ -34,7 +34,8 @@ Plug 'vim-pandoc/vim-pandoc-syntax'
 Plug 'vim-pandoc/vim-rmarkdown'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
-Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+" Plug 'pineapplegiant/spaceduck', { 'branch': 'main' }
+Plug 'catppuccin/nvim', { 'as': 'catppuccin' }
 
 " All of your Plugins must be added before the following line
 call plug#end()            " required
@@ -50,8 +51,9 @@ set mouse=nv	" enable mouse support in Normal and Visual mode
 " https://github.com/vim-pandoc/vim-pandoc-syntax/issues/185
 set termguicolors
 
-" spaceduck theme
-colors spaceduck
+" catppuccin theme
+colorscheme catppuccin-mocha " catppuccin-latte, catppuccin-frappe, catppuccin-macchiato, catppuccin
+
 
 " split navigations
 nnoremap <C-J> <C-W><C-J>
