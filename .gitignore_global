@@ -37,3 +37,6 @@ dev/
 .Rproj.user
 .Rdata
 .httr-oauth
+
+# Python virtualenv
+.venv/
