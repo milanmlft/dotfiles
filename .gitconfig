@@ -38,6 +38,6 @@
 [pull]
 	rebase = false
 [init]
-	defaultBranch = master
+	defaultBranch = main
 [gpg]
 	program = /opt/homebrew/bin/gpg
