@@ -20,8 +20,6 @@ alias tree='tree -C'   # show filesizes in tree output and colorize output
 alias grep='grep -E'		# force grep to always use extended regexp
 alias weather='curl http://wttr.in/brussels'
 
-alias tmux-new='tmux -CC new -A -s main'
-
 # Always use nvim
 alias vim='nvim'
 alias vi='nvim'
@@ -35,7 +33,6 @@ alias rad='radian'
 alias python='python3'
 
 ## Misc
-alias vsc-login='ssh vsc43603@login.hpc.ugent.be'
 alias ls-dot='ls -a | grep "^\."'   # List dot-files
 alias homepath='realpath --relative-to=$HOME'
 
@@ -125,7 +122,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages python extract z tmux zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git colored-man-pages python extract z zsh-autosuggestions zsh-syntax-highlighting docker)
 
 source $ZSH/oh-my-zsh.sh
 
