@@ -6,18 +6,17 @@
 	autocrlf = false
 	safecrlf = true
 	excludesfile = /Users/milan/.gitignore_global
-
 [alias]
-	co = checkout
-	st = status
-	br = branch
+  co = checkout
+  st = status
+  br = branch
   hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
   type = cat-file -t
   dump = cat-file -p
-	unstage = reset HEAD --
-	last = log -p -n 1
-	ci = commit -v
-	can = commit -v --amend --no-edit
+  unstage = reset HEAD --
+  last = log -p -n 1
+  ci = commit -v
+  can = commit -v --amend --no-edit
 [commit]
 	template = /Users/milan/.stCommitMsg
 	gpgsign = true
