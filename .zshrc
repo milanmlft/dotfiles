@@ -21,6 +21,8 @@ alias tree='tree -C'   # show filesizes in tree output and colorize output
 alias grep='grep -E'		# force grep to always use extended regexp
 alias weather='curl http://wttr.in/brussels'
 
+alias cat='bat'
+
 # Always use nvim
 alias vim='nvim'
 alias vi='nvim'
