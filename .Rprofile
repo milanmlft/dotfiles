@@ -65,7 +65,7 @@ if (interactive()) {
     warnPartialMatchAttr = TRUE,
     warnPartialMatchArgs = TRUE
   )
-  options(styler.addins_style_transformer = "biocthis::bioc_style()")
+  # options(styler.addins_style_transformer = "biocthis::bioc_style()")
   options(styler.cache_root = "styler_perm")
 
   # print .libPaths()
