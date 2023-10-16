@@ -60,8 +60,8 @@
     "insert_native_pipe_operator": true,
     "rmd_auto_date": true,
     "editor_theme": "Catppuccin",
-    "highlight_selected_line": true,
     "indent_guides": "gray",
     "margin_column": 100,
-    "save_files_before_build": true
+    "save_files_before_build": true,
+    "font_size_points": 9
 }

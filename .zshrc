@@ -11,6 +11,7 @@ fi
 export TERM="xterm-256color"
 export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
 
+
 # ALIASES
 # -------
 alias ls='ls -GFhp'
@@ -60,9 +61,6 @@ POWERLEVEL9K_ANACONDA_BACKGROUND="black"
 POWERLEVEL9K_ANACONDA_FOREGROUND="green"
 
 DEFAULT_USER="milan"
-
-# Set the -CC option for iTerm2 tmux integration
-ZSH_TMUX_ITERM2=false
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
