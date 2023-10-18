@@ -24,7 +24,7 @@
             "Presentations"
         ],
         "hiddenTabSet": [],
-        "console_left_on_top": true,
+        "console_left_on_top": false,
         "console_right_on_top": true,
         "additional_source_columns": 0
     },
@@ -63,5 +63,6 @@
     "indent_guides": "gray",
     "margin_column": 100,
     "save_files_before_build": true,
-    "font_size_points": 9
+    "copilot_enabled": true,
+    "source_with_echo": true
 }
