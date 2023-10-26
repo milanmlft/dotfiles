@@ -145,9 +145,21 @@ local plugins = {
     "tpope/vim-fugitive",
     lazy = false,
     config = function ()
-      require("core.utils").load_mappings("fugitive") 
+      require("core.utils").load_mappings("fugitive")
     end
-  }
+  },
+  {
+    'https://codeberg.org/esensar/nvim-dev-container',
+    cmd = "DevcontainerStart",
+    dependencies = 'nvim-treesitter/nvim-treesitter',
+    config = function()
+      require("devcontainer").setup{
+        autocommands = {
+          init = true
+        }
+      }
+    end
+  },
 }
 return plugins
 
