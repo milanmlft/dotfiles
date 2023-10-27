@@ -39,6 +39,9 @@ alias python='python3'
 alias ls-dot='ls -a | grep "^\."'   # List dot-files
 alias homepath='realpath --relative-to=$HOME'
 
+## Disable zsh autocorrect for some commands
+alias git='nocorrect git'
+
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -204,3 +207,5 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 fpath=(/opt/vagrant/embedded/gems/gems/vagrant-2.3.7/contrib/zsh $fpath)
 compinit
 # <<<<  Vagrant command completion (end)
+
+eval $(thefuck --alias)
