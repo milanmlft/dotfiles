@@ -23,3 +23,7 @@ local function open_nvim_tree(data)
 end
 vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = open_nvim_tree })
 
+local function reverse_highlight_colors()
+  vim.cmd('hi Visual cterm=reverse gui=reverse')
+end
+vim.api.nvim_create_autocmd({ "VimEnter" }, { callback = reverse_highlight_colors })

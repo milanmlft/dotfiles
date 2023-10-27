@@ -1,6 +1,8 @@
 local opts = {
   ensure_installed = {
     "black",
+    "clangd",
+    "clang-format",
     "debugpy",
     "mypy",
     "pyright",

@@ -31,7 +31,7 @@ local plugins = {
   },
   {
     "jose-elias-alvarez/null-ls.nvim",
-    ft = {"python", "go"},
+    event = "VeryLazy",
     opts = function()
       return require("custom.configs.null-ls")
     end,
@@ -105,7 +105,6 @@ local plugins = {
       require("copilot").setup({
         suggestion = {
           keymap = {
-            accept = "<Tab>",
             accept_word = false,
             accept_line = false,
             next = "<M-]>",

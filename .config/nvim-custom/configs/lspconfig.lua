@@ -12,6 +12,14 @@ lspconfig.rust_analyzer.setup({
   root_dir = util.root_pattern("Cargo.toml")
 })
 
+lspconfig.clangd.setup({
+  on_attach = function(client, bufnr)
+    client.server_capabilities.signatureHelpProvider = false
+    on_attach(client, bufnr)
+  end,
+  capabilities = capabilities
+})
+
 lspconfig.pyright.setup({
   on_attach = on_attach,
   capabilities = capabilities,
