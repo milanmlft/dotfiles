@@ -159,6 +159,7 @@ local plugins = {
       }
     end
   },
+  require("custom.quarto")
 }
 return plugins
 
