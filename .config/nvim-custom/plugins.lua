@@ -5,7 +5,8 @@ local plugins = {
   },
   {
     "neovim/nvim-lspconfig",
-    config = function ()
+    event = "BufReadPre",
+    config = function()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end
@@ -17,7 +18,7 @@ local plugins = {
       require("nvim-tree").setup {
         filters = {
           git_ignored = false,
-          custom = {"^\\.git$"}
+          custom = { "^\\.git$" }
         }
       }
     end,
@@ -49,7 +50,7 @@ local plugins = {
       "mfussenegger/nvim-dap",
       "rcarriga/nvim-dap-ui"
     },
-    config = function (_,opts)
+    config = function(_, opts)
       local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
       require("dap-python").setup(path)
       require("core.utils").load_mappings("dap_python")
@@ -59,7 +60,7 @@ local plugins = {
     "leoluz/nvim-dap-go",
     ft = "go",
     dependencies = "mfussenegger/nvim-dap",
-    config = function (_, opts)
+    config = function(_, opts)
       require("dap-go").setup(opts)
       require("core.utils").load_mappings("dap_go")
     end
@@ -67,14 +68,14 @@ local plugins = {
   {
     "rcarriga/nvim-dap-ui",
     dependencies = "mfussenegger/nvim-dap",
-    config = function ()
+    config = function()
       local dap = require("dap")
       local dapui = require("dapui")
       dapui.setup()
-      dap.listeners.after.event_initialized["dapui_config"] = function ()
+      dap.listeners.after.event_initialized["dapui_config"] = function()
         dapui.open()
       end
-      dap.listeners.before.event_terminated["dapui_config"] = function ()
+      dap.listeners.before.event_terminated["dapui_config"] = function()
         dapui.close()
       end
       dap.listeners.before.event_exited["dapui_config"] = function()
@@ -85,8 +86,8 @@ local plugins = {
   {
     -- Rainbow indent plugin
     "p00f/nvim-ts-rainbow",
-     event = "BufRead",
-     config = function()
+    event = "BufRead",
+    config = function()
       require("nvim-treesitter.configs").setup {
         rainbow = {
           enable = true,
@@ -101,19 +102,6 @@ local plugins = {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "VeryLazy",
-    config = function()
-      require("copilot").setup({
-        suggestion = {
-          keymap = {
-            accept_word = false,
-            accept_line = false,
-            next = "<M-]>",
-            prev = "<M-[>",
-            dismiss = "<C-]>",
-          },
-        },
-      })
-    end,
   },
   {
     "dreamsofcode-io/ChatGPT.nvim",
@@ -123,7 +111,7 @@ local plugins = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim"
     },
-    config = function ()
+    config = function()
       require("chatgpt").setup({
         async_api_key_cmd = "pass show api/tokens/openai",
       })
@@ -132,34 +120,99 @@ local plugins = {
   {
     "olexsmir/gopher.nvim",
     ft = "go",
-    config = function (_, opts)
+    config = function(_, opts)
       require("gopher").setup(opts)
       require("core.utils").load_mappings("gopher")
     end,
-    build = function ()
+    build = function()
       vim.cmd [[silent! GoInstallDeps]]
     end
   },
   {
     "tpope/vim-fugitive",
     lazy = false,
-    config = function ()
+    config = function()
       require("core.utils").load_mappings("fugitive")
     end
   },
   {
-    'https://codeberg.org/esensar/nvim-dev-container',
-    cmd = "DevcontainerStart",
-    dependencies = 'nvim-treesitter/nvim-treesitter',
+    "hrsh7th/nvim-cmp",
+    branch = "main",
+    dependencies = {
+      { "hrsh7th/cmp-nvim-lsp" },
+      { "hrsh7th/cmp-nvim-lsp-signature-help" },
+      { "hrsh7th/cmp-buffer" },
+      { "hrsh7th/cmp-path" },
+      { "hrsh7th/cmp-calc" },
+      { "hrsh7th/cmp-emoji" },
+      { "saadparwaiz1/cmp_luasnip" },
+      { "f3fora/cmp-spell" },
+      { "ray-x/cmp-treesitter" },
+      { "kdheepak/cmp-latex-symbols" },
+      { "jmbuhr/cmp-pandoc-references" },
+      {
+        "L3MON4D3/LuaSnip",
+        version = nil,
+        branch = "master",
+      },
+      { "rafamadriz/friendly-snippets" },
+      { "onsails/lspkind-nvim" },
+    },
     config = function()
-      require("devcontainer").setup{
-        autocommands = {
-          init = true
-        }
-      }
+      require "plugins.configs.cmp"
+      require "custom.configs.cmp"
     end
   },
-  require("custom.quarto")
+  {
+    "quarto-dev/quarto-nvim",
+    ft = "quarto",
+    dependencies = {
+      {
+        "jmbuhr/otter.nvim",
+        ft = "quarto",
+        dependencies = {
+          { "neovim/nvim-lspconfig" },
+        },
+        opts = {
+          lsp = {
+            hover = {
+              border = require("custom.style").border,
+            },
+          },
+        },
+      },
+    },
+    opts = {
+      lspFeatures = {
+        languages = { "r", "python", "julia", "bash", "lua", "html" },
+      },
+    },
+  },
+	{ "nvim-treesitter/nvim-treesitter-textobjects" },
+  {
+    "jpalardy/vim-slime",
+    ft = "quarto",
+    init = function()
+      require "custom.configs.vim-slime"
+    end
+  },
+	{
+		"jbyuki/nabla.nvim",
+		keys = {
+			{ "<leader>ee", ':lua require"nabla".toggle_virt()<cr>', "toggle equations" },
+			{ "<leader>eh", ':lua require"nabla".popup()<cr>', "hover equation" },
+		},
+	},
+  {
+    "folke/which-key.nvim",
+    event = "VeryLazy",
+    init = function()
+      vim.o.timeout = true
+      vim.o.timeoutlen = 300
+    end,
+    config = function ()
+      require "custom.configs.whichkey"
+    end
+  }
 }
 return plugins
-
