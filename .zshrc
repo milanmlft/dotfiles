@@ -175,9 +175,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-# export PATH="/usr/local/opt/llvm/bin:$PATH"
-# export PATH="/usr/local/opt/gcc/bin:$PATH"
-# export PATH="/usr/local/opt/ccache/libexec:$PATH"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="/opt/homebrew/opt/gcc/bin:$PATH"
+export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
 
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
