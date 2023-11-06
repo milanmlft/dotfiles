@@ -19,7 +19,6 @@ local opts = {
     "ansible-lint",
     "yaml-language-server",
     "r-languageserver",
-    "marksman",
   },
 }
 

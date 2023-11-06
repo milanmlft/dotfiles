@@ -5,8 +5,7 @@ local plugins = {
   },
   {
     "neovim/nvim-lspconfig",
-    event = "BufReadPre",
-    config = function()
+    config = function ()
       require "plugins.configs.lspconfig"
       require "custom.configs.lspconfig"
     end
@@ -18,7 +17,7 @@ local plugins = {
       require("nvim-tree").setup {
         filters = {
           git_ignored = false,
-          custom = { "^\\.git$" }
+          custom = {"^\\.git$"}
         }
       }
     end,
@@ -50,7 +49,7 @@ local plugins = {
       "mfussenegger/nvim-dap",
       "rcarriga/nvim-dap-ui"
     },
-    config = function(_, opts)
+    config = function (_,opts)
       local path = "~/.local/share/nvim/mason/packages/debugpy/venv/bin/python"
       require("dap-python").setup(path)
       require("core.utils").load_mappings("dap_python")
@@ -60,7 +59,7 @@ local plugins = {
     "leoluz/nvim-dap-go",
     ft = "go",
     dependencies = "mfussenegger/nvim-dap",
-    config = function(_, opts)
+    config = function (_, opts)
       require("dap-go").setup(opts)
       require("core.utils").load_mappings("dap_go")
     end
@@ -68,14 +67,14 @@ local plugins = {
   {
     "rcarriga/nvim-dap-ui",
     dependencies = "mfussenegger/nvim-dap",
-    config = function()
+    config = function ()
       local dap = require("dap")
       local dapui = require("dapui")
       dapui.setup()
-      dap.listeners.after.event_initialized["dapui_config"] = function()
+      dap.listeners.after.event_initialized["dapui_config"] = function ()
         dapui.open()
       end
-      dap.listeners.before.event_terminated["dapui_config"] = function()
+      dap.listeners.before.event_terminated["dapui_config"] = function ()
         dapui.close()
       end
       dap.listeners.before.event_exited["dapui_config"] = function()
@@ -86,8 +85,8 @@ local plugins = {
   {
     -- Rainbow indent plugin
     "p00f/nvim-ts-rainbow",
-    event = "BufRead",
-    config = function()
+     event = "BufRead",
+     config = function()
       require("nvim-treesitter.configs").setup {
         rainbow = {
           enable = true,
@@ -102,6 +101,19 @@ local plugins = {
     "zbirenbaum/copilot.lua",
     cmd = "Copilot",
     event = "VeryLazy",
+    config = function()
+      require("copilot").setup({
+        suggestion = {
+          keymap = {
+            accept_word = false,
+            accept_line = false,
+            next = "<M-]>",
+            prev = "<M-[>",
+            dismiss = "<C-]>",
+          },
+        },
+      })
+    end,
   },
   {
     "dreamsofcode-io/ChatGPT.nvim",
@@ -111,7 +123,7 @@ local plugins = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope.nvim"
     },
-    config = function()
+    config = function ()
       require("chatgpt").setup({
         async_api_key_cmd = "pass show api/tokens/openai",
       })
@@ -120,48 +132,33 @@ local plugins = {
   {
     "olexsmir/gopher.nvim",
     ft = "go",
-    config = function(_, opts)
+    config = function (_, opts)
       require("gopher").setup(opts)
       require("core.utils").load_mappings("gopher")
     end,
-    build = function()
+    build = function ()
       vim.cmd [[silent! GoInstallDeps]]
     end
   },
   {
     "tpope/vim-fugitive",
     lazy = false,
-    config = function()
+    config = function ()
       require("core.utils").load_mappings("fugitive")
     end
   },
   {
-    "hrsh7th/nvim-cmp",
-    branch = "main",
-    dependencies = {
-      { "hrsh7th/cmp-nvim-lsp" },
-      { "hrsh7th/cmp-nvim-lsp-signature-help" },
-      { "hrsh7th/cmp-buffer" },
-      { "hrsh7th/cmp-path" },
-      { "hrsh7th/cmp-calc" },
-      { "hrsh7th/cmp-emoji" },
-      { "saadparwaiz1/cmp_luasnip" },
-      { "f3fora/cmp-spell" },
-      { "ray-x/cmp-treesitter" },
-      { "kdheepak/cmp-latex-symbols" },
-      { "jmbuhr/cmp-pandoc-references" },
-      {
-        "L3MON4D3/LuaSnip",
-        version = nil,
-        branch = "master",
-      },
-      { "rafamadriz/friendly-snippets" },
-      { "onsails/lspkind-nvim" },
-    },
+    'https://codeberg.org/esensar/nvim-dev-container',
+    cmd = "DevcontainerStart",
+    dependencies = 'nvim-treesitter/nvim-treesitter',
     config = function()
-      require "plugins.configs.cmp"
-      require "custom.configs.cmp"
+      require("devcontainer").setup{
+        autocommands = {
+          init = true
+        }
+      }
     end
   },
 }
 return plugins
+
