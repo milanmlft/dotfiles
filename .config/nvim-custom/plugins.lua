@@ -163,56 +163,5 @@ local plugins = {
       require "custom.configs.cmp"
     end
   },
-  {
-    "quarto-dev/quarto-nvim",
-    ft = "quarto",
-    dependencies = {
-      {
-        "jmbuhr/otter.nvim",
-        ft = "quarto",
-        dependencies = {
-          { "neovim/nvim-lspconfig" },
-        },
-        opts = {
-          lsp = {
-            hover = {
-              border = require("custom.style").border,
-            },
-          },
-        },
-      },
-    },
-    opts = {
-      lspFeatures = {
-        languages = { "r", "python", "julia", "bash", "lua", "html" },
-      },
-    },
-  },
-	{ "nvim-treesitter/nvim-treesitter-textobjects" },
-  {
-    "jpalardy/vim-slime",
-    ft = "quarto",
-    init = function()
-      require "custom.configs.vim-slime"
-    end
-  },
-	{
-		"jbyuki/nabla.nvim",
-		keys = {
-			{ "<leader>ee", ':lua require"nabla".toggle_virt()<cr>', "toggle equations" },
-			{ "<leader>eh", ':lua require"nabla".popup()<cr>', "hover equation" },
-		},
-	},
-  {
-    "folke/which-key.nvim",
-    event = "VeryLazy",
-    init = function()
-      vim.o.timeout = true
-      vim.o.timeoutlen = 300
-    end,
-    config = function ()
-      require "custom.configs.whichkey"
-    end
-  }
 }
 return plugins
