@@ -175,9 +175,15 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+## Set C++ compilers
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/opt/homebrew/opt/gcc/bin:$PATH"
 export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
+
+## For CMake
+export CMAKE_PREFIX_PATH="/opt/homebrew"
+export CMAKE_FIND_FRAMEWORK="LAST"
+export CMAKE_FIND_APPBUNDLE="LAST"
 
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
