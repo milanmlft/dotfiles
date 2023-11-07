@@ -215,3 +215,6 @@ compinit
 # <<<<  Vagrant command completion (end)
 
 eval $(thefuck --alias)
+
+## Use GNU sed
+export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
