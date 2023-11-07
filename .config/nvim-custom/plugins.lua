@@ -147,6 +147,17 @@ local plugins = {
       require("core.utils").load_mappings("fugitive")
     end
   },
+  {
+    -- Cmake
+    "Civitasv/cmake-tools.nvim",
+    lazy = true,
+    ft = "cmake",
+    config = function ()
+      require("cmake-tools").setup({
+        cmake_build_directory = "build/${variant:buildType}",
+      })
+    end
+  }
 }
 return plugins
 
