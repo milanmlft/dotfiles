@@ -157,6 +157,15 @@ local plugins = {
         cmake_build_directory = "build/${variant:buildType}",
       })
     end
+  },
+  -- R
+  {
+    "jalvesaq/Nvim-R",
+    lazy = false,
+    dependencies = {
+      "hrsh7th/nvim-cmp",
+      "jalvesaq/cmp-nvim-r"
+    }
   }
 }
 return plugins
