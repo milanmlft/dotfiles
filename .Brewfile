@@ -6,14 +6,14 @@ tap "r-lib/rig"
 tap "romkatv/powerlevel10k"
 # Run your GitHub Actions locally
 brew "act"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # Automate deployment, configuration, and upgrading
 brew "ansible", link: false
 # Library for manipulating PNG images
 brew "libpng"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # C library implementing the SSH2 protocol
@@ -114,6 +114,8 @@ brew "r"
 brew "rclone"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Tool to build, change, and version infrastructure
+brew "terraform"
 # Tool to generate documentation from Terraform modules
 brew "terraform-docs"
 # Thin wrapper for Terraform e.g. for locking state
@@ -140,10 +142,6 @@ brew "zlib"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Packer
-brew "hashicorp/tap/packer"
-# Terraform
-brew "hashicorp/tap/terraform"
 # Application launcher and productivity software
 cask "alfred"
 # Tool to hide status bar icons
