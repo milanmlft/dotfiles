@@ -183,7 +183,8 @@ export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
 ## For CMake
 export CMAKE_PREFIX_PATH="/opt/homebrew"
 export CMAKE_FIND_FRAMEWORK="LAST"
-export CMAKE_FIND_APPBUNDLE="LAST"
+export CMAKE_FIND_APPBUNDLE="NEVER"
+export CMAKE_EXPORT_COMPILE_COMMANDS="ON"
 
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
