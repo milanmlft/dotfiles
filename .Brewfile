@@ -30,6 +30,8 @@ brew "harfbuzz"
 brew "bfg"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
+# Modern, C++-native, header-only, test framework
+brew "catch2"
 # Object-file caching compiler wrapper
 brew "ccache"
 # Checks for bashisms in shell scripts
