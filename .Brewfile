@@ -172,6 +172,8 @@ cask "mactex"
 cask "obsidian"
 # Scientific and technical publishing system built on Pandoc
 cask "quarto"
+# Control your tools with a few keystrokes
+cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # The R Installation Manager
