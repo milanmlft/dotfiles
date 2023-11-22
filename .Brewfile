@@ -94,6 +94,8 @@ brew "llvm", link: true
 brew "llvm@13"
 # Next-gen compiler infrastructure
 brew "llvm@15"
+# Package manager for the Lua programming language
+brew "luarocks"
 # Language Server Protocol for Markdown
 brew "marksman"
 # Ambitious Vim-fork focused on extensibility and agility
