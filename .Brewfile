@@ -140,6 +140,8 @@ brew "tldr"
 brew "tmux"
 # Upgrade all the things
 brew "topgrade"
+# Source code spell checker
+brew "typos-cli"
 # ODBC 3 connectivity for UNIX
 brew "unixodbc"
 # Vi 'workalike' with many additional features
