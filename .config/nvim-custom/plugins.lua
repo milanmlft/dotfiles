@@ -126,11 +126,24 @@ local plugins = {
                 cmake_build_directory = "build/${variant:buildType}"
             })
         end
-    }, -- R
-    {
+    }, {
+        -- R
         "jalvesaq/Nvim-R",
         lazy = false,
         dependencies = {"hrsh7th/nvim-cmp", "jalvesaq/cmp-nvim-r"}
+    }, {
+        -- Markdown
+        "ellisonleao/glow.nvim",
+        config = true,
+        cmd = "Glow"
+    }, {
+        "iamcco/markdown-preview.nvim",
+        cmd = {
+            "MarkdownPreviewToggle", "MarkdownPreview", "MarkdownPreviewStop"
+        },
+        build = "cd app && yarn install",
+        init = function() vim.g.mkdp_filetypes = {"markdown"} end,
+        ft = {"markdown"}
     }
 }
 return plugins
