@@ -156,8 +156,6 @@ brew "zsh"
 brew "zsh-syntax-highlighting"
 # Application launcher and productivity software
 cask "alfred"
-# Tool to hide status bar icons
-cask "dozer"
 # Clipboard manager for developers
 cask "flycut"
 # Developer targeted fonts with a high number of glyphs
