@@ -5,7 +5,18 @@ My dotfiles, managed by [yadm](https://github.com/TheLocehiliosan/yadm).
 ## Set up instructions
 
 1. [Install yadm](https://yadm.io/docs/install)
-2. Run `yadm clone git@github.com:milanmlft/dotfiles.git` locally
+2. Run
+
+    ```sh
+    yadm clone git@github.com:milanmlft/dotfiles.git`
+    ```
+
+3. Source shell with 
+
+    ```sh
+    exec zsh`
+    ```
+
 3. Enjoy!
 
 ## Updating the `Brewfile`
