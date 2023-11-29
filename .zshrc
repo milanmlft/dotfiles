@@ -59,7 +59,7 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
 POWERLEVEL9K_SHORTEN_DELIMITER=""
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
 POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status root_indicator time vi_mode)
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status pyenv virtualenv root_indicator time vi_mode)
 POWERLEVEL9K_PROMPT_ON_NEWLINE=true
 POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
 POWERLEVEL9K_ANACONDA_BACKGROUND="black"
@@ -125,7 +125,18 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git colored-man-pages python extract z zsh-autosuggestions zsh-syntax-highlighting docker)
+plugins=( 
+    git 
+    colored-man-pages 
+    python 
+    pyenv
+    virtualenv
+    extract 
+    z 
+    zsh-autosuggestions
+    zsh-syntax-highlighting 
+    docker
+)
 
 source $ZSH/oh-my-zsh.sh
 
