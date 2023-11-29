@@ -54,6 +54,8 @@ brew "ghostscript"
 brew "git"
 # Git extension for versioning large files
 brew "git-lfs"
+# Render markdown on the CLI
+brew "glow"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
 # Validating, recursive, caching DNS resolver
@@ -100,8 +102,6 @@ brew "luarocks"
 brew "marksman"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Manage multiple Node.js versions
-brew "nvm"
 # Optimized BLAS library
 brew "openblas"
 # Display directories as trees (with optional color/HTML output)
@@ -148,6 +148,8 @@ brew "unixodbc"
 brew "vim"
 # Yet Another Dotfiles Manager
 brew "yadm"
+# JavaScript package manager
+brew "yarn"
 # General-purpose lossless data-compression library
 brew "zlib"
 # UNIX shell (command interpreter)
