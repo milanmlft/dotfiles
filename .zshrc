@@ -34,6 +34,7 @@ alias rad='radian'
 
 ## Python
 alias python='python3'
+alias pip='noglob pip'
 
 ## Misc
 alias ls-dot='ls -a | grep "^\."'   # List dot-files
