@@ -6,6 +6,8 @@ tap "r-lib/rig"
 tap "romkatv/powerlevel10k"
 # Run your GitHub Actions locally
 brew "act"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Automate deployment, configuration, and upgrading
 brew "ansible", link: false
 # Library for manipulating PNG images
@@ -114,8 +116,12 @@ brew "pinentry-mac"
 brew "poppler"
 # Theme for zsh
 brew "powerlevel10k"
+# Framework for managing multi-language pre-commit hooks
+brew "pre-commit"
 # Python version management
 brew "pyenv"
+# Pyenv plugin to manage virtualenv
+brew "pyenv-virtualenv"
 # Tool Command Language
 brew "tcl-tk"
 # Software environment for statistical computing
