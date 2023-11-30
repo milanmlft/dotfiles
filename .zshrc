@@ -34,6 +34,7 @@ alias rad='radian'
 
 ## Python
 alias python='python3'
+alias pip='noglob pip' # disable globbing when running pip: https://stackoverflow.com/a/30539963/11801854
 
 ## Misc
 alias ls-dot='ls -a | grep "^\."'   # List dot-files
@@ -205,8 +206,9 @@ source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+## pyenv setup
 export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
 
