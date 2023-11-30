@@ -206,13 +206,6 @@ source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-
-## pyenv-virtualenv
-eval "$(pyenv virtualenv-init -)"
-
 export GPG_TTY=$TTY
 
 ## aws code completion
@@ -235,8 +228,11 @@ eval $(thefuck --alias)
 ## Use GNU sed
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
-## NVM settings
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+## pyenv setup
+export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+
+## pyenv-virtualenv
+eval "$(pyenv virtualenv-init -)"
 
