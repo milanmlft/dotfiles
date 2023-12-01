@@ -126,16 +126,16 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=( 
-    git 
-    colored-man-pages 
-    python 
+plugins=(
+    git
+    colored-man-pages
+    python
     pyenv
     virtualenv
-    extract 
-    z 
+    extract
+    z
     zsh-autosuggestions
-    zsh-syntax-highlighting 
+    zsh-syntax-highlighting
     docker
 )
 
@@ -172,21 +172,6 @@ set -o vi
 
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/Users/milan/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/Users/milan/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/Users/milan/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/Users/milan/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
 ## Set C++ compilers
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/opt/homebrew/opt/gcc/bin:$PATH"
@@ -197,6 +182,7 @@ export CMAKE_PREFIX_PATH="/opt/homebrew"
 export CMAKE_FIND_FRAMEWORK="LAST"
 export CMAKE_FIND_APPBUNDLE="NEVER"
 export CMAKE_EXPORT_COMPILE_COMMANDS="ON"
+export C="clang"
 export CXX="clang++"
 
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
@@ -235,4 +221,3 @@ eval "$(pyenv init -)"
 
 ## pyenv-virtualenv
 eval "$(pyenv virtualenv-init -)"
-
