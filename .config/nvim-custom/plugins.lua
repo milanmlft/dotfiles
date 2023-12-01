@@ -76,13 +76,14 @@ local plugins = {
         -- Copilot
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
-        event = "VeryLazy",
+        event = "InsertEnter",
         config = function()
             require("copilot").setup({
                 suggestion = {
                     keymap = {
+                        accept = "<M-l>",
                         accept_word = false,
-                        accept_line = "<S-tab>",
+                        accept_line = false,
                         next = "<M-]>",
                         prev = "<M-[>",
                         dismiss = "<C-]>"
