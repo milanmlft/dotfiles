@@ -46,6 +46,8 @@ brew "cmake-docs"
 brew "coreutils"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
+# C++ template library for linear algebra
+brew "eigen"
 # GNU compiler collection
 brew "gcc"
 # GitHub command-line tool
@@ -114,6 +116,8 @@ brew "pass"
 brew "pinentry-mac"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Object-relational database system
+brew "postgresql@14"
 # Theme for zsh
 brew "powerlevel10k"
 # Framework for managing multi-language pre-commit hooks
