@@ -130,7 +130,7 @@ local plugins = {
     }, {
         -- R
         "jalvesaq/Nvim-R",
-        lazy = false,
+        ft = "R",
         dependencies = {"hrsh7th/nvim-cmp", "jalvesaq/cmp-nvim-r"}
     }, {
         -- Markdown
@@ -151,6 +151,24 @@ local plugins = {
         opts = {
             -- your configuration comes here
             -- or leave it empty to use the default settings
+        }
+    }, {
+        "folke/todo-comments.nvim",
+        lazy = false,
+        dependencies = {"nvim-lua/plenary.nvim"},
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
+        }
+    }, {
+        "folke/trouble.nvim",
+        lazy = false,
+        dependencies = {"nvim-tree/nvim-web-devicons"},
+        opts = {
+            -- your configuration comes here
+            -- or leave it empty to use the default settings
+            -- refer to the configuration section below
         }
     }
 }
