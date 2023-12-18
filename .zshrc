@@ -177,13 +177,17 @@ export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 export PATH="/opt/homebrew/opt/gcc/bin:$PATH"
 export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
 
+## Use Homebrew gcc compilers
+alias gcc="gcc-13"
+alias g++="g++-13"
+
 ## For CMake
 export CMAKE_PREFIX_PATH="/opt/homebrew"
 export CMAKE_FIND_FRAMEWORK="LAST"
 export CMAKE_FIND_APPBUNDLE="NEVER"
 export CMAKE_EXPORT_COMPILE_COMMANDS="ON"
-export C="clang"
-export CXX="clang++"
+export C="gcc-13"
+export CXX="g++-13"
 
 source /opt/homebrew/opt/powerlevel10k/powerlevel10k.zsh-theme
 
