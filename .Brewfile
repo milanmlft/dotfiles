@@ -74,8 +74,12 @@ brew "librsvg"
 brew "graphviz"
 # Improved top (interactive process viewer)
 brew "htop"
+# Command-line benchmarking tool
+brew "hyperfine"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
+# LLVM's OpenMP runtime library
+brew "libomp"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # Just Another Gibbs Sampler for Bayesian MCMC simulation
@@ -156,6 +160,8 @@ brew "typos-cli"
 brew "unixodbc"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Internet file retriever
+brew "wget"
 # Yet Another Dotfiles Manager
 brew "yadm"
 # JavaScript package manager
