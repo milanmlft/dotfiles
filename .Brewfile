@@ -24,12 +24,16 @@ brew "libssh2"
 brew "libgit2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# High performance key/value database
+brew "berkeley-db"
 # Software library to render fonts
 brew "freetype"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Remove large files or passwords from Git history like git-filter-branch
 brew "bfg"
+# Collection of portable C++ source libraries
+brew "boost"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
 # Modern, C++-native, header-only, test framework
@@ -44,6 +48,8 @@ brew "cmake"
 brew "cmake-docs"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Static analysis of C and C++ code
+brew "cppcheck"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
 # C++ template library for linear algebra
@@ -110,6 +116,8 @@ brew "luarocks"
 brew "marksman"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# High performance message passing library
+brew "open-mpi"
 # Optimized BLAS library
 brew "openblas"
 # Display directories as trees (with optional color/HTML output)
