@@ -13,7 +13,7 @@
 
 # iWork files
 *.pages
-*.key
+*.keynote
 *.numbers
 
 # to do lists
