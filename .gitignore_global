@@ -40,3 +40,8 @@ dev/
 
 # Python virtualenv
 .venv/
+
+# C++ stuff
+.cache/
+build/
+
