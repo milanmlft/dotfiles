@@ -225,3 +225,6 @@ eval "$(pyenv init -)"
 
 ## pyenv-virtualenv
 eval "$(pyenv virtualenv-init -)"
+
+## set defaulft config directory for lazygit
+export XDG_CONFIG_HOME="$HOME/.config"
