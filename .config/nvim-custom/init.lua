@@ -5,7 +5,7 @@ set.softtabstop = 4
 set.shiftwidth = 4
 
 -- Add width marker
-set.colorcolumn = "88"
+set.colorcolumn = "100"
 
 -- Set relative line numbers by default
 set.relativenumber = true

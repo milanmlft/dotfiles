@@ -5,7 +5,7 @@ local opts = {
     sources = {
         -- python
         null_ls.builtins.formatting.black.with({
-            extra_args = {"--fast", "--line-length-88"}
+            extra_args = {"--fast", "--line-length-100"}
         }), null_ls.builtins.diagnostics.mypy,
         null_ls.builtins.diagnostics.ruff, null_ls.builtins.formatting.gofmt, -- go
         null_ls.builtins.formatting.goimports_reviser,
