@@ -6,8 +6,15 @@ local opts = {
         -- python
         null_ls.builtins.formatting.black.with({
             extra_args = {"--fast", "--line-length-100"}
-        }), null_ls.builtins.diagnostics.mypy,
-        null_ls.builtins.diagnostics.ruff, null_ls.builtins.formatting.gofmt, -- go
+        }), null_ls.builtins.diagnostics.mypy.with({
+            extra_args = function()
+                local virtual = os.getenv("VIRTUAL_ENV") .. "/bin" or
+                                    os.getenv("PYENV_ROOT") .. "/shims" or
+                                    "/usr/bin"
+                return {"--python-executable", virtual .. "/python3"}
+            end
+        }), null_ls.builtins.diagnostics.ruff,
+        null_ls.builtins.formatting.gofmt, -- go
         null_ls.builtins.formatting.goimports_reviser,
         null_ls.builtins.formatting.golines,
         null_ls.builtins.formatting.clang_format, -- c++

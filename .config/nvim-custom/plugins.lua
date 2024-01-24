@@ -173,6 +173,31 @@ local plugins = {
             -- or leave it empty to use the default settings
             -- refer to the configuration section below
         }
+    }, {
+        -- Unit testing
+        "nvim-neotest/neotest",
+        lazy = true,
+        dependencies = {
+            "nvim-lua/plenary.nvim", "antoinemadec/FixCursorHold.nvim",
+            "nvim-treesitter/nvim-treesitter"
+        },
+        config = function()
+            require("neotest").setup({
+                adapters = {
+                    require("neotest-python")({
+                        dap = {justMyCode = false},
+                        args = {"--log-level", "DEBUG", "--quiet"},
+                        runner = "pytest"
+                    })
+                }
+            })
+            require("core.utils").load_mappings("neotest")
+        end
+    }, {
+        "nvim-neotest/neotest-python",
+        lazy = true,
+        ft = {"python"},
+        dependencies = {"nvim-neotest/neotest"}
     }
 }
 return plugins

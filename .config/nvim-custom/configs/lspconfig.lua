@@ -28,12 +28,6 @@ lspconfig.cmake.setup({
     init_options = {buildDirectory = "build"}
 })
 
-lspconfig.pyright.setup({
-    on_attach = on_attach,
-    capabilities = capabilities,
-    filetypes = {"python"}
-})
-
 lspconfig.r_language_server.setup({
     on_attach = on_attach,
     capabilities = capabilities,
