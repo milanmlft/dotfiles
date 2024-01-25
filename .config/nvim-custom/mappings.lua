@@ -84,4 +84,15 @@ M.neotest = {
     }
 }
 
+M.autosession = {
+    plugin = true,
+    n = {
+        ["<leader>ss"] = {
+            function()
+                require("auto-session.session-lens").search_session()
+            end, "Search sessions"
+        }
+    }
+}
+
 return M

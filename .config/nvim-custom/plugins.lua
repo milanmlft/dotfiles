@@ -198,6 +198,24 @@ local plugins = {
         lazy = true,
         ft = {"python"},
         dependencies = {"nvim-neotest/neotest"}
+    }, {
+        -- Session management
+        'rmagatti/auto-session',
+        lazy = false,
+        config = function()
+            require("auto-session").setup({
+                log_level = "error",
+                auto_session_suppress_dirs = {
+                    "~/", "~/Projects", "~/Downloads", "/"
+                },
+                session_lens = {
+                    load_on_setup = true,
+                    theme_conf = {border = true},
+                    previewer = false
+                }
+            })
+            require("core.utils").load_mappings("autosession")
+        end
     }
 }
 return plugins
