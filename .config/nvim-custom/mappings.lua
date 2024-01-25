@@ -2,10 +2,10 @@ local M = {}
 
 M.general = {
     n = {
-        ["<C-h>"] = {"<cmd> TmuxNavigateLeft<CR>", "window left"},
-        ["<C-l>"] = {"<cmd> TmuxNavigateRight<CR>", "window right"},
-        ["<C-j>"] = {"<cmd> TmuxNavigateDown<CR>", "window down"},
-        ["<C-k>"] = {"<cmd> TmuxNavigateUp<CR>", "window up"}
+        ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
+        ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
+        ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
+        ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" }
     }
 }
 
@@ -27,7 +27,18 @@ M.dap = {
 
 M.dap_python = {
     plugin = true,
-    n = {["<leader>dpr"] = {function() require("dap-python").test_method() end}}
+    n = {
+        ["<leader>dpt"] = {
+            function() require('dap-python').test_method() end,
+            desc = "Debug Method",
+            ft = "python"
+        },
+        ["<leader>dpc"] = {
+            function() require('dap-python').test_class() end,
+            desc = "Debug Class",
+            ft = "python"
+        }
+    }
 }
 
 M.dap_go = {
@@ -45,14 +56,14 @@ M.dap_go = {
 M.gopher = {
     plugin = true,
     n = {
-        ["<leader>gsj"] = {"<cmd> GoTagAdd json <CR>", "Add json struct tags"},
-        ["<leader>gsy"] = {"<cmd> GoTagAdd yaml <CR>", "Add yaml struct tags"}
+        ["<leader>gsj"] = { "<cmd> GoTagAdd json <CR>", "Add json struct tags" },
+        ["<leader>gsy"] = { "<cmd> GoTagAdd yaml <CR>", "Add yaml struct tags" }
     }
 }
 
 M.fugitive = {
     plugin = true,
-    n = {["<leader>gg"] = {"<cmd> Git <CR>", "Open fugitive"}}
+    n = { ["<leader>gg"] = { "<cmd> Git <CR>", "Open fugitive" } }
 }
 
 M.neotest = {
@@ -62,7 +73,7 @@ M.neotest = {
             function() require("neotest").run.run() end, "Run current test"
         },
         ["<leader>dM"] = {
-            function() require("neotest").run.run({strategy = 'dap'}) end,
+            function() require("neotest").run.run({ strategy = 'dap' }) end,
             "Debug current test"
         },
         ["<leader>ds"] = {
