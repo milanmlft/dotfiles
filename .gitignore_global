@@ -38,8 +38,9 @@ dev/
 .Rdata
 .httr-oauth
 
-# Python virtualenv
+# Python
 .venv/
+.python-version
 
 # C++ stuff
 .cache/
