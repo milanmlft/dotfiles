@@ -1,11 +1,28 @@
 local M = {}
 
 M.general = {
+    -- Allow window navigation also when in terminal mode
+    t = {
+        ["<C-h>"] = {"<cmd> TmuxNavigateLeft<CR>", "window left"},
+        ["<C-l>"] = {"<cmd> TmuxNavigateRight<CR>", "window right"},
+        ["<C-j>"] = {"<cmd> TmuxNavigateDown<CR>", "window down"},
+        ["<C-k>"] = {"<cmd> TmuxNavigateUp<CR>", "window up"}
+    },
     n = {
-        ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
-        ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
-        ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
-        ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" }
+        ["<C-h>"] = {"<cmd> TmuxNavigateLeft<CR>", "window left"},
+        ["<C-l>"] = {"<cmd> TmuxNavigateRight<CR>", "window right"},
+        ["<C-j>"] = {"<cmd> TmuxNavigateDown<CR>", "window down"},
+        ["<C-k>"] = {"<cmd> TmuxNavigateUp<CR>", "window up"}
+    }
+}
+
+M.nvterm = {
+    n = {
+        ["<A-g>"] = {
+            function()
+                require("nvterm.terminal").send("lazygit", "float")
+            end, "Toggle lazygit in floating term"
+        }
     }
 }
 
@@ -56,14 +73,14 @@ M.dap_go = {
 M.gopher = {
     plugin = true,
     n = {
-        ["<leader>gsj"] = { "<cmd> GoTagAdd json <CR>", "Add json struct tags" },
-        ["<leader>gsy"] = { "<cmd> GoTagAdd yaml <CR>", "Add yaml struct tags" }
+        ["<leader>gsj"] = {"<cmd> GoTagAdd json <CR>", "Add json struct tags"},
+        ["<leader>gsy"] = {"<cmd> GoTagAdd yaml <CR>", "Add yaml struct tags"}
     }
 }
 
 M.fugitive = {
     plugin = true,
-    n = { ["<leader>gg"] = { "<cmd> Git <CR>", "Open fugitive" } }
+    n = {["<leader>gg"] = {"<cmd> Git <CR>", "Open fugitive"}}
 }
 
 M.neotest = {
@@ -73,7 +90,7 @@ M.neotest = {
             function() require("neotest").run.run() end, "Run current test"
         },
         ["<leader>dM"] = {
-            function() require("neotest").run.run({ strategy = 'dap' }) end,
+            function() require("neotest").run.run({strategy = 'dap'}) end,
             "Debug current test"
         },
         ["<leader>ds"] = {
@@ -91,6 +108,36 @@ M.autosession = {
             function()
                 require("auto-session.session-lens").search_session()
             end, "Search sessions"
+        }
+    }
+}
+
+M.trouble = {
+    plugin = true,
+    n = {
+        ["<leader>tt"] = {
+            function() require("trouble").toggle() end, "Toggle Trouble"
+        },
+        ["<leader>tw"] = {
+            function()
+                require("trouble").toggle("workspace_diagnostics")
+            end, "Workspace diagnostics"
+        },
+        ["<leader>td"] = {
+            function()
+                require("trouble").toggle("document_diagnostics")
+            end, "Document diagnostics"
+        },
+        ["<leader>tq"] = {
+            function() require("trouble").toggle("quickfix") end, "Quickfix"
+        },
+        ["<leader>tl"] = {
+            function() require("trouble").toggle("loclist") end,
+            "Items from location list"
+        },
+        ["gR"] = {
+            function() require("trouble").toggle("lsp_references") end,
+            "Lps references"
         }
     }
 }

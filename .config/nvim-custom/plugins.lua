@@ -168,11 +168,9 @@ local plugins = {
         "folke/trouble.nvim",
         lazy = false,
         dependencies = {"nvim-tree/nvim-web-devicons"},
-        opts = {
-            -- your configuration comes here
-            -- or leave it empty to use the default settings
-            -- refer to the configuration section below
-        }
+        config = function()
+            require("core.utils").load_mappings("trouble")
+        end
     }, {
         -- Unit testing
         "nvim-neotest/neotest",
@@ -210,8 +208,7 @@ local plugins = {
                 },
                 session_lens = {
                     load_on_setup = true,
-                    theme_conf = {border = true},
-                    previewer = false
+                    theme_conf = {winblend = 0}
                 }
             })
             require("core.utils").load_mappings("autosession")
