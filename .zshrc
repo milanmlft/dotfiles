@@ -228,3 +228,6 @@ eval "$(pyenv virtualenv-init -)"
 
 ## set defaulft config directory for lazygit
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# Created by `pipx` on 2024-01-27 14:59:53
+export PATH="$PATH:/Users/milan/.local/bin"

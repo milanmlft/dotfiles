@@ -1,6 +1,7 @@
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "r-lib/rig"
 tap "romkatv/powerlevel10k"
@@ -36,8 +37,6 @@ brew "bfg"
 brew "boost"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
-# Modern, C++-native, header-only, test framework
-brew "catch2"
 # Object-file caching compiler wrapper
 brew "ccache"
 # Checks for bashisms in shell scripts
@@ -88,6 +87,8 @@ brew "libheif"
 brew "libomp"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
+# GNU utilities for networking
+brew "inetutils"
 # Just Another Gibbs Sampler for Bayesian MCMC simulation
 brew "jags"
 # Image manipulation library
@@ -126,6 +127,8 @@ brew "tree"
 brew "pass"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Object-relational database system
@@ -134,6 +137,8 @@ brew "postgresql@14"
 brew "powerlevel10k"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Secure and efficient FTP server
+brew "pure-ftpd"
 # Python version management
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
