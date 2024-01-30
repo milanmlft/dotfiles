@@ -6,7 +6,7 @@ local opts = {
         "dockerfile-language-server", "terraform-ls", "ansible-language-server",
         "ansible-lint", "yaml-language-server", "r-languageserver",
         "luaformatter", "lua-language-server", "markdownlint",
-        "cmake-language-server", "cmakelang"
+        "cmake-language-server", "cmakelang", "prettier", "prettierd"
     }
 }
 
