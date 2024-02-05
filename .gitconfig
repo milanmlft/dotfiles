@@ -7,16 +7,19 @@
 	safecrlf = true
 	excludesfile = /Users/milan/.gitignore_global
 [alias]
-  co = checkout
-  st = status
-  br = branch
-  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
-  type = cat-file -t
-  dump = cat-file -p
-  unstage = reset HEAD --
-  last = log -p -n 1
-  ci = commit -v
-  can = commit -v --amend --no-edit
+    co = checkout
+    st = status
+    br = branch
+    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    type = cat-file -t
+    dump = cat-file -p
+    unstage = reset HEAD --
+    last = log -p -n 1
+    ci = commit -v
+    can = commit -v --amend --no-edit
+	staash = stash --all
+	bb = !better-git-branch.sh
+	pushfwl = push --force-with-lease
 [commit]
 	template = /Users/milan/.stCommitMsg
 	gpgsign = true
@@ -44,3 +47,9 @@
 	repo = /Users/milan/Projects/tech-socials
 	repo = /Users/milan/Projects/UCLH-Foundry/PIXL
 	repo = /Users/milan
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
