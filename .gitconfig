@@ -40,3 +40,7 @@
 	defaultBranch = main
 [gpg]
 	program = /opt/homebrew/bin/gpg
+[maintenance]
+	repo = /Users/milan/Projects/tech-socials
+	repo = /Users/milan/Projects/UCLH-Foundry/PIXL
+	repo = /Users/milan
