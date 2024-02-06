@@ -17,9 +17,9 @@
     last = log -p -n 1
     ci = commit -v
     can = commit -v --amend --no-edit
-	staash = stash --all
-	bb = !better-git-branch.sh
-	pushfwl = push --force-with-lease
+    staash = stash --all
+    bb = !better-git-branch.sh
+    pushfwl = push --force-with-lease
 [commit]
 	template = /Users/milan/.stCommitMsg
 	gpgsign = true
