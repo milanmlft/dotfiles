@@ -19,18 +19,22 @@ export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
 
 # ALIASES
 # -------
+
+# Project shortcuts
+alias pixl='cd ~/Projects/UCLH-Foundry/PIXL'
+alias notes='cd ~/obsidian-notes/'
+
 alias ls='ls -GFhp'
 alias ll='ls -lhp'
 alias cp='cp -i'
 alias tree='tree -C'   # show filesizes in tree output and colorize output
 alias grep='grep -E'		# force grep to always use extended regexp
-alias weather='curl http://wttr.in/brussels'
 
 alias cat='bat'
 
 # Always use nvim
 alias vim='nvim'
-alias vi='nvim'
+alias v='nvim'
 
 ## R
 alias R='R --no-save --no-restore-data'		# never save or restore R workspace
@@ -212,8 +216,6 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 fpath=(/opt/vagrant/embedded/gems/gems/vagrant-2.3.7/contrib/zsh $fpath)
 compinit
 # <<<<  Vagrant command completion (end)
-
-eval $(thefuck --alias)
 
 ## Use GNU sed
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
