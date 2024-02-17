@@ -5,8 +5,6 @@ tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "r-lib/rig"
 tap "romkatv/powerlevel10k"
-# Run your GitHub Actions locally
-brew "act"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Automate deployment, configuration, and upgrading
@@ -151,6 +149,8 @@ brew "r"
 brew "rclone"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Version control system designed to be a better CVS
+brew "subversion"
 # Tool to build, change, and version infrastructure
 brew "terraform"
 # Tool to generate documentation from Terraform modules
@@ -159,8 +159,6 @@ brew "terraform-docs"
 brew "terragrunt"
 # Free software distribution for the TeX typesetting system
 brew "texlive"
-# Programmatically correct mistyped console commands
-brew "thefuck"
 # Simplified and community-driven man pages
 brew "tldr"
 # Terminal multiplexer
@@ -185,8 +183,6 @@ brew "zlib"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# Application launcher and productivity software
-cask "alfred"
 # Clipboard manager for developers
 cask "flycut"
 # Developer targeted fonts with a high number of glyphs
@@ -213,17 +209,11 @@ cask "rig"
 cask "rstudio"
 # Team communication and collaboration software
 cask "slack"
-# System monitor for the menu bar
-cask "stats"
-# Management tool for Unity
-cask "unity-hub"
 # Development environment
 cask "vagrant"
 # Gives Vagrant VMware plugin access to various VMware functionalities
 cask "vagrant-vmware-utility"
 # Open-source code editor
 cask "visual-studio-code"
-# HTML to PDF renderer
-cask "wkhtmltopdf"
-# Collect, organize, cite, and share research sources
+# Collect, organise, cite, and share research sources
 cask "zotero"
