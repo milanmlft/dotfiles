@@ -3,16 +3,16 @@ local M = {}
 M.general = {
     -- Allow window navigation also when in terminal mode
     t = {
-        ["<C-h>"] = {"<cmd> TmuxNavigateLeft<CR>", "window left"},
-        ["<C-l>"] = {"<cmd> TmuxNavigateRight<CR>", "window right"},
-        ["<C-j>"] = {"<cmd> TmuxNavigateDown<CR>", "window down"},
-        ["<C-k>"] = {"<cmd> TmuxNavigateUp<CR>", "window up"}
+        ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
+        ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
+        ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
+        ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" }
     },
     n = {
-        ["<C-h>"] = {"<cmd> TmuxNavigateLeft<CR>", "window left"},
-        ["<C-l>"] = {"<cmd> TmuxNavigateRight<CR>", "window right"},
-        ["<C-j>"] = {"<cmd> TmuxNavigateDown<CR>", "window down"},
-        ["<C-k>"] = {"<cmd> TmuxNavigateUp<CR>", "window up"}
+        ["<C-h>"] = { "<cmd> TmuxNavigateLeft<CR>", "window left" },
+        ["<C-l>"] = { "<cmd> TmuxNavigateRight<CR>", "window right" },
+        ["<C-j>"] = { "<cmd> TmuxNavigateDown<CR>", "window down" },
+        ["<C-k>"] = { "<cmd> TmuxNavigateUp<CR>", "window up" }
     }
 }
 
@@ -73,14 +73,14 @@ M.dap_go = {
 M.gopher = {
     plugin = true,
     n = {
-        ["<leader>gsj"] = {"<cmd> GoTagAdd json <CR>", "Add json struct tags"},
-        ["<leader>gsy"] = {"<cmd> GoTagAdd yaml <CR>", "Add yaml struct tags"}
+        ["<leader>gsj"] = { "<cmd> GoTagAdd json <CR>", "Add json struct tags" },
+        ["<leader>gsy"] = { "<cmd> GoTagAdd yaml <CR>", "Add yaml struct tags" }
     }
 }
 
 M.fugitive = {
     plugin = true,
-    n = {["<leader>gg"] = {"<cmd> Git <CR>", "Open fugitive"}}
+    n = { ["<leader>gg"] = { "<cmd> Git <CR>", "Open fugitive" } }
 }
 
 M.neotest = {
@@ -90,12 +90,16 @@ M.neotest = {
             function() require("neotest").run.run() end, "Run current test"
         },
         ["<leader>dM"] = {
-            function() require("neotest").run.run({strategy = 'dap'}) end,
+            function() require("neotest").run.run({ strategy = 'dap' }) end,
             "Debug current test"
         },
         ["<leader>ds"] = {
             function() require("neotest").summary.toggle() end,
             "Toggle test summary"
+        },
+        ["<leader>do"] = {
+            function() require("neotest").output_panel.toggle() end,
+            "Toggle test output panel"
         }
 
     }
