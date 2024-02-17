@@ -47,6 +47,8 @@
 	repo = /Users/milan/Projects/tech-socials
 	repo = /Users/milan/Projects/UCLH-Foundry/PIXL
 	repo = /Users/milan
+	repo = /Users/milan/github/milanmlft
+	repo = /Users/milan/Teaching/ClinicianCoders
 [rerere]
 	enabled = true
 [column]
