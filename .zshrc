@@ -1,3 +1,6 @@
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
 # load .profile
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
@@ -6,6 +9,29 @@ export TERM="xterm-256color"
 
 ## set defaulft config directory
 export XDG_CONFIG_HOME="$HOME/.config"
+
+# Which plugins would you like to load?
+# Standard plugins can be found in $ZSH/plugins/
+# Custom plugins may be added to $ZSH_CUSTOM/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+plugins=(
+    git
+    colored-man-pages
+    python
+    pyenv
+    virtualenv
+    extract
+    z
+    docker
+    zsh-autosuggestions
+    zsh-syntax-highlighting
+)
+source $ZSH/oh-my-zsh.sh
+
+# User configuration
+alias ohmyzsh="nvim ~/.oh-my-zsh"
+alias zshconfig="nvim ~/.zshrc"
 
 # Set vi-mode as default for shell interaction
 set -o vi
@@ -25,12 +51,13 @@ alias zshconf='nvim ~/.zshrc'
 alias projects='cd ~/Projects'
 alias pixl='cd ~/Projects/UCLH-Foundry/PIXL && nvim'
 alias todo='cd ~/Projects/todo/ && nvim'
-alias notes='cd ~/obsidian-notes/ && nvim'
+alias notes='cd ~/obsidian-notes/'
 
 alias ls='ls -GFhp'
 alias ll='ls -lhp'
-alias cp='cp -i'
+alias la='ll -a'
 alias tree='tree -C'   # show filesizes in tree output and colorize output
+alias cp='cp -i'
 alias grep='grep -E'		# force grep to always use extended regexp
 
 alias cat='bat'
