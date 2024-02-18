@@ -82,19 +82,15 @@ export CXX="g++-13"
 export GPG_TTY=$TTY
 
 ## aws code completion
-autoload bashcompinit && bashcompinit
-autoload -Uz compinit && compinit
-complete -C '/opt/homebrew/bin/aws_completer' aws
+# autoload bashcompinit && bashcompinit
+# autoload -Uz compinit && compinit
+# complete -C '/opt/homebrew/bin/aws_completer' aws
+#
+# export AWS_PROFILE=playpen
 
-export AWS_PROFILE=playpen
-
-autoload -U +X bashcompinit && bashcompinit
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
-
-# >>>> Vagrant command completion (start)
-fpath=(/opt/vagrant/embedded/gems/gems/vagrant-2.3.7/contrib/zsh $fpath)
-compinit
-# <<<<  Vagrant command completion (end)
+## terraform code completion
+# autoload -U +X bashcompinit && bashcompinit
+# complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 ## Use GNU sed
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
