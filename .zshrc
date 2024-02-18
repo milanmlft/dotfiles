@@ -1,30 +1,21 @@
-# Homebrew powerlevel10k theme
-source /opt/homebrew/share/powerlevel10k/powerlevel10k.zsh-theme
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 # load .profile
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
+## Colors
 export TERM="xterm-256color"
-export ITERM_ENABLE_SHELL_INTEGRATION_WITH_TMUX=YES
 
 ## set defaulft config directory
 export XDG_CONFIG_HOME="$HOME/.config"
 
+# Set vi-mode as default for shell interaction
+set -o vi
 
 # ALIASES
 # -------
 
 alias conf='cd ~/.config'
 alias nvconf='nvim ~/.config/nvim/'
+alias zshconf='nvim ~/.zshrc'
 
 # Project shortcuts
 alias projects='cd ~/Projects'
@@ -62,53 +53,8 @@ alias git='nocorrect git'
 # If you come from bash you might have to change your $PATH.
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/milan/.oh-my-zsh"
-
-# Set name of the theme to load --- if set to "random", it will
-# load a random theme each time oh-my-zsh is loaded, in which case,
-# to know which specific one was loaded, run: echo $RANDOM_THEME
-# See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-#ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel10k/powerlevel10k"
-# customize prompt
-POWERLEVEL9K_SHORTEN_DIR_LENGTH=1
-POWERLEVEL9K_SHORTEN_DELIMITER=""
-POWERLEVEL9K_SHORTEN_STRATEGY="truncate_from_right"
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(anaconda context dir vcs)
-POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=(status pyenv virtualenv root_indicator time vi_mode)
-POWERLEVEL9K_PROMPT_ON_NEWLINE=true
-POWERLEVEL9K_PROMPT_ADD_NEWLINE=true
-POWERLEVEL9K_ANACONDA_BACKGROUND="black"
-POWERLEVEL9K_ANACONDA_FOREGROUND="green"
-
-DEFAULT_USER="milan"
-
-# Uncomment the following line to enable command auto-correction.
-ENABLE_CORRECTION="true"
-
-# Which plugins would you like to load?
-# Standard plugins can be found in ~/.oh-my-zsh/plugins/*
-# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    git
-    colored-man-pages
-    python
-    pyenv
-    virtualenv
-    extract
-    z
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-    docker
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# Set vi-mode as default for shell interaction
-set -o vi
+# Paths
+# -----
 
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 
@@ -128,8 +74,6 @@ export CMAKE_FIND_APPBUNDLE="NEVER"
 export CMAKE_EXPORT_COMPILE_COMMANDS="ON"
 export C="gcc-13"
 export CXX="g++-13"
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
 export GPG_TTY=$TTY
 
