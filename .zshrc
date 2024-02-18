@@ -10,6 +10,10 @@ export XDG_CONFIG_HOME="$HOME/.config"
 # Set vi-mode as default for shell interaction
 set -o vi
 
+# Load starship
+eval "$(starship init zsh)"
+
+
 # ALIASES
 # -------
 
