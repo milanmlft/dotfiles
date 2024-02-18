@@ -15,6 +15,10 @@ return {
         "gitignore",
         "go",
       },
+      highlight = {
+        enable = true,
+        use_languagetree = true,
+      },
     },
   },
 }
