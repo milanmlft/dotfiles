@@ -4,9 +4,6 @@ export ZSH="$HOME/.oh-my-zsh"
 # load .profile
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
-## Colors
-export TERM="xterm-256color"
-
 ## set defaulft config directory
 export XDG_CONFIG_HOME="$HOME/.config"
 
