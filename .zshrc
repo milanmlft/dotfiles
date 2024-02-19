@@ -44,7 +44,7 @@ eval "$(starship init zsh)"
 # -------
 
 alias conf='cd ~/.config'
-alias nvconf='nvim ~/.config/nvim/'
+alias nvconf='cd ~/.config/nvim/ && nvim'
 alias zshconf='nvim ~/.zshrc'
 
 # Project shortcuts
