@@ -24,6 +24,10 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
+
+## brew autocompletion
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
