@@ -1,10 +1,8 @@
 ## Set catppuccin theme
-import = [
-  "~/.config/alacritty/themes/themes/catppuccin.toml"
-]
+import = ["~/.config/alacritty/themes/themes/catppuccin.toml"]
 
 [font]
-size = 16
+size = 14
 
 [font.normal]
 family = "JetBrainsMonoNL Nerd Font"
@@ -20,4 +18,4 @@ y = 0
 ## Set tmux as the default shell
 [shell]
 program = "/opt/homebrew/bin/tmux"
-args = ["new-session", "-A", "-D", "-s" ,"main"]
+args = ["new-session", "-A", "-D", "-s", "main"]
