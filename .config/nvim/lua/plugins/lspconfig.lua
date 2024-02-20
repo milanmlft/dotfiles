@@ -5,6 +5,7 @@ return {
       bashls = {},
       eslint = {},
       -- Python
+      -- Still need pyright for more LSP features
       pyright = {},
       ruff_lsp = {},
       -- C++
