@@ -203,6 +203,8 @@ cask "google-chrome"
 cask "inkscape"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
+# Web browser
+cask "microsoft-edge"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Scientific and technical publishing system built on Pandoc
