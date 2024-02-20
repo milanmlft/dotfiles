@@ -187,6 +187,10 @@ brew "zlib"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# GPU-accelerated terminal emulator
+cask "alacritty"
+# Automatic tiling window manager similar to xmonad
+cask "amethyst"
 # Clipboard manager for developers
 cask "flycut"
 # Developer targeted fonts with a high number of glyphs
