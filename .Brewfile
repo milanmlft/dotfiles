@@ -51,6 +51,8 @@ brew "cppcheck"
 brew "docker"
 # C++ template library for linear algebra
 brew "eigen"
+# Simple, fast and user-friendly alternative to find
+brew "fd"
 # GNU compiler collection
 brew "gcc"
 # GitHub command-line tool
