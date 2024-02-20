@@ -209,8 +209,6 @@ cask "obsidian"
 cask "quarto"
 # Control your tools with a few keystrokes
 cask "raycast"
-# Move and resize windows using keyboard shortcuts or snap areas
-cask "rectangle"
 # The R Installation Manager
 cask "rig"
 # Data science software focusing on R and Python
