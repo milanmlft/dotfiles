@@ -45,7 +45,7 @@ return {
       table.insert(opts.sources, 1, {
         name = "copilot",
         group_index = 1,
-        priority = -100, -- Let Copilot be the last suggestion
+        priority = -1000, -- Let Copilot be the last suggestion
       })
     end,
   },
