@@ -201,6 +201,8 @@ cask "font-jetbrains-mono-nerd-font"
 cask "google-chrome"
 # Vector graphics editor
 cask "inkscape"
+# Open-source keystroke visualiser
+cask "keycastr"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
 # Web browser
