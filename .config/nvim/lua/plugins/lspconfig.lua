@@ -6,7 +6,19 @@ return {
       eslint = {},
       -- Python
       -- Still need pyright for more LSP features
-      pyright = {},
+      pyright = {
+        settings = {
+          pyright = {
+            disableOrganizeImports = true, -- Using Ruff
+          },
+          python = {
+            analysis = {
+              ignore = { "*" }, -- Using Ruff
+              typeCheckingMode = "off", -- Using mypy
+            },
+          },
+        },
+      },
       ruff_lsp = {},
       -- C++
       clangd = {},
