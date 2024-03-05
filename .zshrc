@@ -50,9 +50,9 @@ alias zshconf='nvim ~/.zshrc'
 
 # Project shortcuts
 alias projects='cd ~/Projects'
-alias pixl='cd ~/Projects/UCLH-Foundry/PIXL && nvim'
-alias todo='cd ~/Projects/todo/ && nvim'
-alias notes='cd ~/obsidian-notes/'
+alias ppixl='cd ~/Projects/UCLH-Foundry/PIXL && nvim'
+alias ptodo='cd ~/Projects/todo/ && nvim'
+alias pnotes='cd ~/obsidian-notes/'
 
 alias ls='ls -GFhp'
 alias ll='ls -lhp'
