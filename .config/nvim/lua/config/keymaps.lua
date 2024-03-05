@@ -26,4 +26,4 @@ map("n", "Q", "<nop>")
 -- Replace word under cursor
 map("n", "<leader>r", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>")
 
-map("n", "<leader>u", vim.cmd.UndotreeToggle)
+map("n", "<leader>U", vim.cmd.UndotreeToggle, { desc = "Toggle Undotree" })
