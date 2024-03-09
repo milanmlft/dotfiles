@@ -60,6 +60,8 @@ return {
             return { "--python-executable", virtual .. "/bin/python3" }
           end,
         }),
+        -- Styler for R
+        nls.builtins.formatting.styler,
       })
     end,
   },
