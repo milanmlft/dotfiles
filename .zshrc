@@ -92,21 +92,26 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 
 ## Set C++ compilers
-export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-export PATH="/opt/homebrew/opt/gcc/bin:$PATH"
-export PATH="/opt/homebrew/opt/ccache/libexec:$PATH"
+export PATH="$(brew --prefix)/opt/llvm/bin:$PATH"
+export PATH="$(brew --prefix)/opt/gcc/bin:$PATH"
+export PATH="$(brew --prefix)/opt/ccache/libexec:$PATH"
 
 ## Use Homebrew gcc compilers
 alias gcc="gcc-13"
 alias g++="g++-13"
 
 ## For CMake
-export CMAKE_PREFIX_PATH="/opt/homebrew"
+export CMAKE_PREFIX_PATH="$(brew --prefix)"
+export CMAKE_C_COMPILER="$(brew --prefix)/opt/gcc/bin/gcc-13"
+export CMAKE_CXX_COMPILER="$(brew --prefix)/opt/gcc/bin/g++-13"
 export CMAKE_FIND_FRAMEWORK="LAST"
 export CMAKE_FIND_APPBUNDLE="NEVER"
 export CMAKE_EXPORT_COMPILE_COMMANDS="ON"
 export C="gcc-13"
 export CXX="g++-13"
+
+export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
 
 export GPG_TTY=$TTY
 
