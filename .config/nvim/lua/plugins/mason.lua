@@ -12,6 +12,7 @@ return {
       "prettierd",
       "cmake-language-server",
       "cmakelang",
+      "cmakelint",
     },
   },
 }
