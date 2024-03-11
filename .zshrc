@@ -107,11 +107,8 @@ export CMAKE_CXX_COMPILER="$(brew --prefix)/opt/gcc/bin/g++-13"
 export CMAKE_FIND_FRAMEWORK="LAST"
 export CMAKE_FIND_APPBUNDLE="NEVER"
 export CMAKE_EXPORT_COMPILE_COMMANDS="ON"
-export C="gcc-13"
-export CXX="g++-13"
-
-export LDFLAGS="-L/opt/homebrew/opt/libomp/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/libomp/include"
+export CC="clang"
+export CXX="clang++"
 
 export GPG_TTY=$TTY
 
