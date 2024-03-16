@@ -50,3 +50,5 @@ build/
 # Vim sessions
 Session.vim
 
+*cmake-tools*
+compile_commands.json
