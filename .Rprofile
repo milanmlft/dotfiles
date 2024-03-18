@@ -23,7 +23,7 @@ options(
     comment = c(ORCID = "0000-0001-9144-3701"))',
     Version = "0.0.1"
   ),
-  usethis.protocol  = "ssh"
+  usethis.protocol = "ssh"
 )
 
 # Options for reprex
@@ -65,7 +65,6 @@ if (interactive()) {
     warnPartialMatchAttr = TRUE,
     warnPartialMatchArgs = TRUE
   )
-  # options(styler.addins_style_transformer = "biocthis::bioc_style()")
   options(styler.cache_root = "styler_perm")
 
   # print .libPaths()
@@ -79,16 +78,16 @@ if (interactive()) {
 
   # Check and print BioC version
   if (requireNamespace("BiocManager", quietly = TRUE)) {
-      bioc_devel <- BiocManager:::isDevel()
-      msg <- paste("Using Bioconductor", BiocManager::version())
+    bioc_devel <- BiocManager:::isDevel()
+    msg <- paste("Using Bioconductor", BiocManager::version())
     if (bioc_devel) msg <- paste(msg, "(devel)")
-      message(msg)
-      # if (!bioc_devel) {
-      #    message(
-      #        "Activate Bioc-devel with\n",
-      #        "  .libPaths('~/Library/R/x86_64/4.1-Bioc-devel/library/')"
-      #    )
-      # }
+    message(msg)
+    # if (!bioc_devel) {
+    #    message(
+    #        "Activate Bioc-devel with\n",
+    #        "  .libPaths('~/Library/R/x86_64/4.1-Bioc-devel/library/')"
+    #    )
+    # }
   }
   ## Clean up
   rm(list = ls())
@@ -105,7 +104,6 @@ if (requireNamespace("languageserversetup", quietly = TRUE)) {
 
 # From https://github.com/REditorSupport/vscode-R/wiki/Interacting-with-R-terminals
 if (interactive() && Sys.getenv("TERM_PROGRAM") == "vscode") {
-
   # https://github.com/REditorSupport/vscode-R/wiki/Plot-viewer#svg-in-httpgd-webpage
   if ("httpgd" %in% .packages(all.available = TRUE)) {
     options(vsc.plot = FALSE)
@@ -116,11 +114,12 @@ if (interactive() && Sys.getenv("TERM_PROGRAM") == "vscode") {
     options(vsc.use_httpgd = TRUE)
   }
 
-	vscodeR_init <- file.path(Sys.getenv(if (.Platform$OS.type == "windows") "USERPROFILE" else "HOME"), ".vscode-R", "init.R")
-	if (file.exists(vscodeR_init)) { # nolint
-			source(vscodeR_init)
-	}
-	## Clean up
-	rm(vscodeR_init)
+  vscodeR_init <- file.path(Sys.getenv(
+    if (.Platform$OS.type == "windows") "USERPROFILE" else "HOME"
+  ), ".vscode-R", "init.R")
+  if (file.exists(vscodeR_init)) { # nolint
+    source(vscodeR_init)
+  }
+  ## Clean up
+  rm(vscodeR_init)
 }
-
