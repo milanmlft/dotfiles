@@ -139,3 +139,8 @@ eval "$(pyenv virtualenv-init -)"
 
 # Created by `pipx` on 2024-01-27 14:59:53
 export PATH="$PATH:/Users/milan/.local/bin"
+
+# >>>> Vagrant command completion (start)
+fpath=(/opt/vagrant/embedded/gems/gems/vagrant-2.4.1/contrib/zsh $fpath)
+compinit
+# <<<<  Vagrant command completion (end)
