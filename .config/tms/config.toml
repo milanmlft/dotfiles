@@ -1,5 +1,14 @@
 default_session = "main"
+recursive_submodules = false
 
 [[search_dirs]]
 path = "/Users/milan/Projects"
+depth = 3
+
+[[search_dirs]]
+path = "/Users/milan/R-packages"
+depth = 3
+
+[[search_dirs]]
+path = "/Users/milan/Learning"
 depth = 3
