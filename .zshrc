@@ -7,6 +7,9 @@ export ZSH="$HOME/.oh-my-zsh"
 ## set defaulft config directory
 export XDG_CONFIG_HOME="$HOME/.config"
 
+## Set config location for tms
+export TMS_CONFIG_FILE="$XDG_CONFIG_HOME/tms/config.toml"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
