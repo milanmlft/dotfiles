@@ -16,7 +16,6 @@ export TMS_CONFIG_FILE="$XDG_CONFIG_HOME/tms/config.toml"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-    git
     colored-man-pages
     python
     pyenv
