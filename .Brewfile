@@ -35,6 +35,8 @@ brew "bfg"
 brew "boost"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
+# Modern, C++-native, header-only, test framework
+brew "catch2"
 # Object-file caching compiler wrapper
 brew "ccache"
 # Checks for bashisms in shell scripts
@@ -55,6 +57,8 @@ brew "eigen"
 brew "fd"
 # GNU compiler collection
 brew "gcc"
+# High performance message passing library
+brew "open-mpi"
 # GitHub command-line tool
 brew "gh"
 # Interpreter for PostScript and PDF
@@ -69,14 +73,20 @@ brew "glow"
 brew "gnu-sed"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
+# Passphrase entry dialog utilizing the Assuan protocol
+brew "pinentry"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
+# Command-driven, interactive function plotting
+brew "gnuplot"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Library to render SVG files using Cairo
 brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
+# Numerical library for C and C++
+brew "gsl"
 # Improved top (interactive process viewer)
 brew "htop"
 # Command-line benchmarking tool
@@ -101,6 +111,8 @@ brew "node"
 brew "pandoc"
 # Interactive environments for writing and running code
 brew "jupyterlab"
+# LastPass command-line interface tool
+brew "lastpass-cli"
 # Simple terminal UI for git commands
 brew "lazygit"
 # GNOME XML library
@@ -115,10 +127,10 @@ brew "llvm@15"
 brew "luarocks"
 # Language Server Protocol for Markdown
 brew "marksman"
+# C++ Graphics Library for Data Visualization
+brew "matplotplusplus"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# High performance message passing library
-brew "open-mpi"
 # Optimized BLAS library
 brew "openblas"
 # Display directories as trees (with optional color/HTML output)
@@ -175,6 +187,8 @@ brew "topgrade"
 brew "typos-cli"
 # ODBC 3 connectivity for UNIX
 brew "unixodbc"
+# Extremely fast Python package installer and resolver, written in Rust
+brew "uv"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Internet file retriever
@@ -201,6 +215,8 @@ cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 # Web browser
 cask "google-chrome"
+# Utility to hide menu bar items
+cask "hiddenbar"
 # Vector graphics editor
 cask "inkscape"
 # Open-source keystroke visualiser
@@ -227,5 +243,7 @@ cask "vagrant"
 cask "vagrant-vmware-utility"
 # Open-source code editor
 cask "visual-studio-code"
+# Multiplayer code editor
+cask "zed"
 # Collect, organise, cite, and share research sources
 cask "zotero"
