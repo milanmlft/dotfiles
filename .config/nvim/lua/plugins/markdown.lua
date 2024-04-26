@@ -9,15 +9,4 @@ return {
   },
   { "vim-pandoc/vim-pandoc" },
   { "vim-pandoc/vim-pandoc-syntax" },
-  {
-    "mfussenegger/nvim-lint",
-    opts = {
-      linters = {
-        markdownlint = {
-          -- Disable line length cheking for markdown
-          args = { "--disable", "MD013", "--" },
-        },
-      },
-    },
-  },
 }
