@@ -91,6 +91,9 @@ export PATH=$HOME/bin:/usr/local/bin:$PATH
 # Paths
 # -----
 
+## Personal scripts
+export PATH="$PATH:$HOME/bin"
+
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 
 ## Set C++ compilers
