@@ -117,6 +117,13 @@ export CXX="clang++"
 
 export GPG_TTY=$TTY
 
+# Ruby
+export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
+
+
 ## aws code completion
 # autoload bashcompinit && bashcompinit
 # autoload -Uz compinit && compinit

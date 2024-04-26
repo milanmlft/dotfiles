@@ -151,6 +151,8 @@ brew "r"
 brew "rclone"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Powerful, clean, object-oriented scripting language
+brew "ruby"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Version control system designed to be a better CVS
