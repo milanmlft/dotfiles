@@ -96,6 +96,10 @@ export PATH="$PATH:$HOME/bin"
 
 export PATH="/usr/local/opt/libxml2/bin:$PATH"
 
+# allows Coreutils package to be used without 'g' prefix before each command.
+export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
+export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
+
 ## Set C++ compilers
 export PATH="$(brew --prefix)/opt/llvm/bin:$PATH"
 export PATH="$(brew --prefix)/opt/gcc/bin:$PATH"
