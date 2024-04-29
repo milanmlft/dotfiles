@@ -42,6 +42,7 @@ dev/
 .venv/
 .python-version
 pyrightconfig.json
+__pycache__/
 
 # C++ stuff
 .cache/
