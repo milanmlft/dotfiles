@@ -35,11 +35,9 @@
     "scroll_past_end_of_document": true,
     "default_project_location": "~/Projects",
     "wrap_tab_navigation": false,
-    "save_workspace": "never",
     "reuse_sessions_for_project_links": true,
     "posix_terminal_shell": "zsh",
     "jobs_tab_visibility": "shown",
-    "load_workspace": false,
     "num_spaces_for_tab": 4,
     "check_arguments_to_r_function_calls": true,
     "style_diagnostics": true,
@@ -64,5 +62,8 @@
     "margin_column": 100,
     "save_files_before_build": true,
     "copilot_enabled": true,
-    "source_with_echo": true
+    "source_with_echo": true,
+    "spelling_dictionary_language": "en_GB",
+    "save_workspace": "never",
+    "load_workspace": false
 }
