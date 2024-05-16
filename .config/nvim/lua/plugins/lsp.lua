@@ -47,7 +47,6 @@ return {
       },
     },
   },
-  -- Set up mypy through null-ls
   {
     "nvimtools/none-ls.nvim", -- null-ls fork after it was archived
     opts = function(_, opts)
@@ -59,10 +58,19 @@ return {
             local virtual = os.getenv("VIRTUAL_ENV") or os.getenv("CONDA_PREFIX") or "/usr"
             return { "--python-executable", virtual .. "/bin/python3" }
           end,
+          -- Styler for R
+          nls.builtins.formatting.styler,
         }),
-        -- Styler for R
-        nls.builtins.formatting.styler,
       })
     end,
+  },
+  {
+    "mfussenegger/nvim-lint",
+    optional = true,
+    opts = {
+      linters_by_ft = {
+        cmake = { "cmakelint" },
+      },
+    },
   },
 }
