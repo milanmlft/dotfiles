@@ -61,7 +61,7 @@ alias ll='ls -lhp'
 alias la='ll -a'
 alias tree='tree -C'   # show filesizes in tree output and colorize output
 alias cp='cp -i'
-alias grep='grep -E'		# force grep to always use extended regexp
+alias grep='grep -E --color'		# force grep to always use extended regexp
 
 alias cat='bat'
 
