@@ -131,6 +131,8 @@ brew "marksman"
 brew "matplotplusplus"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+# Manage multiple Node.js versions
+brew "nvm"
 # Optimized BLAS library
 brew "openblas"
 # Display directories as trees (with optional color/HTML output)
