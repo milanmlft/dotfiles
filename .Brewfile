@@ -59,6 +59,8 @@ brew "fd"
 brew "gcc"
 # High performance message passing library
 brew "open-mpi"
+# GNU compiler collection
+brew "gcc@13"
 # GitHub command-line tool
 brew "gh"
 # Interpreter for PostScript and PDF
