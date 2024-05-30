@@ -14,6 +14,7 @@ return {
         "cpp",
         "gitignore",
         "go",
+        "markdown",
       },
       highlight = {
         enable = true,

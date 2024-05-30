@@ -20,12 +20,18 @@ return {
             },
           },
         },
+        -- R
+        r_language_server = {
+          root_dir = function(fname)
+            return require("lspconfig.util").root_pattern("DESCRIPTION", "NAMESPACE", ".Rbuildignore")(fname)
+              or require("lspconfig.util").find_git_ancestor(fname)
+              or vim.loop.os_homedir()
+          end,
+        },
         ruff_lsp = {},
         -- C++
         clangd = {},
         cmake = {},
-        -- R
-        r_language_server = {},
         -- Docker
         dockerls = {},
         docker_compose_language_service = {},
