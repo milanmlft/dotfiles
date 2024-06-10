@@ -73,6 +73,9 @@ alias v='nvim'
 alias R='R --no-save --no-restore-data'		# never save or restore R workspace
 alias bioc-devel='R_LIBS_USER=~/Library/R/x86_64/4.1-Bioc-3.14/library radian' # launch R with bioc-devel library
 alias rad='radian'
+alias rcheck='Rscript -e "devtools::check()"'
+alias rtest='Rscript -e "devtools::test()"'
+alias rinstall='Rscript -e "devtools::install()"'
 
 ## Python
 alias python='python3'
