@@ -7,6 +7,12 @@ tap "r-lib/rig"
 tap "romkatv/powerlevel10k"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
+# Library for command-line editing
+brew "readline"
+# Command-line interface for SQLite
+brew "sqlite"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # Automate deployment, configuration, and upgrading
 brew "ansible", link: false
 # Library for manipulating PNG images
@@ -159,10 +165,6 @@ brew "pure-ftpd"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
-# Tool Command Language
-brew "tcl-tk"
-# Software environment for statistical computing
-brew "r"
 # Rsync for cloud storage
 brew "rclone"
 # Search tool like grep and The Silver Searcher
@@ -173,6 +175,8 @@ brew "ruby"
 brew "starship"
 # Version control system designed to be a better CVS
 brew "subversion"
+# Tool Command Language
+brew "tcl-tk"
 # Tool to build, change, and version infrastructure
 brew "terraform"
 # Tool to generate documentation from Terraform modules
@@ -223,6 +227,8 @@ cask "google-chrome"
 cask "hiddenbar"
 # Vector graphics editor
 cask "inkscape"
+# Programming language for technical computing
+cask "julia"
 # Open-source keystroke visualiser
 cask "keycastr"
 # Full TeX Live distribution with GUI applications
