@@ -50,6 +50,9 @@ alias conf='cd ~/.config'
 alias nvconf='cd ~/.config/nvim/ && nvim'
 alias zshconf='nvim ~/.zshrc'
 
+# Update brewfile
+alias brupdate='~/.config/homebrew/update.sh'
+
 # Project shortcuts
 alias projects='cd ~/Projects'
 alias ppixl='cd ~/Projects/UCLH-Foundry/PIXL && nvim'
