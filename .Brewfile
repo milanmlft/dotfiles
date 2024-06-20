@@ -247,6 +247,8 @@ cask "rig"
 cask "rstudio"
 # Team communication and collaboration software
 cask "slack"
+# Music streaming service
+cask "spotify"
 # Development environment
 cask "vagrant"
 # Gives Vagrant VMware plugin access to various VMware functionalities
