@@ -165,6 +165,10 @@ brew "pure-ftpd"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
+# Tool Command Language
+brew "tcl-tk"
+# Software environment for statistical computing
+brew "r"
 # Rsync for cloud storage
 brew "rclone"
 # Search tool like grep and The Silver Searcher
@@ -175,8 +179,6 @@ brew "ruby"
 brew "starship"
 # Version control system designed to be a better CVS
 brew "subversion"
-# Tool Command Language
-brew "tcl-tk"
 # Tool to build, change, and version infrastructure
 brew "terraform"
 # Tool to generate documentation from Terraform modules
@@ -217,9 +219,7 @@ cask "alacritty"
 cask "amethyst"
 # Clipboard manager for developers
 cask "flycut"
-# Developer targeted fonts with a high number of glyphs
 cask "font-hack-nerd-font"
-# Developer targeted fonts with a high number of glyphs
 cask "font-jetbrains-mono-nerd-font"
 # Web browser
 cask "google-chrome"
