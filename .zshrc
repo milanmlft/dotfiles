@@ -21,9 +21,6 @@ plugins=(
     zsh-syntax-highlighting
 )
 
-## brew autocompletion
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -127,6 +124,8 @@ export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
 export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
 export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 
+## brew autocompletion
+FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 ## aws code completion
 # autoload bashcompinit && bashcompinit
