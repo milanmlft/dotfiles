@@ -2,8 +2,8 @@
     "panes": {
         "quadrants": [
             "Source",
-            "TabSet1",
             "Console",
+            "TabSet1",
             "TabSet2"
         ],
         "tabSet1": [
@@ -62,7 +62,6 @@
     "margin_column": 100,
     "save_files_before_build": true,
     "copilot_enabled": true,
-    "source_with_echo": true,
     "spelling_dictionary_language": "en_GB",
     "save_workspace": "never",
     "load_workspace": false
