@@ -17,12 +17,6 @@ export TMS_CONFIG_FILE="$XDG_CONFIG_HOME/tms/config.toml"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
     colored-man-pages
-    python
-    pyenv
-    virtualenv
-    extract
-    z
-    docker
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
