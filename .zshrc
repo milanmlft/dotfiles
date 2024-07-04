@@ -73,7 +73,7 @@ alias rinstall='Rscript -e "devtools::install()"'
 
 ## Python
 alias python='python3'
-alias pip='noglob pip'
+alias pip='uv pip'
 
 ## Misc
 alias ls-dot='ls -a | grep "^\."'   # List dot-files
