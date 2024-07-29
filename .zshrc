@@ -109,17 +109,6 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 ## brew autocompletion
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
-## aws code completion
-# autoload bashcompinit && bashcompinit
-# autoload -Uz compinit && compinit
-# complete -C '/opt/homebrew/bin/aws_completer' aws
-#
-# export AWS_PROFILE=playpen
-
-## terraform code completion
-# autoload -U +X bashcompinit && bashcompinit
-# complete -o nospace -C /opt/homebrew/bin/terraform terraform
-
 ## Use GNU sed
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
 
@@ -133,11 +122,6 @@ eval "$(pyenv virtualenv-init -)"
 
 # Created by `pipx` on 2024-01-27 14:59:53
 export PATH="$PATH:/Users/milan/.local/bin"
-
-# >>>> Vagrant command completion (start)
-fpath=(/opt/vagrant/embedded/gems/gems/vagrant-2.4.1/contrib/zsh $fpath)
-compinit
-# <<<<  Vagrant command completion (end)
 
 # nvm
  export NVM_DIR="$HOME/.nvm"
