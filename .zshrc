@@ -1,32 +1,14 @@
-# Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
-
 # load .profile
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+
+## Colors
+export TERM="xterm-256color"
 
 ## set defaulft config directory
 export XDG_CONFIG_HOME="$HOME/.config"
 
 ## Set config location for tms
 export TMS_CONFIG_FILE="$XDG_CONFIG_HOME/tms/config.toml"
-
-# Which plugins would you like to load?
-# Standard plugins can be found in $ZSH/plugins/
-# Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
-# Add wisely, as too many plugins slow down shell startup.
-plugins=(
-    colored-man-pages
-    zsh-autosuggestions
-    zsh-syntax-highlighting
-)
-
-source $ZSH/oh-my-zsh.sh
-
-# User configuration
-alias ohmyzsh="nvim ~/.oh-my-zsh"
-alias zshconfig="nvim ~/.zshrc"
-
 # Set vi-mode as default for shell interaction
 set -o vi
 
