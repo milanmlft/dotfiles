@@ -27,3 +27,17 @@ eval "$(starship init zsh)"
 # Load completions
 autoload -Uz +X compinit && compinit
 zinit cdreplay -q
+
+
+# Track zsh history
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUPE=erase # erase duplicates
+setopt appendhistory
+setopt sharehistory # share history across terminals
+setopt hist_ignore_space # ignore commands starting with space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
