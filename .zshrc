@@ -1,6 +1,8 @@
 # load .profile
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
+# Set vi-mode as default for shell interaction
+set -o vi
 
 # https://youtu.be/ud7YxC33Z3w?si=oBp68ABoP5NrMJB8
 # Root dir for zinit
