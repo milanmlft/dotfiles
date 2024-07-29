@@ -10,3 +10,5 @@ export LANG="en_US.UTF-8"
 
 . "$HOME/.cargo/env"
 
+# Add Homebrew-installed bins to the PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"
