@@ -55,4 +55,4 @@ eval "$(zoxide init --cmd cd zsh)"
 
 # Aliases
 # =======
-source ~/.config/zsh/aliases.zsh
+source ${HOME}/.config/zsh/aliases.zsh
