@@ -52,3 +52,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath' # mak
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+
+# Aliases
+# =======
+source ~/.config/zsh/aliases.zsh
