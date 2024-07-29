@@ -56,10 +56,10 @@ eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
 # Aliases 
-source ${HOME}/.config/zsh/aliases.zsh
+source $HOME/.config/zsh/aliases.zsh
 
 # Paths
-source ${HOME}/.config/zsh/paths.zsh
+source $HOME/.config/zsh/paths.zsh
 
 # pyenv setup
 export PYENV_ROOT="$HOME/.pyenv"
