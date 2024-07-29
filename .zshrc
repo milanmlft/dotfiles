@@ -47,3 +47,8 @@ zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # make completioon cas
 zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}' # use LS_COLORS for completion colors
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' # preview files in fzf-tab
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath' # make file preview work with zoxide
+
+
+# Shell integrations
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
