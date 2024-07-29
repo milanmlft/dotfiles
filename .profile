@@ -10,7 +10,5 @@ export LANG="en_US.UTF-8"
 
 . "$HOME/.cargo/env"
 
-# pyenv setup
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init --path)"
+# Add Homebrew-installed bins to the PATH
+eval "$(/opt/homebrew/bin/brew shellenv)"

@@ -1,130 +1,73 @@
 # load .profile
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
-## Colors
-export TERM="xterm-256color"
-
-## set defaulft config directory
-export XDG_CONFIG_HOME="$HOME/.config"
-
-## Set config location for tms
-export TMS_CONFIG_FILE="$XDG_CONFIG_HOME/tms/config.toml"
 # Set vi-mode as default for shell interaction
 set -o vi
+
+# https://youtu.be/ud7YxC33Z3w?si=oBp68ABoP5NrMJB8
+# Root dir for zinit
+ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
+
+# Download zinit, if it's not there yet
+if [ ! -d "$ZINIT_HOME" ]; then
+    mkdir -p "$(dirname $ZINIT_HOME)"
+    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
+fi
+
+# Load zinit
+source "${ZINIT_HOME}/zinit.zsh"
+
+# Zsh plugins
+zinit light zsh-users/zsh-autosuggestions
+zinit light zsh-users/zsh-completions
+zinit light zsh-users/zsh-syntax-highlighting
+zinit light Aloxaf/fzf-tab # bring fzf into tab completion
 
 # Load starship
 eval "$(starship init zsh)"
 
+# Load completions
+autoload -Uz +X compinit && compinit
+zinit cdreplay -q
 
-# ALIASES
-# -------
 
-alias conf='cd ~/.config'
-alias nvconf='cd ~/.config/nvim/ && nvim'
-alias zshconf='nvim ~/.zshrc'
+# Track zsh history
+HISTSIZE=5000
+HISTFILE=~/.zsh_history
+SAVEHIST=$HISTSIZE
+HISTDUPE=erase # erase duplicates
+setopt appendhistory
+setopt sharehistory # share history across terminals
+setopt hist_ignore_space # ignore commands starting with space
+setopt hist_ignore_all_dups
+setopt hist_save_no_dups
+setopt hist_ignore_dups
+setopt hist_find_no_dups
 
-# Update brewfile
-alias brupdate='~/.config/homebrew/update.sh'
+# Competion styling
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # make completioon case-insensitive
+zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}' # use LS_COLORS for completion colors
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' # preview files in fzf-tab
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath' # make file preview work with zoxide
 
-# Project shortcuts
-alias projects='cd ~/Projects'
-alias ppixl='cd ~/Projects/UCLH-Foundry/PIXL && nvim'
-alias ptodo='cd ~/Projects/todo/ && nvim'
-alias pnotes='cd ~/obsidian-notes/'
 
-alias ls='ls -GFhp'
-alias ll='ls -lhp'
-alias la='ll -a'
-alias tree='tree -C'   # show filesizes in tree output and colorize output
-alias cp='cp -i'
-alias grep='grep -E --color'		# force grep to always use extended regexp
+# Shell integrations
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
 
-alias cat='bat'
-
-# Always use nvim
-alias vim='nvim'
-alias v='nvim'
-
-## R
-alias R='R --no-save --no-restore-data'		# never save or restore R workspace
-alias bioc-devel='R_LIBS_USER=~/Library/R/x86_64/4.1-Bioc-3.14/library radian' # launch R with bioc-devel library
-alias rad='radian'
-alias rcheck='Rscript -e "devtools::check()"'
-alias rtest='Rscript -e "devtools::test()"'
-alias rinstall='Rscript -e "devtools::install()"'
-
-## Python
-alias python='python3'
-alias pip='uv pip'
-
-## Misc
-alias ls-dot='ls -a | grep "^\."'   # List dot-files
-alias homepath='realpath --relative-to=$HOME'
-
-## Disable zsh autocorrect for some commands
-alias git='nocorrect git'
-
-# If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+# Aliases 
+source ${HOME}/.config/zsh/aliases.zsh
 
 # Paths
-# -----
+source ${HOME}/.config/zsh/paths.zsh
 
-## Personal scripts
-export PATH="$PATH:$HOME/bin"
-
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
-
-# allows Coreutils package to be used without 'g' prefix before each command.
-export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
-export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
-
-## Set C++ compilers
-export PATH="$(brew --prefix)/opt/llvm/bin:$PATH"
-export PATH="$(brew --prefix)/opt/gcc/bin:$PATH"
-export PATH="$(brew --prefix)/opt/ccache/libexec:$PATH"
-
-## Use Homebrew gcc compilers
-alias gcc="gcc-13"
-alias g++="g++-13"
-
-## For CMake
-export CMAKE_PREFIX_PATH="$(brew --prefix)"
-export CMAKE_C_COMPILER="$(brew --prefix)/opt/gcc/bin/gcc-13"
-export CMAKE_CXX_COMPILER="$(brew --prefix)/opt/gcc/bin/g++-13"
-export CMAKE_FIND_FRAMEWORK="LAST"
-export CMAKE_FIND_APPBUNDLE="NEVER"
-export CMAKE_EXPORT_COMPILE_COMMANDS="ON"
-export CC="clang"
-export CXX="clang++"
-
-export GPG_TTY=$TTY
-
-# Ruby
-export PATH="/opt/homebrew/opt/ruby/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/ruby/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/ruby/include"
-export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
-
-## brew autocompletion
-FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
-
-## Use GNU sed
-export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
-
-## pyenv setup
+# pyenv setup
 export PYENV_ROOT="$HOME/.pyenv"
 command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-
-## pyenv-virtualenv
 eval "$(pyenv virtualenv-init -)"
 
 # Created by `pipx` on 2024-01-27 14:59:53
 export PATH="$PATH:/Users/milan/.local/bin"
-
-# nvm
- export NVM_DIR="$HOME/.nvm"
-  [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
