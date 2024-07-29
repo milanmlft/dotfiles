@@ -23,3 +23,7 @@ zinit light Aloxaf/fzf-tab # bring fzf into tab completion
 
 # Load starship
 eval "$(starship init zsh)"
+
+# Load completions
+autoload -Uz +X compinit && compinit
+zinit cdreplay -q
