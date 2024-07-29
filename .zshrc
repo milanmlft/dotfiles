@@ -55,6 +55,8 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath' # mak
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-# Aliases
-# =======
+# Aliases 
 source ${HOME}/.config/zsh/aliases.zsh
+
+# Paths
+source ${HOME}/.config/zsh/paths.zsh
