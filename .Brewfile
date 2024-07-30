@@ -1,6 +1,5 @@
 tap "hashicorp/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask-fonts"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
 tap "r-lib/rig"
@@ -25,8 +24,6 @@ brew "python@3.11"
 brew "awscli"
 # C library implementing the SSH2 protocol
 brew "libssh2"
-# C library of Git core methods that is re-entrant and linkable
-brew "libgit2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # High performance key/value database
@@ -65,6 +62,8 @@ brew "fd"
 brew "gcc"
 # High performance message passing library
 brew "open-mpi"
+# Command-line fuzzy finder written in Go
+brew "fzf"
 # GNU compiler collection
 brew "gcc@13"
 # GitHub command-line tool
@@ -101,8 +100,6 @@ brew "htop"
 brew "hyperfine"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
-# LLVM's OpenMP runtime library
-brew "libomp"
 # Tools and libraries to manipulate images in many formats
 brew "imagemagick"
 # GNU utilities for networking
@@ -123,6 +120,8 @@ brew "jupyterlab"
 brew "lastpass-cli"
 # Simple terminal UI for git commands
 brew "lazygit"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
 # GNOME XML library
 brew "libxml2"
 # Next-gen compiler infrastructure
@@ -165,10 +164,6 @@ brew "pure-ftpd"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
-# Tool Command Language
-brew "tcl-tk"
-# Software environment for statistical computing
-brew "r"
 # Rsync for cloud storage
 brew "rclone"
 # Search tool like grep and The Silver Searcher
@@ -179,6 +174,8 @@ brew "ruby"
 brew "starship"
 # Version control system designed to be a better CVS
 brew "subversion"
+# Tool Command Language
+brew "tcl-tk"
 # Tool to build, change, and version infrastructure
 brew "terraform"
 # Tool to generate documentation from Terraform modules
@@ -209,6 +206,8 @@ brew "yadm"
 brew "yarn"
 # General-purpose lossless data-compression library
 brew "zlib"
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
@@ -221,6 +220,8 @@ cask "amethyst"
 cask "flycut"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
+# Free and open-source image editor
+cask "gimp"
 # Web browser
 cask "google-chrome"
 # Utility to hide menu bar items
