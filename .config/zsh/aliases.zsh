@@ -1,8 +1,15 @@
 alias ls='ls --color=auto'
-alias ll='ls -l'
-alias ll='ls -lhp'
-alias la='ll -a'
-alias tree='tree -C' # show filesizes in tree output and colorize output
+
+# eza aliases
+alias eza='eza --icons --group-directories-first'
+alias ld='eza -lD' # only list directories
+alias lf='eza -lf' # only list files
+alias ll='eza -l'
+alias la='eza -la' # list all files including hidden
+alias lh='eza -dl .*' # list hidden files
+alias lt='eza -T' # tree view
+alias tree='eza -T'
+
 alias cp='cp -i'
 alias grep='grep -E --color' # force grep to always use extended regexp
 
