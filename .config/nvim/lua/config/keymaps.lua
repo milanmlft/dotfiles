@@ -29,9 +29,5 @@ map("n", "<leader>r", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { 
 
 map("n", "<leader>U", vim.cmd.UndotreeToggle, { desc = "Toggle Undotree" })
 
--- cmake
-wk.register({
-  C = { name = "+CMake" },
-})
 map("n", "<leader>Cg", ":CMakeGenerate<CR>", { desc = "CMake Generate" })
 map("n", "<leader>Cb", ":CMakeBuild<CR>", { desc = "CMake Build" })
