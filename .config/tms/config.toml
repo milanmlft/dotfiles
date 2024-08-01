@@ -6,9 +6,9 @@ path = "/Users/milan/Projects"
 depth = 3
 
 [[search_dirs]]
-path = "/Users/milan/R-packages"
+path = "/Users/milan/Teaching"
 depth = 3
 
 [[search_dirs]]
-path = "/Users/milan/Learning"
+path = "/Users/milan/R-packages"
 depth = 3
