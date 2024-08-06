@@ -44,10 +44,12 @@ setopt hist_save_no_dups
 setopt hist_ignore_dups
 setopt hist_find_no_dups
 
-# Competion styling
+# Completion styling
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # make completioon case-insensitive
 zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}' # use LS_COLORS for completion colors
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' # preview files in fzf-tab
+zstyle ':fzf-tab:complete:ls:*' fzf-preview 'ls --color $realpath' # preview files in fzf-tab
+zstyle ':fzf-tab:complete:eza:*' fzf-preview 'ls --color $realpath' # preview files in fzf-tab
 zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath' # make file preview work with zoxide
 
 
