@@ -4,6 +4,9 @@
 # Set vi-mode as default for shell interaction
 set -o vi
 
+## set defaulft config directory
+export XDG_CONFIG_HOME="$HOME/.config"
+
 # https://youtu.be/ud7YxC33Z3w?si=oBp68ABoP5NrMJB8
 # Root dir for zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
@@ -62,6 +65,9 @@ source $HOME/.config/zsh/aliases.zsh
 
 # Paths
 source $HOME/.config/zsh/paths.zsh
+
+## Set config location for tms
+export TMS_CONFIG_FILE="$XDG_CONFIG_HOME/tms/config.toml"
 
 # pyenv setup
 export PYENV_ROOT="$HOME/.pyenv"
