@@ -69,14 +69,6 @@ if (interactive()) {
   libs <- paste("-", .libPaths(), collapse = "\n")
   message(msg, libs, sep = "")
 
-  # Check and print BioC version
-  if (requireNamespace("BiocManager", quietly = TRUE)) {
-    bioc_devel <- BiocManager:::isDevel()
-    msg <- paste("Using Bioconductor", BiocManager::version())
-    if (bioc_devel) msg <- paste(msg, "(devel)")
-    message(msg)
-  }
   ## Clean up
   rm(list = ls())
 }
-
