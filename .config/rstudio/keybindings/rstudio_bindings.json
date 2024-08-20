@@ -15,5 +15,6 @@
     "layoutZoomRightColumn": "",
     "focusLeftSeparator": "",
     "focusNextPane": "",
-    "focusPreviousPane": ""
+    "focusPreviousPane": "",
+    "goToDefinition": "Shift+F2"
 }
