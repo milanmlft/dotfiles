@@ -258,8 +258,6 @@ cask "spotify"
 cask "vagrant"
 # Gives Vagrant VMware plugin access to various VMware functionalities
 cask "vagrant-vmware-utility"
-# Open-source code editor
-cask "visual-studio-code"
 # Multiplayer code editor
 cask "zed"
 # Collect, organise, cite, and share research sources
