@@ -170,6 +170,8 @@ brew "rclone"
 brew "ripgrep"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
+# Extremely fast Python linter, written in Rust
+brew "ruff"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Version control system designed to be a better CVS
