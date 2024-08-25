@@ -34,6 +34,10 @@ brew "freetype"
 brew "harfbuzz"
 # Remove large files or passwords from Git history like git-filter-branch
 brew "bfg"
+# Platform built on V8 to build network applications
+brew "node"
+# Secure and free password manager for all of your devices
+brew "bitwarden-cli"
 # Collection of portable C++ source libraries
 brew "boost"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
@@ -110,8 +114,6 @@ brew "jags"
 brew "jpeg"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Platform built on V8 to build network applications
-brew "node"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Interactive environments for writing and running code
@@ -148,8 +150,6 @@ brew "tree"
 brew "pass"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
-# Execute binaries from Python packages in isolated environments
-brew "pipx"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Object-relational database system
