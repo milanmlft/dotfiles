@@ -68,5 +68,5 @@
     "auto_detect_indentation": true,
     "relative_line_numbers": true,
     "auto_save_on_blur": true,
-    "source_with_echo": true
+    "rmd_viewer_type": "pane"
 }
