@@ -36,4 +36,3 @@ alias rinstall='Rscript -e "devtools::install()"'
 
 ## Python
 alias python='python3'
-alias pip='uv pip'
