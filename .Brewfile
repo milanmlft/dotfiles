@@ -13,7 +13,7 @@ brew "sqlite"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Automate deployment, configuration, and upgrading
-brew "ansible", link: false
+brew "ansible"
 # Library for manipulating PNG images
 brew "libpng"
 # Image format providing lossless and lossy compression for web images
