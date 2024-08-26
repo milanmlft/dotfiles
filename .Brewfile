@@ -240,6 +240,8 @@ cask "mactex"
 cask "microsoft-edge"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Data science IDE
+cask "positron"
 # Collaboration platform for API development
 cask "postman"
 # Scientific and technical publishing system built on Pandoc
