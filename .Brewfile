@@ -238,6 +238,8 @@ cask "keycastr"
 cask "mactex"
 # Web browser
 cask "microsoft-edge"
+# VPN client for secure internet access and private browsing
+cask "nordvpn"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
 # Data science IDE
