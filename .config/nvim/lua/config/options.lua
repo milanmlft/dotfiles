@@ -12,8 +12,8 @@ set.smarttab = true
 set.expandtab = true
 
 -- Set tab stops to different length than indentation width, to reduce the chance of mixing tabs and spaces
-set.tabstop = 8
-set.softtabstop = 8
+set.tabstop = 4
+set.softtabstop = 4
 
 set.smartindent = true
 
