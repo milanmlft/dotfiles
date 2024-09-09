@@ -20,6 +20,7 @@
     staash = stash --all
     bb = !better-git-branch.sh
     pushfwl = push --force-with-lease
+    rpo = remote prune origin
 [commit]
 	template = /Users/milan/.stCommitMsg
 	gpgsign = true
