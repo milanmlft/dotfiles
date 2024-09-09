@@ -2,8 +2,8 @@
     "panes": {
         "quadrants": [
             "Source",
-            "TabSet1",
             "Console",
+            "TabSet1",
             "TabSet2"
         ],
         "tabSet1": [
@@ -68,5 +68,6 @@
     "auto_detect_indentation": true,
     "relative_line_numbers": true,
     "auto_save_on_blur": true,
-    "rmd_viewer_type": "pane"
+    "rmd_viewer_type": "pane",
+    "show_hidden_files": true
 }
