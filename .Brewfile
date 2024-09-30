@@ -214,6 +214,8 @@ brew "zoxide"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# A tiling window manager for macOS based on binary space partitioning.
+brew "koekeishiya/formulae/yabai"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 # Automatic tiling window manager similar to xmonad
