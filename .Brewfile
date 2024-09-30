@@ -220,8 +220,6 @@ brew "koekeishiya/formulae/skhd"
 brew "koekeishiya/formulae/yabai"
 # GPU-accelerated terminal emulator
 cask "alacritty"
-# Automatic tiling window manager similar to xmonad
-cask "amethyst"
 # Clipboard manager for developers
 cask "flycut"
 cask "font-hack-nerd-font"
