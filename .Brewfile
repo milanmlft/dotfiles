@@ -214,6 +214,8 @@ brew "zoxide"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Simple hotkey-daemon for macOS.
+brew "koekeishiya/formulae/skhd"
 # A tiling window manager for macOS based on binary space partitioning.
 brew "koekeishiya/formulae/yabai"
 # GPU-accelerated terminal emulator
