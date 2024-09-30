@@ -18,8 +18,6 @@ brew "ansible"
 brew "libpng"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # C library implementing the SSH2 protocol
@@ -164,6 +162,8 @@ brew "pure-ftpd"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
 # Rsync for cloud storage
 brew "rclone"
 # Search tool like grep and The Silver Searcher
