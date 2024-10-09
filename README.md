@@ -14,7 +14,7 @@ My dotfiles, managed by [yadm](https://github.com/TheLocehiliosan/yadm).
 3. Source shell with 
 
     ```sh
-    exec zsh`
+    exec zsh
     ```
 
 3. Enjoy!
