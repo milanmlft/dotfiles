@@ -4,5 +4,6 @@ return {
   opts = {
     R_app = "radian",
     rmdchunk = "``",
+    bracketed_paste = true,
   },
 }
