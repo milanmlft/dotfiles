@@ -60,12 +60,10 @@ brew "docker"
 brew "eigen"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# GNU compiler collection
-brew "gcc"
-# High performance message passing library
-brew "open-mpi"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# GNU compiler collection
+brew "gcc"
 # GNU compiler collection
 brew "gcc@13"
 # GitHub command-line tool
@@ -116,8 +114,6 @@ brew "jq"
 brew "pandoc"
 # Interactive environments for writing and running code
 brew "jupyterlab"
-# LastPass command-line interface tool
-brew "lastpass-cli"
 # Simple terminal UI for git commands
 brew "lazygit"
 # C library of Git core methods that is re-entrant and linkable
@@ -127,19 +123,17 @@ brew "libxml2"
 # Next-gen compiler infrastructure
 brew "llvm", link: true
 # Next-gen compiler infrastructure
-brew "llvm@13"
-# Next-gen compiler infrastructure
 brew "llvm@15"
 # Package manager for the Lua programming language
 brew "luarocks"
 # Language Server Protocol for Markdown
 brew "marksman"
-# C++ Graphics Library for Data Visualization
-brew "matplotplusplus"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Manage multiple Node.js versions
 brew "nvm"
+# High performance message passing library
+brew "open-mpi"
 # Optimized BLAS library
 brew "openblas"
 # Display directories as trees (with optional color/HTML output)
@@ -162,8 +156,6 @@ brew "pure-ftpd"
 brew "pyenv"
 # Pyenv plugin to manage virtualenv
 brew "pyenv-virtualenv"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # Rsync for cloud storage
 brew "rclone"
 # Search tool like grep and The Silver Searcher
@@ -178,8 +170,6 @@ brew "starship"
 brew "subversion"
 # Tool Command Language
 brew "tcl-tk"
-# Tool to build, change, and version infrastructure
-brew "terraform"
 # Tool to generate documentation from Terraform modules
 brew "terraform-docs"
 # Thin wrapper for Terraform e.g. for locking state
@@ -232,14 +222,10 @@ cask "google-chrome"
 cask "hiddenbar"
 # Vector graphics editor
 cask "inkscape"
-# Programming language for technical computing
-cask "julia"
 # Open-source keystroke visualiser
 cask "keycastr"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
-# Web browser
-cask "microsoft-edge"
 # VPN client for secure internet access and private browsing
 cask "nordvpn"
 # Knowledge base that works on top of a local folder of plain text Markdown files
