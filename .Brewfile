@@ -18,8 +18,6 @@ brew "ansible"
 brew "libpng"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
-# Official Amazon AWS command-line interface
-brew "awscli"
 # C library implementing the SSH2 protocol
 brew "libssh2"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -216,8 +214,6 @@ cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 # Free and open-source image editor
 cask "gimp"
-# Web browser
-cask "google-chrome"
 # Utility to hide menu bar items
 cask "hiddenbar"
 # Vector graphics editor
