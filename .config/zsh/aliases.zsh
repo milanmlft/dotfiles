@@ -8,7 +8,6 @@ alias ll='eza -l'
 alias la='eza -la' # list all files including hidden
 alias lh='eza -dl .*' # list hidden files
 alias lt='eza -T' # tree view
-alias tree='eza -T'
 
 alias cp='cp -i'
 alias grep='grep -E --color' # force grep to always use extended regexp
