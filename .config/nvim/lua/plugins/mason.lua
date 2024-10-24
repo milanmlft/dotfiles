@@ -13,6 +13,7 @@ return {
       "cmake-language-server",
       "cmakelang",
       "cmakelint",
+      "sqlfluff",
     },
   },
 }

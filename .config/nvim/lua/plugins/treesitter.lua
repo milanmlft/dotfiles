@@ -15,6 +15,7 @@ return {
         "gitignore",
         "go",
         "markdown",
+        "sql",
       },
       highlight = {
         enable = true,

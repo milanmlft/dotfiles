@@ -79,6 +79,7 @@ return {
     opts = {
       linters_by_ft = {
         cmake = { "cmakelint" },
+        sql = { "sqlfluff" },
       },
     },
   },
