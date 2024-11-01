@@ -42,3 +42,7 @@ FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 ## Use GNU sed
 export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+
+## Go
+export GOPATH=$HOME/go
+export PATH="$GOPATH/bin:$PATH"
