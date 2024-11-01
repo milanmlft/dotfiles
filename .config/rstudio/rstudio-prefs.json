@@ -69,5 +69,6 @@
     "relative_line_numbers": true,
     "auto_save_on_blur": true,
     "rmd_viewer_type": "pane",
-    "show_hidden_files": true
+    "show_hidden_files": true,
+    "copilot_completions_trigger": "manual"
 }
