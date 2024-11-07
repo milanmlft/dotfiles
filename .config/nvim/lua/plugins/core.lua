@@ -2,7 +2,7 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "catppuccin",
+      colorscheme = "nightfox",
     },
   },
 
@@ -17,5 +17,10 @@ return {
         comments = { "italic" },
       },
     },
+  },
+  {
+    "EdenEast/nightfox.nvim",
+    name = "nightfox",
+    priority = 1000,
   },
 }

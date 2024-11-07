@@ -2,8 +2,8 @@ return {
   "R-nvim/R.nvim",
   lazy = false,
   opts = {
-    R_app = "radian",
+    R_app = "R",
     rmdchunk = "``",
-    bracketed_paste = true,
+    bracketed_paste = false,
   },
 }

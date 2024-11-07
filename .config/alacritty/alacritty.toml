@@ -1,6 +1,3 @@
-## Set catppuccin theme
-import = ["~/.config/alacritty/themes/themes/catppuccin.toml"]
-
 [font]
 size = 14
 
@@ -15,7 +12,13 @@ opacity = 0.90
 x = 7
 y = 0
 
+[general]
+## Set colour theme
+import = ["~/.config/alacritty/themes/themes/carbonfox.toml"]
+
+[terminal]
+
 ## Set tmux as the default shell
-[shell]
+[terminal.shell]
 program = "/opt/homebrew/bin/tmux"
 args = ["new-session", "-A", "-D", "-s", "main"]
