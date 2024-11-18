@@ -9,7 +9,7 @@ decorations = "none"
 opacity = 0.90
 
 [window.padding]
-x = 7
+x = 12
 y = 0
 
 [general]
