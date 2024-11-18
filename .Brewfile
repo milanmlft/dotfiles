@@ -248,5 +248,7 @@ cask "vagrant"
 cask "vagrant-vmware-utility"
 # Multiplayer code editor
 cask "zed"
+# Gecko based web browser
+cask "zen-browser"
 # Collect, organise, cite, and share research sources
 cask "zotero"
