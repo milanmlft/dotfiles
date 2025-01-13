@@ -70,5 +70,7 @@
     "auto_save_on_blur": true,
     "rmd_viewer_type": "pane",
     "show_hidden_files": true,
-    "copilot_completions_trigger": "manual"
+    "source_with_echo": true,
+    "reformat_on_save": true,
+    "code_formatter": "styler"
 }

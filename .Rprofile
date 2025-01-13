@@ -19,7 +19,7 @@ options(
   usethis.full_name = "Milan Malfait",
   usethis.description = list(
     `Authors@R` = 'person("Milan", "Malfait",
-    email = "milan.malfait94@gmail.com", role = c("aut", "cre"),
+    email = "m.malfait@ucl.ac.uk", role = c("aut", "cre"),
     comment = c(ORCID = "0000-0001-9144-3701"))',
     Version = "0.0.1"
   ),
