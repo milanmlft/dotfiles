@@ -39,3 +39,7 @@ set.updatetime = 50
 
 set.textwidth = 100
 set.colorcolumn = "100"
+
+-- LSP Server to use for Python.
+vim.g.lazyvim_python_lsp = "pyright"
+vim.g.lazyvim_python_ruff = "ruff"

@@ -5,21 +5,6 @@ return {
       servers = {
         bashls = {},
         eslint = {},
-        -- Python
-        -- Still need pyright for more LSP features
-        pyright = {
-          settings = {
-            pyright = {
-              disableOrganizeImports = true, -- Using Ruff
-            },
-            python = {
-              analysis = {
-                ignore = { "*" }, -- Using Ruff
-                typeCheckingMode = "off", -- Using mypy
-              },
-            },
-          },
-        },
         -- R
         r_language_server = {
           cmd = { "R", "--slave", "-e", "languageserver::run()" },
