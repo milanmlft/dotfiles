@@ -69,15 +69,6 @@ source $HOME/.config/zsh/paths.zsh
 ## Set config location for tms
 export TMS_CONFIG_FILE="$XDG_CONFIG_HOME/tms/config.toml"
 
-# pyenv setup
-export PYENV_ROOT="$HOME/.pyenv"
-command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-# Disable virtualenv prompt as this is handled by starship
-export PYENV_VIRTUALENV_DISABLE_PROMPT=1 
-
 # Created by `pipx` on 2024-01-27 14:59:53
 export PATH="$PATH:/Users/milan/.local/bin"
 

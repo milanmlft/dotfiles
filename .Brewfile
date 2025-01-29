@@ -152,10 +152,6 @@ brew "powerlevel10k"
 brew "pre-commit"
 # Secure and efficient FTP server
 brew "pure-ftpd"
-# Python version management
-brew "pyenv"
-# Pyenv plugin to manage virtualenv
-brew "pyenv-virtualenv"
 # Rsync for cloud storage
 brew "rclone"
 # Search tool like grep and The Silver Searcher
