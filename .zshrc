@@ -72,3 +72,5 @@ export TMS_CONFIG_FILE="$XDG_CONFIG_HOME/tms/config.toml"
 # Created by `pipx` on 2024-01-27 14:59:53
 export PATH="$PATH:/Users/milan/.local/bin"
 
+eval "$(uv generate-shell-completion zsh)"
+eval "$(uvx --generate-shell-completion zsh)"
