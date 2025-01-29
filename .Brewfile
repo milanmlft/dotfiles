@@ -8,8 +8,6 @@ tap "romkatv/powerlevel10k"
 brew "openssl@3"
 # Library for command-line editing
 brew "readline"
-# Command-line interface for SQLite
-brew "sqlite"
 # General-purpose data compression with high compression ratio
 brew "xz"
 # Automate deployment, configuration, and upgrading
@@ -20,6 +18,8 @@ brew "libpng"
 brew "webp"
 # C library implementing the SSH2 protocol
 brew "libssh2"
+# C library of Git core methods that is re-entrant and linkable
+brew "libgit2"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # High performance key/value database
@@ -30,13 +30,15 @@ brew "freetype"
 brew "harfbuzz"
 # Remove large files or passwords from Git history like git-filter-branch
 brew "bfg"
+# Platform built on V8 to build network applications
+brew "node"
 # Secure and free password manager for all of your devices
 brew "bitwarden-cli"
 # Collection of portable C++ source libraries
 brew "boost"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
-# Modern, C++-native, header-only, test framework
+# Modern, C++-native, test framework
 brew "catch2"
 # Object-file caching compiler wrapper
 brew "ccache"
@@ -52,6 +54,8 @@ brew "coreutils"
 brew "cppcheck"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
+# Isolated development environments using Docker
+brew "docker-compose"
 # C++ template library for linear algebra
 brew "eigen"
 # Simple, fast and user-friendly alternative to find
@@ -106,16 +110,12 @@ brew "jags"
 brew "jpeg"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Platform built on V8 to build network applications
-brew "node"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Interactive environments for writing and running code
 brew "jupyterlab"
 # Simple terminal UI for git commands
 brew "lazygit"
-# C library of Git core methods that is re-entrant and linkable
-brew "libgit2"
 # GNOME XML library
 brew "libxml2"
 # Next-gen compiler infrastructure
@@ -156,8 +156,6 @@ brew "pure-ftpd"
 brew "rclone"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
-# Powerful, clean, object-oriented scripting language
-brew "ruby"
 # Extremely fast Python linter, written in Rust
 brew "ruff"
 # Cross-shell prompt for astronauts
@@ -244,6 +242,8 @@ cask "spotify"
 cask "vagrant"
 # Gives Vagrant VMware plugin access to various VMware functionalities
 cask "vagrant-vmware-utility"
+# Open-source code editor
+cask "visual-studio-code"
 # Multiplayer code editor
 cask "zed"
 # Gecko based web browser
