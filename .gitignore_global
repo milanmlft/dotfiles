@@ -54,3 +54,5 @@ Session.vim
 *cmake-tools*
 compile_commands.json
 .quarto
+
+.null-ls_*
