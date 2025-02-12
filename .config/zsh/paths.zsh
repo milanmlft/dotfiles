@@ -26,8 +26,8 @@ export CMAKE_CXX_COMPILER="$(brew --prefix)/opt/gcc/bin/g++-13"
 export CMAKE_FIND_FRAMEWORK="LAST"
 export CMAKE_FIND_APPBUNDLE="NEVER"
 export CMAKE_EXPORT_COMPILE_COMMANDS="ON"
-export CC="clang"
-export CXX="clang++"
+export CC="gcc-13"
+export CXX="g++-13"
 
 export GPG_TTY=$TTY
 
