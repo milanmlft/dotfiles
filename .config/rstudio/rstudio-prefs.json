@@ -58,7 +58,7 @@
     "rmd_auto_date": true,
     "editor_theme": "Catppuccin",
     "indent_guides": "gray",
-    "margin_column": 100,
+    "margin_column": 120,
     "save_files_before_build": true,
     "copilot_enabled": true,
     "spelling_dictionary_language": "en_GB",
@@ -70,7 +70,7 @@
     "auto_save_on_blur": true,
     "rmd_viewer_type": "pane",
     "show_hidden_files": true,
-    "source_with_echo": true,
     "reformat_on_save": true,
-    "code_formatter": "styler"
+    "code_formatter": "styler",
+    "source_with_echo": true
 }
