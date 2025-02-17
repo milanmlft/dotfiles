@@ -5,7 +5,8 @@ size = 14
 family = "JetBrainsMonoNL Nerd Font"
 
 [window]
-decorations = "none"
+decorations = "buttonless"
+startup_mode = "Maximized"
 opacity = 0.90
 
 [window.padding]
