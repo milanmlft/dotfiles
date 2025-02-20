@@ -128,6 +128,8 @@ brew "llvm@15"
 brew "luarocks"
 # Language Server Protocol for Markdown
 brew "marksman"
+# Run a Kubernetes cluster locally
+brew "minikube"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Manage multiple Node.js versions
