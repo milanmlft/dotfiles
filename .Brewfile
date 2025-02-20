@@ -152,6 +152,8 @@ brew "postgresql@14"
 brew "powerlevel10k"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
+# Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
+brew "prettier"
 # Secure and efficient FTP server
 brew "pure-ftpd"
 # Rsync for cloud storage
