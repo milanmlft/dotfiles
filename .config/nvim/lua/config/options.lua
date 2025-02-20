@@ -38,7 +38,7 @@ set.signcolumn = "yes"
 set.updatetime = 50
 
 set.textwidth = 100
-set.colorcolumn = "100"
+set.colorcolumn = "120"
 
 -- LSP Server to use for Python.
 vim.g.lazyvim_python_lsp = "pyright"
