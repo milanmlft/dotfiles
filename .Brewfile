@@ -16,6 +16,8 @@ brew "ansible"
 brew "libpng"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
+# Official Amazon AWS command-line interface
+brew "awscli"
 # C library implementing the SSH2 protocol
 brew "libssh2"
 # C library of Git core methods that is re-entrant and linkable
@@ -96,6 +98,8 @@ brew "librsvg"
 brew "graphviz"
 # Numerical library for C and C++
 brew "gsl"
+# Smarter Dockerfile linter to validate best practices
+brew "hadolint"
 # Improved top (interactive process viewer)
 brew "htop"
 # Command-line benchmarking tool
@@ -144,6 +148,8 @@ brew "tree"
 brew "pass"
 # Pinentry for GPG on Mac
 brew "pinentry-mac"
+# Execute binaries from Python packages in isolated environments
+brew "pipx"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
 # PDF rendering library (based on the xpdf-3.0 code base)
@@ -170,6 +176,8 @@ brew "starship"
 brew "subversion"
 # Tool Command Language
 brew "tcl-tk"
+# Tool to build, change, and version infrastructure
+brew "terraform"
 # Tool to generate documentation from Terraform modules
 brew "terraform-docs"
 # Thin wrapper for Terraform e.g. for locking state
@@ -190,6 +198,8 @@ brew "unixodbc"
 brew "uv"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Watch files and take action when they change
+brew "watchman"
 # Internet file retriever
 brew "wget"
 # Yet Another Dotfiles Manager
@@ -204,6 +214,8 @@ brew "zoxide"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# Packer
+brew "hashicorp/tap/packer"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 # Clipboard manager for developers
