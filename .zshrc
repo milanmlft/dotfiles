@@ -74,3 +74,6 @@ export PATH="$PATH:/Users/milan/.local/bin"
 
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
+
+# kubectl completion
+source <(kubectl completion zsh)
