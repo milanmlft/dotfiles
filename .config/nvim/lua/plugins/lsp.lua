@@ -20,9 +20,6 @@ return {
         -- C++
         clangd = {},
         cmake = {},
-        -- Docker
-        dockerls = {},
-        docker_compose_language_service = {},
         -- markdown
         marksman = {},
         -- other
@@ -54,6 +51,8 @@ return {
           end,
           -- Styler for R
           nls.builtins.formatting.styler,
+          -- linting for docker
+          nls.builtins.diagnostics.hadolint,
         }),
       })
     end,
@@ -64,6 +63,7 @@ return {
     opts = {
       linters_by_ft = {
         cmake = { "cmakelint" },
+        dockerfile = { "hadolint" },
         -- sql = { "sqlfluff" },
       },
     },
