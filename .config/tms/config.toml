@@ -12,3 +12,11 @@ depth = 3
 [[search_dirs]]
 path = "/Users/milan/R-packages"
 depth = 3
+
+[[search_dirs]]
+path = "/Users/milan/website/"
+depth = 1
+
+[[search_dirs]]
+path = "/Users/milan/talks/"
+depth = 1
