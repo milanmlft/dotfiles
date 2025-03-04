@@ -56,3 +56,5 @@ compile_commands.json
 .quarto
 
 .null-ls_*
+
+.envrc

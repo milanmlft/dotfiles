@@ -77,3 +77,6 @@ eval "$(uvx --generate-shell-completion zsh)"
 
 # kubectl completion
 source <(kubectl completion zsh)
+
+# direnv https://direnv.net/docs/hook.html
+eval "$(direnv hook zsh)"
