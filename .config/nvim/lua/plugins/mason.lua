@@ -4,7 +4,6 @@ return {
     ensure_installed = {
       "clangd",
       "clang-format",
-      "mypy",
       "pyright",
       "ruff",
       "ruff-lsp",
