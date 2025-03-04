@@ -43,17 +43,14 @@ return {
     opts = function(_, opts)
       local nls = require("null-ls")
       opts.sources = vim.list_extend(opts.sources or {}, {
-        -- Set up mypy so it uses the local virtualenv if there is one
-        nls.builtins.diagnostics.mypy.with({
-          extra_args = function()
-            local virtual = os.getenv("VIRTUAL_ENV") or os.getenv("CONDA_PREFIX") or "/usr"
-            return { "--python-executable", virtual .. "/bin/python3" }
-          end,
-          -- Styler for R
-          nls.builtins.formatting.styler,
-          -- linting for docker
-          nls.builtins.diagnostics.hadolint,
-        }),
+        -- Styler for R
+        nls.builtins.formatting.styler,
+        -- linting for docker
+        nls.builtins.diagnostics.hadolint,
+        nls.builtins.code_actions.gomodifytags,
+        nls.builtins.code_actions.impl,
+        nls.builtins.formatting.goimports,
+        nls.builtins.formatting.gofumpt,
       })
     end,
   },
