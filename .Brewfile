@@ -2,6 +2,7 @@ tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
+tap "nikitabobko/tap"
 tap "r-lib/rig"
 tap "romkatv/powerlevel10k"
 # Cryptography and SSL/TLS Toolkit
@@ -222,6 +223,8 @@ brew "zsh"
 brew "zsh-syntax-highlighting"
 # Packer
 brew "hashicorp/tap/packer"
+# AeroSpace is an i3-like tiling window manager for macOS
+cask "aerospace"
 # GPU-accelerated terminal emulator
 cask "alacritty"
 # Clipboard manager for developers

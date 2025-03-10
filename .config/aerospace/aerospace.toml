@@ -1,0 +1,12 @@
+# Start AeroSpace at login
+start-at-login = true
+
+# Float the system preferences window by default
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+if.app-name-regex-substring = 'settings'
+if.window-title-regex-substring = 'substring'
+if.workspace = 'workspace-name'
+if.during-aerospace-startup = true
+check-further-callbacks = true
+run = ['layout floating', 'move-node-to-workspace S']
