@@ -80,3 +80,7 @@ source <(kubectl completion zsh)
 
 # direnv https://direnv.net/docs/hook.html
 eval "$(direnv hook zsh)"
+
+autoload -U +X bashcompinit && bashcompinit
+
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
