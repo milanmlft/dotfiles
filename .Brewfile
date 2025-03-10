@@ -54,6 +54,8 @@ brew "cmake-docs"
 brew "coreutils"
 # Static analysis of C and C++ code
 brew "cppcheck"
+# Load/unload environment variables based on $PWD
+brew "direnv"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
 # Isolated development environments using Docker
@@ -100,6 +102,8 @@ brew "graphviz"
 brew "gsl"
 # Smarter Dockerfile linter to validate best practices
 brew "hadolint"
+# Kubernetes package manager
+brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
 # Command-line benchmarking tool
@@ -198,6 +202,8 @@ brew "unixodbc"
 brew "uv"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Executes a program periodically, showing output fullscreen
+brew "watch"
 # Watch files and take action when they change
 brew "watchman"
 # Internet file retriever
