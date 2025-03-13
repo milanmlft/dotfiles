@@ -16,6 +16,7 @@ return {
         "go",
         "markdown",
         "sql",
+        "html",
       },
       highlight = {
         enable = true,
