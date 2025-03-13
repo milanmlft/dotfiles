@@ -141,8 +141,6 @@ brew "marksman"
 brew "minikube"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Manage multiple Node.js versions
-brew "nvm"
 # High performance message passing library
 brew "open-mpi"
 # Optimized BLAS library
