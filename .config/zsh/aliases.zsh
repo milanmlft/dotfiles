@@ -33,5 +33,3 @@ alias rcheck='Rscript -e "devtools::check()"'
 alias rtest='Rscript -e "devtools::test()"'
 alias rinstall='Rscript -e "devtools::install()"'
 
-## Python
-alias python='python3'
