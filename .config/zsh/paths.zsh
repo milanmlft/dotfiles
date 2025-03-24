@@ -16,18 +16,18 @@ export PATH="$(brew --prefix)/opt/gcc/bin:$PATH"
 export PATH="$(brew --prefix)/opt/ccache/libexec:$PATH"
 
 ## Use Homebrew gcc compilers
-alias gcc="gcc-13"
-alias g++="g++-13"
+alias gcc="gcc-14"
+alias g++="g++-14"
 
 ## For CMake
 export CMAKE_PREFIX_PATH="$(brew --prefix)"
-export CMAKE_C_COMPILER="$(brew --prefix)/opt/gcc/bin/gcc-13"
-export CMAKE_CXX_COMPILER="$(brew --prefix)/opt/gcc/bin/g++-13"
+export CMAKE_C_COMPILER="$(brew --prefix)/opt/gcc/bin/gcc-14"
+export CMAKE_CXX_COMPILER="$(brew --prefix)/opt/gcc/bin/g++-14"
 export CMAKE_FIND_FRAMEWORK="LAST"
 export CMAKE_FIND_APPBUNDLE="NEVER"
 export CMAKE_EXPORT_COMPILE_COMMANDS="ON"
-export CC="gcc-13"
-export CXX="g++-13"
+export CC="gcc-14"
+export CXX="g++-14"
 
 export GPG_TTY=$TTY
 
