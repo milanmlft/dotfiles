@@ -59,7 +59,6 @@ return {
     optional = true,
     opts = {
       linters_by_ft = {
-        cmake = { "cmakelint" },
         dockerfile = { "hadolint" },
         -- sql = { "sqlfluff" },
       },
