@@ -4,7 +4,7 @@ export TMS_CONFIG_FILE="$XDG_CONFIG_HOME/tms/config.toml"
 ## Personal scripts
 export PATH="$PATH:$HOME/bin"
 
-export PATH="/usr/local/opt/libxml2/bin:$PATH"
+export PATH="$(brew --prefix)/opt/libxml2/bin:$PATH"
 
 # allows Coreutils package to be used without 'g' prefix before each command.
 export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
@@ -41,7 +41,7 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/ruby/lib/pkgconfig"
 FPATH="$(brew --prefix)/share/zsh/site-functions:${FPATH}"
 
 ## Use GNU sed
-export PATH="/opt/homebrew/opt/gnu-sed/libexec/gnubin:$PATH"
+export PATH="$(brew --prefix)/opt/gnu-sed/libexec/gnubin:$PATH"
 
 ## Go
 export GOPATH=$HOME/go
