@@ -20,3 +20,7 @@ depth = 1
 [[search_dirs]]
 path = "/Users/milan/talks/"
 depth = 1
+
+[[search_dirs]]
+path = "/Users/milan/obsidian/"
+depth = 1
