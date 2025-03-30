@@ -33,3 +33,13 @@ alias rcheck='Rscript -e "devtools::check()"'
 alias rtest='Rscript -e "devtools::test()"'
 alias rinstall='Rscript -e "devtools::install()"'
 
+# GitHub
+alias tasks='gh issue list --assignee @me' # list all issues assigned to me
+
+# Create a temp dir and change into it
+alias cdtemp='cd $(mktemp -d)'
+
+## Use Homebrew gcc compilers
+alias gcc="gcc-14"
+alias g++="g++-14"
+
