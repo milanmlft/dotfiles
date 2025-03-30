@@ -10,24 +10,19 @@ export PATH="$(brew --prefix)/opt/libxml2/bin:$PATH"
 export PATH="$(brew --prefix)/opt/coreutils/libexec/gnubin:$PATH"
 export MANPATH="$(brew --prefix)/opt/coreutils/libexec/gnuman:$MANPATH"
 
-## Set C++ compilers
+## Set C/C++ compilers
 export PATH="$(brew --prefix)/opt/llvm/bin:$PATH"
 export PATH="$(brew --prefix)/opt/gcc/bin:$PATH"
-export PATH="$(brew --prefix)/opt/ccache/libexec:$PATH"
-
-## Use Homebrew gcc compilers
-alias gcc="gcc-14"
-alias g++="g++-14"
 
 ## For CMake
+export CC="$(brew --prefix)/opt/llvm/bin/clang"
+export CXX="$(brew --prefix)/opt/llvm/bin/clang++"
 export CMAKE_PREFIX_PATH="$(brew --prefix)"
-export CMAKE_C_COMPILER="$(brew --prefix)/opt/gcc/bin/gcc-14"
-export CMAKE_CXX_COMPILER="$(brew --prefix)/opt/gcc/bin/g++-14"
+export CMAKE_C_COMPILER="$(brew --prefix)/opt/llvm/bin/clang"
+export CMAKE_CXX_COMPILER="$(brew --prefix)/opt/llvm/bin/clang++"
 export CMAKE_FIND_FRAMEWORK="LAST"
 export CMAKE_FIND_APPBUNDLE="NEVER"
 export CMAKE_EXPORT_COMPILE_COMMANDS="ON"
-export CC="gcc-14"
-export CXX="g++-14"
 
 export GPG_TTY=$TTY
 
