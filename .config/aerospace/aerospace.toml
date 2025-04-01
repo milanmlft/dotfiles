@@ -1,6 +1,6 @@
 # Start AeroSpace at login
 start-at-login = true
-
+#
 # Normalisations. See ttps://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -8,23 +8,6 @@ enable-normalization-opposite-orientation-for-nested-containers = true
 default-root-container-layout = 'tiles'
 default-root-container-orientation = 'auto'
 on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
-
-# Float these windows by default
-[[on-window-detected]]
-if.app-id = 'com.apple.systempreferences'
-if.app-name-regex-substring = 'settings'
-if.window-title-regex-substring = 'substring'
-if.workspace = 'workspace-name'
-if.during-aerospace-startup = true
-check-further-callbacks = true
-run = ['layout floating']
-
-[[on-window-detected]]
-if.app-id = 'com.apple.iCal'
-if.app-name-regex-substring = 'calendar'
-if.during-aerospace-startup = true
-check-further-callbacks = true
-run = ['layout floating']
 
 # Keybindings
 # 'main' binding mode declaration
@@ -139,3 +122,47 @@ alt-shift-h = ['join-with left', 'mode main']
 alt-shift-j = ['join-with down', 'mode main']
 alt-shift-k = ['join-with up', 'mode main']
 alt-shift-l = ['join-with right', 'mode main']
+
+# Float these windows by default
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iCal'
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace 1'
+
+[[on-window-detected]]
+if.app-id = 'org.alacritty'
+run = 'move-node-to-workspace 2'
+
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap' # slack
+run = 'move-node-to-workspace 4'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = 'move-node-to-workspace O'
+
+[[on-window-detected]]
+if.app-id = 'com.spotify.client'
+run = 'move-node-to-workspace S'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = 'move-node-to-workspace T'
