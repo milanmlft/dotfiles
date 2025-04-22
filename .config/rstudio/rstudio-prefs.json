@@ -71,5 +71,6 @@
     "show_hidden_files": true,
     "reformat_on_save": true,
     "code_formatter": "styler",
-    "source_with_echo": true
+    "source_with_echo": true,
+    "copilot_completions_trigger": "manual"
 }
