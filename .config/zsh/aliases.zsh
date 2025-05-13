@@ -11,6 +11,7 @@ alias lt='eza -T' # tree view
 
 alias cp='cp -i'
 alias grep='grep -E --color' # force grep to always use extended regexp
+alias cl='clear'
 
 alias conf='cd ~/.config'
 alias nvconf='cd ~/.config/nvim/ && nvim'
