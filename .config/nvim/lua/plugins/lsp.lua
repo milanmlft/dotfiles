@@ -6,16 +6,16 @@ return {
         bashls = {},
         eslint = {},
         -- R
-        r_language_server = {
-          cmd = { "R", "--slave", "-e", "languageserver::run()" },
-          filetypes = { "r", "rmd" },
-          log_level = 2,
-          root_dir = function(fname)
-            return require("lspconfig.util").root_pattern("DESCRIPTION", "NAMESPACE", ".Rbuildignore")(fname)
-              or require("lspconfig.util").find_git_ancestor(fname)
-              or vim.loop.os_homedir()
-          end,
-        },
+        -- r_language_server = {
+        --   cmd = { "R", "--slave", "-e", "languageserver::run()" },
+        --   filetypes = { "r", "rmd" },
+        --   log_level = 2,
+        --   root_dir = function(fname)
+        --     return require("lspconfig.util").root_pattern("DESCRIPTION", "NAMESPACE", ".Rbuildignore")(fname)
+        --       or require("lspconfig.util").find_git_ancestor(fname)
+        --       or vim.loop.os_homedir()
+        --   end,
+        -- },
         ruff_lsp = {},
         -- C++
         clangd = {},
