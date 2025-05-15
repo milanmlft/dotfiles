@@ -2,12 +2,20 @@ return {
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "carbonfox",
+      colorscheme = "catppuccin",
     },
   },
+
   {
-    "EdenEast/nightfox.nvim",
-    name = "nightfox",
+    "catppuccin/nvim",
+    name = "catppuccin",
     priority = 1000,
+    opts = {
+      flavour = "macchiato",
+      transparent_background = true,
+      styles = {
+        comments = { "italic" },
+      },
+    },
   },
 }
