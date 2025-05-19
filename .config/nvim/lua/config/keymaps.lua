@@ -5,8 +5,6 @@
 local map = vim.keymap.set
 local wk = require("which-key")
 
-map("n", "<leader>pv", vim.cmd.Ex)
-
 -- Move lines up and down in Visual mode
 map("v", "J", ":m '>+1<CR>gv=gv")
 map("v", "K", ":m '<-2<CR>gv=gv")
@@ -18,16 +16,25 @@ map("n", "<C-u>", "<C-u>zz")
 map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 
--- Pasting without overwriting the paste buffer!
-map("x", "<leader>p", '"_dP')
-
--- Disable Q!
+-- Disable q and Q!
+map("n", "q", "<nop>")
 map("n", "Q", "<nop>")
 
--- Replace word under cursor
-map("n", "<leader>r", ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>", { desc = "Replace word under cursor" })
-
-map("n", "<leader>U", vim.cmd.UndotreeToggle, { desc = "Toggle Undotree" })
-
-map("n", "<leader>Cg", ":CMakeGenerate<CR>", { desc = "CMake Generate" })
-map("n", "<leader>Cb", ":CMakeBuild<CR>", { desc = "CMake Build" })
+wk.add({
+  {
+    mode = { "n", "v" }, -- NORMAL and VISUAL mode
+    { "<leader>W", group = "Write" },
+    { "<leader>Ww", "<cmd>w<cr>", desc = "Write" },
+    { "<leader>Wq", "<cmd>wq<cr>", desc = "Write and quit" },
+    { "<leader>Wqa", "<cmd>wqa<cr>", desc = "Write and quit all" },
+  },
+  { "<leader>P", '"_dP', desc = "Paste without overwriting paste buffer", mode = "x" },
+  {
+    "<leader>R",
+    ":%s/\\<<C-r><C-w>\\>/<C-r><C-w>/gI<Left><Left><Left>",
+    desc = "Replace word under cursor",
+    icon = "󰛔",
+  },
+  { "<leader>U", vim.cmd.UndotreeToggle, desc = "Toggle Undotree", icon = "" },
+  },
+})
