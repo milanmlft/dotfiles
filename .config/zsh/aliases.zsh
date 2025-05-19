@@ -4,6 +4,7 @@ alias ls='ls --color=auto'
 alias eza='eza --icons --group-directories-first'
 alias ld='eza -lD' # only list directories
 alias lf='eza -lf' # only list files
+alias l='eza -l'
 alias ll='eza -l'
 alias la='eza -la' # list all files including hidden
 alias lh='eza -dl .*' # list hidden files
