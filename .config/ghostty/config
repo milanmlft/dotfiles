@@ -2,8 +2,10 @@ font-family = "JetBrains Mono"
 theme = catppuccin-mocha
 font-size = 16
 mouse-hide-while-typing = true
-window-decoration = false
 macos-option-as-alt = true
+
+# Hide the titlebar without removing the rounded corners
+macos-titlebar-style = hidden
 
 background = 000000
 background-opacity = 0.9
