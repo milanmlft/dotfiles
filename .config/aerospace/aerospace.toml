@@ -12,7 +12,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 250
+accordion-padding = 80
 
 [gaps]
 inner.horizontal = 8
@@ -21,6 +21,7 @@ outer.left = 8
 outer.bottom = 8
 outer.top = 8
 outer.right = 8
+
 
 # Keybindings
 # 'main' binding mode declaration
@@ -69,6 +70,7 @@ alt-t = 'workspace T'
 alt-shift-o = 'move-node-to-workspace O --focus-follows-window'
 alt-shift-s = 'move-node-to-workspace S --focus-follows-window'
 alt-shift-t = 'move-node-to-workspace T --focus-follows-window'
+
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
@@ -128,32 +130,43 @@ if.app-id = 'com.hnc.Discord'
 check-further-callbacks = true
 run = 'layout floating'
 
+
 # Move these apps to specific workspaces
+# 1: Obsidian
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace 1'
 
-# https://ghostty.org/docs/help/macos-tiling-wms
+# 2: terminal
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
-run = ['layout tiling', 'move-node-to-workspace 2']
+run = ['move-node-to-workspace 2']
+
+# 3: browser
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = 'move-node-to-workspace 3'
 
 [[on-window-detected]]
 if.app-id = 'com.kagi.kagimacOS'
 run = 'move-node-to-workspace 3'
 
+# 4: Slack
 [[on-window-detected]]
-if.app-id = 'com.tinyspeck.slackmacgap' # slack
+if.app-id = 'com.tinyspeck.slackmacgap'
 run = 'move-node-to-workspace 4'
 
+# O: Outlook
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Outlook'
 run = 'move-node-to-workspace O'
 
+# S: Slack
 [[on-window-detected]]
 if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace S'
 
+# T: Teams
 [[on-window-detected]]
 if.app-id = 'com.microsoft.teams2'
 run = 'move-node-to-workspace T'
