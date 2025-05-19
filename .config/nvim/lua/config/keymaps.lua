@@ -36,5 +36,12 @@ wk.add({
     icon = "󰛔",
   },
   { "<leader>U", vim.cmd.UndotreeToggle, desc = "Toggle Undotree", icon = "" },
+  {
+    "<leader>0",
+    function()
+      Snacks.dashboard.open()
+    end,
+    desc = "Home",
+    icon = "",
   },
 })
