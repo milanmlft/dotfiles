@@ -7,6 +7,4 @@ return {
       vim.fn["mkdp#util#install"]()
     end,
   },
-  { "vim-pandoc/vim-pandoc" },
-  { "vim-pandoc/vim-pandoc-syntax" },
 }
