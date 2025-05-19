@@ -1,14 +1,16 @@
 alias ls='ls --color=auto'
 
 # eza aliases
-alias eza='eza --icons --group-directories-first'
-alias ld='eza -lD' # only list directories
-alias lf='eza -lf' # only list files
-alias l='eza -l'
-alias ll='eza -l'
-alias la='eza -la' # list all files including hidden
-alias lh='eza -dl .*' # list hidden files
-alias lt='eza -T' # tree view
+alias ls='eza'
+alias ezaa='eza --icons --git --group-directories-first'
+alias ld='ezaa -lD' # only list directories
+alias lf='ezaa -lf' # only list files
+alias l='ezaa --oneline'
+alias ll='ezaa -l'
+alias la='ezaa -la' # list all files including hidden
+alias lh='ezaa -dl .*' # list hidden files
+alias lt='ezaa -T' # tree view
+alias lr='ezaa --reverse --sort size' # sort files by size
 
 alias cp='cp -i'
 alias grep='grep -E --color' # force grep to always use extended regexp
