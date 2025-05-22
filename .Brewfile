@@ -223,8 +223,6 @@ brew "zsh-syntax-highlighting"
 brew "hashicorp/tap/packer"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
-# GPU-accelerated terminal emulator
-cask "alacritty"
 # Clipboard manager for developers
 cask "flycut"
 cask "font-hack-nerd-font"
