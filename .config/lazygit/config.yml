@@ -3,3 +3,4 @@ os:
 
 git:
   overrideGpg: true
+  parseEmoji: true
