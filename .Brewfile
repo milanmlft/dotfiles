@@ -17,6 +17,8 @@ brew "ansible"
 brew "libpng"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
+# Code searching, linting, rewriting
+brew "ast-grep"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # C library implementing the SSH2 protocol
@@ -51,6 +53,8 @@ brew "checkbashisms"
 brew "cmake"
 # Documentation for CMake
 brew "cmake-docs"
+# Console Matrix
+brew "cmatrix"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Static analysis of C and C++ code
@@ -65,6 +69,8 @@ brew "docker-compose"
 brew "eigen"
 # Modern, maintained replacement for ls
 brew "eza"
+# Like neofetch, but much faster because written mostly in C
+brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
 # Command-line fuzzy finder written in Go
@@ -125,6 +131,10 @@ brew "jq"
 brew "pandoc"
 # Interactive environments for writing and running code
 brew "jupyterlab"
+# Little helper to run CNCF's k3s in Docker
+brew "k3d"
+# Kubernetes CLI To Manage Your Clusters In Style!
+brew "k9s"
 # Simple terminal UI for git commands
 brew "lazygit"
 # GNOME XML library
@@ -225,8 +235,15 @@ brew "hashicorp/tap/packer"
 cask "aerospace"
 # Clipboard manager for developers
 cask "flycut"
+cask "font-consolas-for-powerline"
 cask "font-hack-nerd-font"
+cask "font-inter"
+cask "font-jetbrains-mono"
 cask "font-jetbrains-mono-nerd-font"
+cask "font-roboto"
+cask "font-rubik"
+# Terminal emulator that uses platform-native UI and GPU acceleration
+cask "ghostty"
 # Free and open-source image editor
 cask "gimp"
 # Utility to hide menu bar items
@@ -266,6 +283,6 @@ cask "visual-studio-code"
 # Multiplayer code editor
 cask "zed"
 # Gecko based web browser
-cask "zen-browser"
+cask "zen"
 # Collect, organise, cite, and share research sources
 cask "zotero"
