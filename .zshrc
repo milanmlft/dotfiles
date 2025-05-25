@@ -84,3 +84,7 @@ eval "$(direnv hook zsh)"
 autoload -U +X bashcompinit && bashcompinit
 
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
+
+# Tab completion for cht.sh
+# https://github.com/chubin/cheat.sh?tab=readme-ov-file#zsh-tab-completion
+fpath=(~/.zsh.d/ $fpath)
