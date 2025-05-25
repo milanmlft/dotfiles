@@ -130,6 +130,15 @@ if.app-id = 'com.hnc.Discord'
 check-further-callbacks = true
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = 'org.whispersystems.signal-desktop'
+check-further-callbacks = true
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.wulkano.kap'
+check-further-callbacks = true
+run = 'layout floating'
 
 # Move these apps to specific workspaces
 # 1: Obsidian
