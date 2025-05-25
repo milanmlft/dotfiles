@@ -1,5 +1,6 @@
 default_session = "main"
 recursive_submodules = false
+bookmarks = ["/Users/milan/.config"]
 
 [[search_dirs]]
 path = "/Users/milan/Projects"
