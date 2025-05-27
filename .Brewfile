@@ -85,6 +85,8 @@ brew "gh"
 brew "ghostscript"
 # Distributed revision control system
 brew "git"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
 # Git extension for versioning large files
 brew "git-lfs"
 # Render markdown on the CLI
@@ -181,6 +183,8 @@ brew "pure-ftpd"
 brew "rclone"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Readline wrapper: adds readline support to tools that lack it
+brew "rlwrap"
 # Extremely fast Python linter, written in Rust
 brew "ruff"
 # Cross-shell prompt for astronauts
@@ -201,6 +205,8 @@ brew "texlive"
 brew "tldr"
 # Terminal multiplexer
 brew "tmux"
+# Program that allows you to count code, quickly
+brew "tokei"
 # Upgrade all the things
 brew "topgrade"
 # Source code spell checker
