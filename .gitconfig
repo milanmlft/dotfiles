@@ -6,11 +6,12 @@
 	autocrlf = false
 	safecrlf = true
 	excludesfile = /Users/milan/.gitignore_global
+    pager = delta
 [alias]
     co = checkout
     st = status
     br = branch
-    hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+    hist = "log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
     type = cat-file -t
     dump = cat-file -p
     unstage = reset HEAD --
@@ -61,3 +62,10 @@
 	sort = -committerdate
 [fetch]
 	prune = true
+[interactive]
+    diffFilter = delta --color-only
+[delta]
+    navigate = true  # use n and N to move between diff sections
+    dark = true      # or light = true, or omit for auto-detection
+[merge]
+    conflictstyle = zdiff3
