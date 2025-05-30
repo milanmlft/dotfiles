@@ -1,15 +1,27 @@
-[brew]
-# greedy_cask = true
-autoremove = true
-
 [misc]
+# Run `sudo -v` to cache credentials at the start of the run
+# This avoids a blocking password prompt in the middle of an unattended run
+pre_sudo = true
+
 # Don't ask for confirmations (no default value)
 assume_yes = true
+
+# Do not ask to retry failed steps (default: false)
+no_retry = true
+
 # Cleanup temporary or old files (default: false)
 cleanup = true
+
 # Skip sending a notification at the end of a run (default: false)
 skip_notify = true
 
 # Disable specific steps
 # uv: managed by homebrew
-disable = ["node", "ruby_gems", "uv"]
+disable = ["node", "uv", "ruby_gems", "gem"]
+
+# Commands to run after anything
+[post_commands]
+"Update Brewfile" = "~/bin/brupdate.sh"
+
+[brew]
+autoremove = true
