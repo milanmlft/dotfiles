@@ -87,6 +87,8 @@ brew "git"
 brew "git-delta"
 # Git extension for versioning large files
 brew "git-lfs"
+# Interactive command-line tool for using emoji in commit messages
+brew "gitmoji"
 # Render markdown on the CLI
 brew "glow"
 # GNU implementation of the famous stream editor
