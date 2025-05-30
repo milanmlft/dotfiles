@@ -5,20 +5,18 @@ tap "koekeishiya/formulae"
 tap "nikitabobko/tap"
 tap "r-lib/rig"
 tap "romkatv/powerlevel10k"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3"
-# Library for command-line editing
-brew "readline"
-# General-purpose data compression with high compression ratio
-brew "xz"
-# Automate deployment, configuration, and upgrading
-brew "ansible"
 # Library for manipulating PNG images
 brew "libpng"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # Image format providing lossless and lossy compression for web images
 brew "webp"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
 # Code searching, linting, rewriting
 brew "ast-grep"
+# Library for command-line editing
+brew "readline"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # C library implementing the SSH2 protocol
@@ -171,8 +169,6 @@ brew "pkgconf"
 brew "poppler"
 # Object-relational database system
 brew "postgresql@14"
-# Theme for zsh
-brew "powerlevel10k"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
@@ -280,15 +276,7 @@ cask "rstudio"
 cask "slack"
 # Music streaming service
 cask "spotify"
-# Development environment
-cask "vagrant"
-# Gives Vagrant VMware plugin access to various VMware functionalities
-cask "vagrant-vmware-utility"
 # Open-source code editor
 cask "visual-studio-code"
-# Multiplayer code editor
-cask "zed"
 # Gecko based web browser
 cask "zen"
-# Collect, organise, cite, and share research sources
-cask "zotero"
