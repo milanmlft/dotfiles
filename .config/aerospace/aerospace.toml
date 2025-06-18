@@ -146,9 +146,13 @@ run = 'layout floating'
 if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace 1'
 
-# 2: terminal
+# 2: terminal/IDE
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
+run = ['move-node-to-workspace 2']
+
+[[on-window-detected]]
+if.app-id = 'dev.zed.Zed'
 run = ['move-node-to-workspace 2']
 
 # 3: browser
