@@ -1,5 +1,20 @@
 [
   {
+    "context": "Editor && edit_prediction_conflict",
+    "bindings": {
+      // Here we bind tab to accept even when there's a language server completion
+      // or the cursor isn't at the correct indentation level
+      "tab": "editor::AcceptEditPrediction"
+    }
+  },
+  // {
+  //   "context": "Editor && edit_prediction",
+  //   "bindings": {
+  //     // Here we also allow `alt-enter` to accept the prediction
+  //     "alt-enter": "editor::AcceptEditPrediction"
+  //   }
+  // },
+  {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     // Redefine window navigation keys to use Vim-style hjkl
     "bindings": {
@@ -13,16 +28,6 @@
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
       // put key-bindings here if you want them to work in normal & visual mode
-
-      // Harpoon style bindings
-      "h 1": ["pane::ActivateItem", 0],
-      "h 2": ["pane::ActivateItem", 1],
-      "h 3": ["pane::ActivateItem", 2],
-      "h 4": ["pane::ActivateItem", 3],
-      "h 5": ["pane::ActivateItem", 4],
-      "h 6": ["pane::ActivateItem", 5],
-      "h 7": ["pane::ActivateItem", 6],
-      "h 8": ["pane::ActivateItem", 7]
     }
   },
   {
@@ -33,15 +38,13 @@
       "up": ["workspace::SendKeystrokes", "4 k"],
 
       // Mimic my neovim bindings
-      "f f": "file_finder::Toggle",
-      "f g": "pane::DeploySearch",
-      "c r": "editor::Rename",
-      "c a": "editor::ToggleCodeActions",
+      "space f f": "file_finder::Toggle",
+      "space f g": "pane::DeploySearch",
+      "space c r": "editor::Rename",
+      "space c a": "editor::ToggleCodeActions",
       "shift-k": "editor::Hover",
       "g d": "editor::GoToDefinition",
-
-      "H": "panel::PreviousPanelTab",
-      "L": "panel::NextPanelTab"
+      "g r": "editor::FindAllReferences"
     }
   },
   {
