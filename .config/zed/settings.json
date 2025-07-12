@@ -14,8 +14,9 @@
     "dock": "right"
   },
   "agent": {
-    "default_profile": "write",
+    "default_profile": "ask",
     "play_sound_when_agent_done": true,
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
       "model": "claude-sonnet-4"
@@ -26,24 +27,6 @@
     "disabled_globs": [".env"]
   },
   "theme": "Nightfox",
-
-  // "experimental.theme_overrides": {
-  //   // "background.appearance": "blurred",
-  //   "background": "#282a3669",
-  //   "editor.background": "#282a3669",
-  //   "editor.gutter.background": "#282a3669",
-  //   "tab_bar.background": "#282a3669",
-  //   "terminal.background": "#282a3600",
-  //   "toolbar.background": "#282a3669",
-  //   "tab.active_background": "#28282820",
-  //   "tab.inactive_background": "#282a3669",
-  //   "status_bar.background": "#282a3669",
-  //   "title_bar.background": "#282a3669",
-  //   "panel.background": "#282a3669",
-  //   "border.variant": "#282a3669",
-  //   "scrollbar.track.border": "#282a3669",
-  //   "editor.active_line.background": "#282a3669"
-  // },
 
   "vim_mode": true,
   "relative_line_numbers": true,
@@ -70,7 +53,8 @@
   "languages": {
     "Lua": { "tab_size": 2 },
     "Python": {
-      "language_servers": ["pyright", "ruff"],
+      "language_servers": ["pylsp", "ruff", "!pyright", "..."],
+      "format_on_save": "on",
       "formatter": [
         {
           "language_server": {
@@ -90,13 +74,30 @@
   },
 
   "lsp": {
-    "pyright": {
+    "pylsp": {
       "settings": {
-        "python.analysis": {
-          "typeCheckingMode": "strict"
-        },
-        "python": {
-          "pythonPath": ".venv/bin/python"
+        "plugins": {
+          // disable plugins superseded by ruff
+          "autopep8": { "enabled": false },
+          "black": { "enabled": false },
+          "flake8": { "enabled": false },
+          "isort": { "enabled": false },
+          "mccabe": { "enabled": false },
+          "pycodestyle": { "enabled": false },
+          "pydocstyle": { "enabled": false },
+          "pyflakes": { "enabled": false },
+          "pylint": { "enabled": false },
+          "yapf": { "enabled": false },
+
+          // keep the others
+          "pylsp_mypy": { "enabled": true, "exclude": ["tests/*"] },
+          "jedi": { "enabled": true },
+          "rope": { "enabled": true },
+          "rope_autoimport": { "enabled": true },
+          "rope_completion": { "enabled": true },
+
+          // disable pylsp ruff in favor of `ruff server`
+          "ruff": { "enabled": false }
         }
       }
     }
