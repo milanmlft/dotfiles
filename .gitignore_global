@@ -32,8 +32,9 @@ _todo.md
 .vscode/
 *.code-workspace
 
-# dev/ folder
-dev/
+# _dev/ folder
+_dev/
+
 .Rproj.user
 .Rdata
 .httr-oauth
@@ -43,6 +44,7 @@ dev/
 .python-version
 pyrightconfig.json
 __pycache__/
+.ropeproject/
 
 # C++ stuff
 .cache/
