@@ -20,8 +20,7 @@ options(
   usethis.description = list(
     `Authors@R` = 'person("Milan", "Malfait",
     email = "m.malfait@ucl.ac.uk", role = c("aut", "cre"),
-    comment = c(ORCID = "0000-0001-9144-3701"))',
-    Version = "0.0.1"
+    comment = c(ORCID = "0000-0001-9144-3701"))'
   ),
   usethis.protocol = "ssh"
 )
