@@ -101,8 +101,6 @@ brew "pinentry"
 brew "gnupg"
 # Command-driven, interactive function plotting
 brew "gnuplot"
-# Open source programming language to build simple/reliable/efficient software
-brew "go"
 # Library to render SVG files using Cairo
 brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
