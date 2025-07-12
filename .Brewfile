@@ -183,20 +183,22 @@ brew "ripgrep"
 brew "rlwrap"
 # Extremely fast Python linter, written in Rust
 brew "ruff"
+# Editor of encrypted files
+brew "sops"
 # Cross-shell prompt for astronauts
 brew "starship"
 # Version control system designed to be a better CVS
 brew "subversion"
 # Tool Command Language
 brew "tcl-tk"
-# Tool to build, change, and version infrastructure
-brew "terraform"
 # Tool to generate documentation from Terraform modules
 brew "terraform-docs"
 # Thin wrapper for Terraform e.g. for locking state
 brew "terragrunt"
 # Free software distribution for the TeX typesetting system
 brew "texlive"
+# Update version constraints in your Terraform configurations
+brew "tfupdate"
 # Simplified and community-driven man pages
 brew "tldr"
 # Terminal multiplexer
@@ -223,6 +225,8 @@ brew "wget"
 brew "yadm"
 # JavaScript package manager
 brew "yarn"
+# Process YAML, JSON, XML, CSV and properties documents from the CLI
+brew "yq"
 # General-purpose lossless data-compression library
 brew "zlib"
 # Shell extension to navigate your filesystem faster
@@ -233,8 +237,12 @@ brew "zsh"
 brew "zsh-syntax-highlighting"
 # Packer
 brew "hashicorp/tap/packer"
+# Terraform
+brew "hashicorp/tap/terraform"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # Clipboard manager for developers
 cask "flycut"
 cask "font-consolas-for-powerline"
@@ -278,5 +286,7 @@ cask "slack"
 cask "spotify"
 # Open-source code editor
 cask "visual-studio-code"
+# Multiplayer code editor
+cask "zed"
 # Gecko based web browser
 cask "zen"
