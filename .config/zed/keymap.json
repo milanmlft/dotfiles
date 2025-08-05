@@ -7,13 +7,14 @@
       "tab": "editor::AcceptEditPrediction"
     }
   },
-  // {
-  //   "context": "Editor && edit_prediction",
-  //   "bindings": {
-  //     // Here we also allow `alt-enter` to accept the prediction
-  //     "alt-enter": "editor::AcceptEditPrediction"
-  //   }
-  // },
+  {
+    "context": "Editor && mode == full",
+    "bindings": {
+      "tab": "editor::AcceptEditPrediction",
+      "shift-tab": "editor::NextEditPrediction",
+      "alt-enter": "editor::ShowEditPrediction"
+    }
+  },
   {
     "context": "Editor && VimControl && !VimWaiting && !menu",
     // Redefine window navigation keys to use Vim-style hjkl
@@ -27,7 +28,9 @@
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
-      // put key-bindings here if you want them to work in normal & visual mode
+      "alt-enter": "editor::AcceptEditPrediction",
+      "tab": "editor::NextEditPrediction",
+      "shift-tab": "editor::NextEditPrediction"
     }
   },
   {
@@ -68,6 +71,18 @@
       "ctrl-l": "workspace::ActivatePaneRight",
       "ctrl-k": "workspace::ActivatePaneUp",
       "ctrl-j": "workspace::ActivatePaneDown"
+    }
+  },
+  {
+    "context": "CommitEditor > Editor",
+    "bindings": {
+      "tab": "git::GenerateCommitMessage"
+    }
+  },
+  {
+    "context": "GitCommit > Editor",
+    "bindings": {
+      "tab": "git::GenerateCommitMessage"
     }
   }
 ]
