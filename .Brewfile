@@ -243,6 +243,8 @@ brew "hashicorp/tap/terraform"
 cask "aerospace"
 # Write, edit, and chat about your code with AI
 cask "cursor"
+# Web browser
+cask "firefox@developer-edition"
 # Clipboard manager for developers
 cask "flycut"
 cask "font-consolas-for-powerline"

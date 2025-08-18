@@ -168,7 +168,7 @@ run = ['move-node-to-workspace 0']
 
 # 3: browser
 [[on-window-detected]]
-if.app-id = 'app.zen-browser.zen'
+if.app-id = 'org.mozilla.firefoxdeveloperedition'
 run = 'move-node-to-workspace 3'
 
 # 4: Slack
