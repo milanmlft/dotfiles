@@ -39,6 +39,8 @@ brew "node"
 brew "bitwarden-cli"
 # Collection of portable C++ source libraries
 brew "boost"
+# Resource monitor. C++ version and continuation of bashtop and bpytop
+brew "btop"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
 # Modern, C++-native, test framework
@@ -47,6 +49,8 @@ brew "catch2"
 brew "ccache"
 # Checks for bashisms in shell scripts
 brew "checkbashisms"
+# CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
+brew "cilium-cli"
 # Cross-platform make
 brew "cmake"
 # Documentation for CMake
@@ -63,6 +67,8 @@ brew "direnv"
 brew "docker"
 # Isolated development environments using Docker
 brew "docker-compose"
+# More intuitive version of du in rust
+brew "dust"
 # C++ template library for linear algebra
 brew "eigen"
 # Modern, maintained replacement for ls
@@ -71,6 +77,8 @@ brew "eza"
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Infamous electronic fortune-cookie generator
+brew "fortune"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # GNU compiler collection
@@ -113,6 +121,8 @@ brew "hadolint"
 brew "helm"
 # Improved top (interactive process viewer)
 brew "htop"
+# User-friendly cURL replacement (command-line HTTP client)
+brew "httpie"
 # Command-line benchmarking tool
 brew "hyperfine"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
@@ -147,6 +157,8 @@ brew "llvm@15"
 brew "luarocks"
 # Language Server Protocol for Markdown
 brew "marksman"
+# Fly through your shell history
+brew "mcfly"
 # Run a Kubernetes cluster locally
 brew "minikube"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -197,6 +209,8 @@ brew "terraform-docs"
 brew "terragrunt"
 # Free software distribution for the TeX typesetting system
 brew "texlive"
+# Linter for Terraform files
+brew "tflint"
 # Update version constraints in your Terraform configurations
 brew "tfupdate"
 # Simplified and community-driven man pages
