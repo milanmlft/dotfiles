@@ -92,3 +92,6 @@ complete -o nospace -C /opt/homebrew/bin/terraform terraform
 # Tab completion for cht.sh
 # https://github.com/chubin/cheat.sh?tab=readme-ov-file#zsh-tab-completion
 fpath=(~/.zsh.d/ $fpath)
+
+# mcfly https://github.com/cantino/mcfly
+eval "$(mcfly init zsh)"
