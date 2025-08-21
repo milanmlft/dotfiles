@@ -1,6 +1,6 @@
 # Start AeroSpace at login
 start-at-login = true
-#
+
 # Normalisations. See ttps://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -12,7 +12,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 80
+accordion-padding = 0
 
 [gaps]
 inner.horizontal = 8
@@ -33,15 +33,15 @@ outer.right = 8
 alt-shift-f = 'fullscreen'
 
 alt-tab = 'workspace-back-and-forth'
-alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+alt-shift-tab = 'move-node-to-monitor --focus-follows-window --wrap-around next'
 
 alt-slash = 'layout tiles horizontal vertical'
 alt-comma = 'layout accordion horizontal vertical'
 
-alt-h = 'focus left'
-alt-j = 'focus down'
-alt-k = 'focus up'
-alt-l = 'focus right'
+alt-h = 'focus left --boundaries-action wrap-around-the-workspace'
+alt-j = 'focus down --boundaries-action wrap-around-the-workspace'
+alt-k = 'focus up --boundaries-action wrap-around-the-workspace'
+alt-l = 'focus right --boundaries-action wrap-around-the-workspace'
 
 alt-shift-h = 'move left'
 alt-shift-j = 'move down'
@@ -154,7 +154,7 @@ run = 'layout floating'
 # 1: Obsidian
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
-run = 'move-node-to-workspace 1'
+run = ['layout floating', 'move-node-to-workspace 1']
 
 # 2: terminal/IDE
 [[on-window-detected]]
@@ -168,7 +168,7 @@ run = ['move-node-to-workspace 0']
 
 # 3: browser
 [[on-window-detected]]
-if.app-id = 'org.mozilla.firefoxdeveloperedition'
+if.app-id = 'org.mozilla.firefox'
 run = 'move-node-to-workspace 3'
 
 # 4: Slack
