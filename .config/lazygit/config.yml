@@ -4,3 +4,6 @@ os:
 git:
   overrideGpg: true
   parseEmoji: true
+  paging:
+    colorArg: always
+    pager: delta --paging=never --line-numbers --features=arctic-fox

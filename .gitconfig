@@ -67,5 +67,7 @@
 [delta]
     navigate = true  # use n and N to move between diff sections
     dark = true      # or light = true, or omit for auto-detection
+[include]
+    path = ~/.config/delta/themes.gitconfig
 [merge]
     conflictstyle = zdiff3
