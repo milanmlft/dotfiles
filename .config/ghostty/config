@@ -1,5 +1,5 @@
 font-family = "JetBrainsMonoNL Nerd Font Mono"
-theme = catppuccin-mocha
+theme = dark:nightfox, light:dayfox
 font-size = 16
 mouse-hide-while-typing = true
 macos-option-as-alt = true
@@ -7,13 +7,13 @@ macos-option-as-alt = true
 # Hide the titlebar without removing the rounded corners
 macos-titlebar-style = hidden
 
-background = 000000
-background-opacity = 0.7
+background-opacity = 0.85
 background-blur-radius = 10
 
-cursor-style = "block"
+#cursor-style = "block"
 cursor-style-blink = true
 
 initial-command = /bin/zsh -c 'tmux new-session -A -s main'
 
 confirm-close-surface = false
+copy-on-select = clipboard
