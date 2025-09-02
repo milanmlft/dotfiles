@@ -14,6 +14,7 @@ return {
     formatters_by_ft = {
       quarto = { "prettierd", "prettier" },
       markdown = { "prettierd", "prettier" },
+      python = { "ruff" },
     },
   },
 }
