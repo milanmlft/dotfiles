@@ -48,3 +48,6 @@ alias cdtemp='cd $(mktemp -d)'
 alias gcc="gcc-14"
 alias g++="g++-14"
 
+# kubectl
+alias k="kubectl"
+
