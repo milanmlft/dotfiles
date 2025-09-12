@@ -11,8 +11,8 @@ return {
     name = "catppuccin",
     tag = "v1.10.0",
     opts = {
-      -- flavour = "macchiato", -- latte, frappe, macchiato, mocha
-      -- transparent_background = true,
+      flavour = "mocha", -- latte, frappe, macchiato, mocha
+      transparent_background = true,
       integrations = {
         aerial = true,
         alpha = true,
