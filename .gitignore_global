@@ -60,3 +60,6 @@ compile_commands.json
 .null-ls_*
 
 .envrc
+
+# AI Agent rules
+.rules
