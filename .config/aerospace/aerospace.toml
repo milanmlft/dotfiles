@@ -17,10 +17,10 @@ accordion-padding = 0
 [gaps]
 inner.horizontal = 4
 inner.vertical = 4
-outer.left = 0
-outer.bottom = 0
-outer.top = 0
-outer.right = 0
+outer.left = 4
+outer.bottom = 4
+outer.top = 4
+outer.right = 4
 
 
 # Keybindings
@@ -94,10 +94,8 @@ alt-shift-semicolon = 'mode service'
 [mode.service.binding]
 esc = ['reload-config', 'mode main']
 r = ['flatten-workspace-tree', 'mode main'] # reset layout
-f = [
-  'layout floating tiling',
-  'mode main',
-] # Toggle between floating and tiling layout
+# Toggle between floating and tiling layout
+f = ['layout floating tiling', 'mode main']
 backspace = ['close-all-windows-but-current', 'mode main']
 
 # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
@@ -162,13 +160,9 @@ run = ['layout floating', 'move-node-to-workspace 1']
 
 # 2: terminal/IDE
 [[on-window-detected]]
-if.app-id = 'com.mitchellh.ghostty'
-run = ['move-node-to-workspace 2']
-
-[[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
 check-further-callbacks = true
-run = ['move-node-to-workspace 0']
+run = ['move-node-to-workspace 2']
 
 # 3: browser
 [[on-window-detected]]
