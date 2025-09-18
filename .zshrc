@@ -1,6 +1,5 @@
 # Welcome message
 echo "👋 Welcome, $USER!"
-echo -e "🗯️ \e[3m$(fortune)\e[0m"
 
 # load .profile
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
