@@ -77,6 +77,10 @@ brew "eza"
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Infamous electronic fortune-cookie generator
 brew "fortune"
 # Command-line fuzzy finder written in Go
@@ -101,8 +105,6 @@ brew "gitmoji"
 brew "glow"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
 # GNU Pretty Good Privacy (PGP) package
@@ -255,8 +257,6 @@ brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
-# Write, edit, and chat about your code with AI
-cask "cursor"
 # Web browser
 cask "firefox@developer-edition"
 # Clipboard manager for developers
@@ -284,12 +284,8 @@ cask "mactex"
 cask "nordvpn"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
-# Data science IDE
-cask "positron"
 # Collaboration platform for API development
 cask "postman"
-# Scientific and technical publishing system built on Pandoc
-cask "quarto"
 # Control your tools with a few keystrokes
 cask "raycast"
 # The R Installation Manager
@@ -304,5 +300,3 @@ cask "spotify"
 cask "visual-studio-code"
 # Multiplayer code editor
 cask "zed"
-# Gecko based web browser
-cask "zen"
