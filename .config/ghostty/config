@@ -13,7 +13,5 @@ background-blur-radius = 10
 #cursor-style = "block"
 cursor-style-blink = true
 
-initial-command = /bin/zsh -c 'tmux new-session -A -s main'
-
 confirm-close-surface = false
 copy-on-select = clipboard
