@@ -9,7 +9,6 @@ return {
     "catppuccin/nvim",
     lazy = true,
     name = "catppuccin",
-    tag = "v1.10.0",
     opts = {
       flavour = "mocha", -- latte, frappe, macchiato, mocha
       transparent_background = true,
@@ -50,17 +49,6 @@ return {
         treesitter = true,
         treesitter_context = true,
         which_key = true,
-      },
-    },
-    specs = {
-      {
-        "akinsho/bufferline.nvim",
-        optional = true,
-        opts = function(_, opts)
-          if (vim.g.colors_name or ""):find("catppuccin") then
-            opts.highlights = require("catppuccin.groups.integrations.bufferline").get()
-          end
-        end,
       },
     },
   },
