@@ -63,3 +63,6 @@ compile_commands.json
 
 # AI Agent rules
 .rules
+
+# Zed
+.zed/
