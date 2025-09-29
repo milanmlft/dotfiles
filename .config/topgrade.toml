@@ -17,7 +17,7 @@ skip_notify = true
 
 # Disable specific steps
 # uv: managed by homebrew
-disable = ["node", "uv", "ruby_gems", "gem"]
+disable = ["node", "uv", "ruby_gems", "gem", "vscode"]
 
 # Commands to run after anything
 [post_commands]
