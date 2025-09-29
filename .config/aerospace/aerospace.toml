@@ -15,12 +15,12 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 accordion-padding = 0
 
 [gaps]
-inner.horizontal = 4
-inner.vertical = 4
-outer.left = 4
-outer.bottom = 4
-outer.top = 4
-outer.right = 4
+inner.horizontal = 10
+inner.vertical = 10
+outer.left = 10
+outer.bottom = 10
+outer.top = 10
+outer.right = 10
 
 
 # Keybindings
@@ -29,9 +29,6 @@ outer.right = 4
 # 'main' binding mode must be always presented
 # Fallback value (if you omit the key): mode.main.binding = {}
 [mode.main.binding]
-
-# Open terminal with alt-enter
-alt-enter = 'exec-and-forget ~/.config/aerospace/new_ghostty.sh'
 
 alt-shift-f = 'fullscreen'
 
@@ -79,11 +76,11 @@ alt-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
 
 alt-o = 'workspace O'
 alt-s = 'workspace S'
-alt-t = 'workspace T'
+# alt-t = 'workspace T'
 
 alt-shift-o = 'move-node-to-workspace O --focus-follows-window'
 alt-shift-s = 'move-node-to-workspace S --focus-follows-window'
-alt-shift-t = 'move-node-to-workspace T --focus-follows-window'
+# alt-shift-t = 'move-node-to-workspace T --focus-follows-window'
 
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
@@ -152,6 +149,10 @@ if.app-id = 'com.wulkano.kap'
 check-further-callbacks = true
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = 'layout floating'
+
 # Move these apps to specific workspaces
 # 1: Obsidian
 [[on-window-detected]]
@@ -184,7 +185,3 @@ run = 'move-node-to-workspace O'
 if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace S'
 
-# T: Teams
-[[on-window-detected]]
-if.app-id = 'com.microsoft.teams2'
-run = 'move-node-to-workspace T'
