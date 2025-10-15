@@ -5,6 +5,8 @@ tap "koekeishiya/formulae"
 tap "nikitabobko/tap"
 tap "r-lib/rig"
 tap "romkatv/powerlevel10k"
+# Run your GitHub Actions locally
+brew "act"
 # Library for manipulating PNG images
 brew "libpng"
 # General-purpose data compression with high compression ratio
@@ -71,6 +73,8 @@ brew "docker-compose"
 brew "dust"
 # C++ template library for linear algebra
 brew "eigen"
+# ODBC 3 connectivity for UNIX
+brew "unixodbc"
 # Modern, maintained replacement for ls
 brew "eza"
 # Like neofetch, but much faster because written mostly in C
@@ -189,6 +193,8 @@ brew "pre-commit"
 brew "prettier"
 # Secure and efficient FTP server
 brew "pure-ftpd"
+# Messaging and streaming broker
+brew "rabbitmq"
 # Rsync for cloud storage
 brew "rclone"
 # Search tool like grep and The Silver Searcher
@@ -225,8 +231,6 @@ brew "tokei"
 brew "topgrade"
 # Source code spell checker
 brew "typos-cli"
-# ODBC 3 connectivity for UNIX
-brew "unixodbc"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Vi 'workalike' with many additional features
@@ -257,6 +261,8 @@ brew "hashicorp/tap/packer"
 brew "hashicorp/tap/terraform"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "aerospace"
+# Anthropic's official Claude AI desktop app
+cask "claude"
 # Web browser
 cask "firefox@developer-edition"
 # Clipboard manager for developers
