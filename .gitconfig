@@ -46,14 +46,10 @@
 [gpg]
 	program = /opt/homebrew/bin/gpg
 [maintenance]
-	repo = /Users/milan/Projects/tech-socials
-	repo = /Users/milan/Projects/UCLH-Foundry/PIXL
 	repo = /Users/milan
 	repo = /Users/milan/github/milanmlft
-	repo = /Users/milan/Teaching/ClinicianCoders
-	repo = /Users/milan/Projects/L2D/sandpaper
-	repo = /Users/milan/Projects/UCLH-Foundry/calypso
-	repo = /Users/milan/Projects/SAFEHR-data/omop-bundles
+	repo = /Users/milan/Projects/SAFEHR-data/crdm-tools
+	repo = /Users/milan/Projects/CodeMiner/codemapper
 [rerere]
 	enabled = true
 [column]
