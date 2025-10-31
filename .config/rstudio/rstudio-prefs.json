@@ -70,7 +70,9 @@
     "rmd_viewer_type": "pane",
     "show_hidden_files": true,
     "reformat_on_save": true,
-    "code_formatter": "styler",
+    "code_formatter": "external",
     "source_with_echo": true,
-    "copilot_completions_trigger": "manual"
+    "copilot_completions_trigger": "manual",
+    "show_terminal_tab": false,
+    "code_formatter_external_command": "/opt/homebrew/bin/air format"
 }
