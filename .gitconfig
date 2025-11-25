@@ -50,6 +50,7 @@
 	repo = /Users/milan/github/milanmlft
 	repo = /Users/milan/Projects/SAFEHR-data/crdm-tools
 	repo = /Users/milan/Projects/CodeMiner/codemapper
+	repo = /Users/milan/talks
 [rerere]
 	enabled = true
 [column]
