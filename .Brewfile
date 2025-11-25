@@ -7,6 +7,8 @@ tap "r-lib/rig"
 tap "romkatv/powerlevel10k"
 # Run your GitHub Actions locally
 brew "act"
+# Fast and opinionated formatter for R code
+brew "air"
 # Library for manipulating PNG images
 brew "libpng"
 # General-purpose data compression with high compression ratio
@@ -35,7 +37,7 @@ brew "freetype"
 brew "harfbuzz"
 # Remove large files or passwords from Git history like git-filter-branch
 brew "bfg"
-# Platform built on V8 to build network applications
+# Open-source, cross-platform JavaScript runtime environment
 brew "node"
 # Secure and free password manager for all of your devices
 brew "bitwarden-cli"
@@ -306,3 +308,22 @@ cask "spotify"
 cask "visual-studio-code"
 # Multiplayer code editor
 cask "zed"
+go "github.com/spf13/cobra-cli"
+go "github.com/dependabot/cli/cmd/dependabot"
+go "github.com/go-delve/delve/cmd/dlv"
+go "golang.org/dl/go1.24.6"
+go "golang.org/dl/go1.25.0"
+go "mvdan.cc/gofumpt"
+go "github.com/incu6us/goimports-reviser/v3"
+go "github.com/golangci/golangci-lint/v2/cmd/golangci-lint"
+go "github.com/segmentio/golines"
+go "github.com/fatih/gomodifytags"
+go "golang.org/x/tools/gopls"
+go "github.com/cweill/gotests/gotests"
+go "github.com/nao1215/gup"
+go "github.com/koron/iferr"
+go "github.com/josharian/impl"
+go "sigs.k8s.io/kind"
+go "github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen"
+go "github.com/ucl-arc-tre/actions-runner/cmd/s3tagsfilter"
+go "honnef.co/go/tools/cmd/staticcheck"
