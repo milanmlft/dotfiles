@@ -61,8 +61,11 @@ compile_commands.json
 
 .envrc
 
-# AI Agent rules
+# AI Agens
 .rules
+.claude/
+CLAUDE.md
+AGENTS.md
 
 # Zed
 .zed/
