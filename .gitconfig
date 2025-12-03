@@ -51,6 +51,7 @@
 	repo = /Users/milan/Projects/SAFEHR-data/crdm-tools
 	repo = /Users/milan/Projects/CodeMiner/codemapper
 	repo = /Users/milan/talks
+	repo = /Users/milan/R-packages/enum
 [rerere]
 	enabled = true
 [column]
