@@ -265,6 +265,8 @@ brew "hashicorp/tap/terraform"
 cask "aerospace"
 # Anthropic's official Claude AI desktop app
 cask "claude"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Web browser
 cask "firefox@developer-edition"
 # Clipboard manager for developers
