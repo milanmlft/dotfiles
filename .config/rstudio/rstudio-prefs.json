@@ -60,7 +60,6 @@
     "indent_guides": "gray",
     "margin_column": 120,
     "save_files_before_build": true,
-    "copilot_enabled": true,
     "spelling_dictionary_language": "en_GB",
     "save_workspace": "never",
     "load_workspace": false,
