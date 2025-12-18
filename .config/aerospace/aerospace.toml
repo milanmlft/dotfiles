@@ -157,7 +157,7 @@ run = 'layout floating'
 # 1: Obsidian
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
-run = ['layout floating', 'move-node-to-workspace 1']
+run = ['move-node-to-workspace 1']
 
 # 2: terminal/IDE
 [[on-window-detected]]
