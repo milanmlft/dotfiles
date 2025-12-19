@@ -1,5 +1,8 @@
 -- Set <space> as the leader key
 vim.g.mapleader = ' '
+vim.g.maplocalleader = ' '
+
+vim.g.have_nerd_font = false
 
 -- [[ Setting options ]] See `:h vim.o`
 
@@ -8,16 +11,47 @@ vim.o.number = true
 -- Use relative line numbers
 vim.o.relativenumber = true
 
+-- Enable mouse mode, can be useful for resizing splits for example!
+vim.o.mouse = 'a'
+
+-- Don't show the mode, since it's already in the status line
+vim.o.showmode = false
+
 -- Sync clipboard between OS and Neovim.
--- vim.api.nvim_create_autocmd('UIEnter', {
---   callback = function()
---     vim.o.clipboard = 'unnamedplus'
---   end,
--- })
+vim.api.nvim_create_autocmd('UIEnter', {
+  callback = function()
+    vim.o.clipboard = 'unnamedplus'
+  end,
+})
+
+-- Enable break indent
+vim.o.breakindent = true
+
+-- Save undo history
+vim.o.undofile = true
 
 -- Case-insensitive searching UNLESS \C or one or more capital letters in the search term
 vim.o.ignorecase = true
 vim.o.smartcase = true
+
+-- Keep signcolumn on by default
+vim.o.signcolumn = 'yes'
+
+-- Decrease update time
+vim.o.updatetime = 250
+
+-- Decrease mapped sequence wait time
+vim.o.timeoutlen = 300
+
+-- Configure how new splits should be opened
+vim.o.splitright = true
+vim.o.splitbelow = true
+
+-- Disable displaying whitespace characters in the editor.
+vim.o.list = false
+
+-- Preview substitutions live, as you type!
+vim.o.inccommand = 'split'
 
 -- Highlight the line where the cursor is on
 vim.o.cursorline = true
