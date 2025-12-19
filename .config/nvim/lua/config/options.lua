@@ -2,6 +2,18 @@ vim.g.have_nerd_font = true
 
 -- [[ Setting options ]] See `:h vim.o`
 
+-- Tabs as spaces, 4 by default
+vim.o.tabstop = 4
+vim.o.softtabstop = 4
+vim.o.shiftwidth = 4
+vim.o.expandtab = true
+
+-- Highlighted column to align text
+vim.opt.colorcolumn = "100"
+
+-- Autoindent new lines
+vim.o.smartindent = true
+
 -- Print the line number in front of each line
 vim.o.number = true
 -- Use relative line numbers
@@ -46,8 +58,9 @@ vim.o.inccommand = 'split'
 vim.o.cursorline = true
 
 -- Minimal number of screen lines to keep above and below the cursor.
-vim.o.scrolloff = 10
+vim.o.scrolloff = 8
 
 -- if performing an operation that would fail due to unsaved changes in the buffer (like `:q`),
 -- instead raise a dialog asking if you wish to save the current file(s) See `:help 'confirm'`
 vim.o.confirm = true
+
