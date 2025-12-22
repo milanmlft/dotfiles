@@ -37,23 +37,21 @@ return {
             vim.keymap.set(mode, keys, func, { buffer = event.buf, desc = "LSP: " .. desc })
           end
 
-          --  To jump back, press <C-t>.
-          map("gd", require("telescope.builtin").lsp_definitions, "[G]oto [D]efinition")
-          map("gR", require("telescope.builtin").lsp_references, "[G]oto [R]eferences")
-          -- Fuzzy find all the symbols in your current document.
-          map("gO", require("telescope.builtin").lsp_document_symbols, "Open Document Symbols")
-          -- Fuzzy find all the symbols in your current workspace.
-          --  Similar to document symbols, except searches over your entire project.
-          map("gW", require("telescope.builtin").lsp_dynamic_workspace_symbols, "Open Workspace Symbols")
+          local builtin = require("telescope.builtin")
 
-          map("grn", vim.lsp.buf.rename, "[R]e[n]ame")
-          map("gra", vim.lsp.buf.code_action, "[G]oto Code [A]ction", { "n", "x" })
-          map("gri", require("telescope.builtin").lsp_implementations, "[G]oto [I]mplementation")
-          -- WARN: This is not Goto Definition, this is Goto Declaration.
-          --  For example, in C this would take you to the header.
-          map("grD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
-          -- Jump to the type of the word under your cursor.
-          map("grt", require("telescope.builtin").lsp_type_definitions, "[G]oto [T]ype Definition")
+          --  To jump back, press <C-t>.
+          map("gd", builtin.lsp_definitions, "[G]oto [D]efinition")
+          map("gD", vim.lsp.buf.declaration, "[G]oto [D]eclaration")
+          map("gr", builtin.lsp_references, "[G]oto [R]eferences")
+          map("gI", builtin.lsp_implementations, "[G]oto [I]mplementation")
+          map("gT", builtin.lsp_type_definitions, "[G]oto [T]ype Definition")
+
+          map("<leader>cr", vim.lsp.buf.rename, "Rename symbol")
+          map("<leader>ca", vim.lsp.buf.code_action, "[C]ode [A]ction", { "n", "x" })
+          map("<leader>wd", builtin.lsp_document_symbols, "Open Document Symbols")
+          map("<space>ww", function()
+            builtin.diagnostics({ root_dir = true })
+          end, "Show diagnostics in current workspace")
 
           -- The following two autocommands are used to highlight references of the
           -- word under your cursor when your cursor rests there for a little while.
