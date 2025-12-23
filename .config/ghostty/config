@@ -1,4 +1,4 @@
-font-family = "JetBrainsMonoNL Nerd Font Mono"
+font-family = "FiraCode Nerd Font"
 theme = dark:nightfox, light:dayfox
 font-size = 16
 mouse-hide-while-typing = true
