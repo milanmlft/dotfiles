@@ -113,7 +113,7 @@ brew "glow"
 brew "gnu-sed"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
-# GNU Pretty Good Privacy (PGP) package
+# GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # Command-driven, interactive function plotting
 brew "gnuplot"
@@ -145,10 +145,6 @@ brew "jags"
 brew "jpeg"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
-# Swiss-army knife of markup format conversion
-brew "pandoc"
-# Interactive environments for writing and running code
-brew "jupyterlab"
 # Little helper to run CNCF's k3s in Docker
 brew "k3d"
 # Kubernetes CLI To Manage Your Clusters In Style!
@@ -175,6 +171,8 @@ brew "neovim"
 brew "open-mpi"
 # Optimized BLAS library
 brew "openblas"
+# Swiss-army knife of markup format conversion
+brew "pandoc"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Password manager
@@ -209,6 +207,8 @@ brew "ruff"
 brew "sops"
 # Cross-shell prompt for astronauts
 brew "starship"
+# Opinionated Lua code formatter
+brew "stylua"
 # Version control system designed to be a better CVS
 brew "subversion"
 # Tool Command Language
@@ -245,8 +245,6 @@ brew "watchman"
 brew "wget"
 # Yet Another Dotfiles Manager
 brew "yadm"
-# JavaScript package manager
-brew "yarn"
 # Process YAML, JSON, XML, CSV and properties documents from the CLI
 brew "yq"
 # General-purpose lossless data-compression library
@@ -329,3 +327,8 @@ go "sigs.k8s.io/kind"
 go "github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen"
 go "github.com/ucl-arc-tre/actions-runner/cmd/s3tagsfilter"
 go "honnef.co/go/tools/cmd/staticcheck"
+cargo "cargo-cache"
+cargo "cargo-update"
+cargo "neocmakelsp"
+cargo "rustlings"
+cargo "tmux-sessionizer"
