@@ -7,6 +7,8 @@ tap "r-lib/rig"
 tap "romkatv/powerlevel10k"
 # Run your GitHub Actions locally
 brew "act"
+# Simple, modern, secure file encryption
+brew "age"
 # Fast and opinionated formatter for R code
 brew "air"
 # Library for manipulating PNG images
@@ -83,9 +85,7 @@ brew "eza"
 brew "fastfetch"
 # Simple, fast and user-friendly alternative to find
 brew "fd"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Infamous electronic fortune-cookie generator
 brew "fortune"
@@ -111,12 +111,16 @@ brew "gitmoji"
 brew "glow"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
 # GNU Privacy Guard (OpenPGP)
 brew "gnupg"
 # Command-driven, interactive function plotting
 brew "gnuplot"
+# Fast linters runner for Go
+brew "golangci-lint"
 # Library to render SVG files using Cairo
 brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
@@ -135,7 +139,7 @@ brew "httpie"
 brew "hyperfine"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
 brew "libheif"
-# Tools and libraries to manipulate images in many formats
+# Tools and libraries to manipulate images in select formats
 brew "imagemagick"
 # GNU utilities for networking
 brew "inetutils"
@@ -183,6 +187,8 @@ brew "pinentry-mac"
 brew "pipx"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Tool for managing OCI containers and pods
+brew "podman"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Object-relational database system
@@ -260,7 +266,7 @@ brew "hashicorp/tap/packer"
 # Terraform
 brew "hashicorp/tap/terraform"
 # AeroSpace is an i3-like tiling window manager for macOS
-cask "aerospace"
+cask "nikitabobko/tap/aerospace"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Terminal-based AI coding assistant
@@ -280,6 +286,8 @@ cask "font-rubik"
 cask "ghostty"
 # Free and open-source image editor
 cask "gimp"
+# Web browser
+cask "google-chrome"
 # Utility to hide menu bar items
 cask "hiddenbar"
 # Vector graphics editor
@@ -297,7 +305,7 @@ cask "postman"
 # Control your tools with a few keystrokes
 cask "raycast"
 # The R Installation Manager
-cask "rig"
+cask "r-lib/rig/rig"
 # Data science software focusing on R and Python
 cask "rstudio"
 # Team communication and collaboration software
@@ -308,6 +316,7 @@ cask "spotify"
 cask "visual-studio-code"
 # Multiplayer code editor
 cask "zed"
+go "github.com/ucl-arc-tre/actions-runner/cmd/agekeygen"
 go "github.com/spf13/cobra-cli"
 go "github.com/dependabot/cli/cmd/dependabot"
 go "github.com/go-delve/delve/cmd/dlv"
@@ -315,10 +324,10 @@ go "golang.org/dl/go1.24.6"
 go "golang.org/dl/go1.25.0"
 go "mvdan.cc/gofumpt"
 go "github.com/incu6us/goimports-reviser/v3"
-go "github.com/golangci/golangci-lint/v2/cmd/golangci-lint"
 go "github.com/segmentio/golines"
 go "github.com/fatih/gomodifytags"
 go "golang.org/x/tools/gopls"
+go "github.com/securego/gosec/v2/cmd/gosec"
 go "github.com/cweill/gotests/gotests"
 go "github.com/nao1215/gup"
 go "github.com/koron/iferr"
@@ -332,3 +341,14 @@ cargo "cargo-update"
 cargo "neocmakelsp"
 cargo "rustlings"
 cargo "tmux-sessionizer"
+uv "cmakelint"
+uv "cookiecutter"
+uv "ipython"
+uv "playwright"
+uv "pre-commit"
+uv "pyright"
+uv "pytest"
+uv "python-lsp-server[all]", with: ["pylsp-mypy"]
+uv "ruff"
+uv "streamlit"
+uv "watchdog"
