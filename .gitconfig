@@ -52,6 +52,7 @@
 	repo = /Users/milan/Projects/CodeMiner/codemapper
 	repo = /Users/milan/talks
 	repo = /Users/milan/R-packages/enum
+	repo = /Users/milan/Projects/ucl-arc-tre/egress
 [rerere]
 	enabled = true
 [column]
