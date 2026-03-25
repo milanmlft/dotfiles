@@ -185,3 +185,9 @@ run = 'move-node-to-workspace O'
 if.app-id = 'com.spotify.client'
 run = 'move-node-to-workspace S'
 
+# https://ghostty.org/docs/help/macos-tiling-wms#aerospace
+[[on-window-detected]]
+if.app-id="com.mitchellh.ghostty"
+run= [
+  "layout floating",
+]
