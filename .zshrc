@@ -2,7 +2,7 @@
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
 # Set default config directory
-export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 
 # Set vi-mode as default for shell interaction
 set -o vi
