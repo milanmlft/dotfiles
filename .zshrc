@@ -1,3 +1,6 @@
+# load .profile
+[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+
 # Set default config directory
 export XDG_CONFIG_HOME="$HOME/.config"
 
@@ -101,9 +104,6 @@ fpath=(~/.zsh.d/ $fpath)
 
 # mcfly https://github.com/cantino/mcfly
 eval "$(mcfly init zsh)"
-
-# load .profile
-[[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
 
 # Welcome message
 echo "👋 Welcome, $USER!"
