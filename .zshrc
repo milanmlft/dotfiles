@@ -1,16 +1,12 @@
-# Welcome message
-echo "👋 Welcome, $USER!"
-
 # load .profile
 [[ -e ~/.profile ]] && emulate sh -c 'source ~/.profile'
+
+# Set default config directory
+export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 
 # Set vi-mode as default for shell interaction
 set -o vi
 
-## set defaulft config directory
-export XDG_CONFIG_HOME="$HOME/.config"
-
-# https://youtu.be/ud7YxC33Z3w?si=oBp68ABoP5NrMJB8
 # Root dir for zinit
 ZINIT_HOME="${XDG_DATA_HOME:-${HOME}/.local/share}/zinit/zinit.git"
 
@@ -23,69 +19,83 @@ fi
 # Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Zsh plugins
+# Zsh plugins - turbo mode (deferred loading)
+zinit ice wait lucid
 zinit light zsh-users/zsh-autosuggestions
+zinit ice wait lucid
 zinit light zsh-users/zsh-completions
+zinit ice wait lucid atload'zicompinit; zicdreplay'
 zinit light zsh-users/zsh-syntax-highlighting
-zinit light Aloxaf/fzf-tab # bring fzf into tab completion
+zinit ice wait lucid
+zinit light Aloxaf/fzf-tab
 
-# Load starship
+# Load starship prompt (must be eager)
 eval "$(starship init zsh)"
 
-# Load completions
-autoload -Uz +X compinit && compinit
+# Completions - single compinit, cached for 24h
+autoload -Uz compinit
+if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
+    compinit
+else
+    compinit -C
+fi
+autoload -U +X bashcompinit && bashcompinit
 zinit cdreplay -q
-
 
 # Track zsh history
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
 SAVEHIST=$HISTSIZE
-HISTDUPE=erase # erase duplicates
-setopt appendhistory
-setopt sharehistory # share history across terminals
-setopt hist_ignore_space # ignore commands starting with space
-setopt hist_ignore_all_dups
-setopt hist_save_no_dups
-setopt hist_ignore_dups
-setopt hist_find_no_dups
+HISTDUPE=erase
+setopt appendhistory sharehistory hist_ignore_space hist_ignore_all_dups hist_save_no_dups hist_ignore_dups hist_find_no_dups
 
 # Completion styling
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' # make completioon case-insensitive
-zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}' # use LS_COLORS for completion colors
-zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' # preview files in fzf-tab
-zstyle ':fzf-tab:complete:ls:*' fzf-preview 'ls --color $realpath' # preview files in fzf-tab
-zstyle ':fzf-tab:complete:eza:*' fzf-preview 'ls --color $realpath' # preview files in fzf-tab
-zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath' # make file preview work with zoxide
+zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}'
+zstyle ':completion:*' list-colors '${(s.:.)LS_COLORS}'
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:ls:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:eza:*' fzf-preview 'ls --color $realpath'
+zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'ls --color $realpath'
 
+# Paths and aliases
+source $HOME/.config/zsh/paths.zsh
+source $HOME/.config/zsh/aliases.zsh
 
-# Shell integrations
+# Set config location for tms
+export TMS_CONFIG_FILE="$XDG_CONFIG_HOME/tms/config.toml"
+
+# pipx
+export PATH="$PATH:/Users/milan/.local/bin"
+
+# --- Cached shell init ---
+# Caches eval output and regenerates when the binary is updated.
+# To force regeneration: rm ~/.cache/zsh/*.zsh
+_zsh_cache="$HOME/.cache/zsh"
+[[ -d "$_zsh_cache" ]] || mkdir -p "$_zsh_cache"
+
+_cached_source() {
+    local name=$1; shift
+    local cache="$_zsh_cache/${name}.zsh"
+    local bin_path="${commands[$name]}"
+    if [[ ! -f "$cache" ]] || [[ -n "$bin_path" && "$bin_path" -nt "$cache" ]]; then
+        eval "$@" > "$cache" 2>/dev/null
+    fi
+    source "$cache"
+}
+
+# Shell integrations (fast — keep as direct eval)
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 
-# Aliases 
-source $HOME/.config/zsh/aliases.zsh
-
-# Paths
-source $HOME/.config/zsh/paths.zsh
-
-## Set config location for tms
-export TMS_CONFIG_FILE="$XDG_CONFIG_HOME/tms/config.toml"
-
-# Created by `pipx` on 2024-01-27 14:59:53
-export PATH="$PATH:/Users/milan/.local/bin"
-
-eval "$(uv generate-shell-completion zsh)"
-eval "$(uvx --generate-shell-completion zsh)"
-
-# kubectl completion
-source <(kubectl completion zsh)
+# Slow completions — cached
+_cached_source uv "uv generate-shell-completion zsh"
+_cached_source uvx "uvx --generate-shell-completion zsh"
+_cached_source kubectl "kubectl completion zsh"
 
 # direnv https://direnv.net/docs/hook.html
 eval "$(direnv hook zsh)"
 
-autoload -U +X bashcompinit && bashcompinit
-
+# terraform
 complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 # Tab completion for cht.sh
@@ -94,3 +104,6 @@ fpath=(~/.zsh.d/ $fpath)
 
 # mcfly https://github.com/cantino/mcfly
 eval "$(mcfly init zsh)"
+
+# Welcome message
+echo "👋 Welcome, $USER!"
