@@ -83,10 +83,6 @@ _cached_source() {
     source "$cache"
 }
 
-# Shell integrations (fast — keep as direct eval)
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
-
 # Slow completions — cached
 _cached_source uv "uv generate-shell-completion zsh"
 _cached_source uvx "uvx --generate-shell-completion zsh"
@@ -105,5 +101,15 @@ fpath=(~/.zsh.d/ $fpath)
 # mcfly https://github.com/cantino/mcfly
 eval "$(mcfly init zsh)"
 
+# zmx completions (https://github.com/neurosnap/zmx)
+if command -v zmx &> /dev/null; then
+  eval "$(zmx completions zsh)"
+fi
+
 # Welcome message
 echo "👋 Welcome, $USER!"
+
+# Shell integrations (fast — keep as direct eval)
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)" # needs to run last
+

@@ -1,6 +1,14 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+format = "$env_var$all"
+
+[env_var.ZMX_SESSION]
+symbol = " "
+format = "[$symbol$env_value]($style) "
+description = "zmx session name"
+style = "bold green"
+
 [aws]
 symbol = "  "
 
@@ -52,3 +60,9 @@ symbol = " "
 
 [rust]
 symbol = " "
+
+format = """
+${env_var.ZMX_SESSION}\
+...
+"""
+

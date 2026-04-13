@@ -3,6 +3,7 @@ tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
 tap "koekeishiya/formulae"
+tap "neurosnap/tap"
 tap "nikitabobko/tap"
 tap "r-lib/rig"
 tap "romkatv/powerlevel10k"
@@ -272,6 +273,8 @@ brew "anomalyco/tap/opencode"
 brew "hashicorp/tap/packer"
 # Terraform
 brew "hashicorp/tap/terraform"
+# Session persistence for terminal processes
+brew "neurosnap/tap/zmx"
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace"
 # Anthropic's official Claude AI desktop app
