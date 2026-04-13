@@ -1,3 +1,4 @@
+tap "anomalyco/tap"
 tap "hashicorp/tap"
 tap "homebrew/bundle"
 tap "homebrew/services"
@@ -11,18 +12,14 @@ brew "act"
 brew "age"
 # Fast and opinionated formatter for R code
 brew "air"
-# Library for manipulating PNG images
-brew "libpng"
-# General-purpose data compression with high compression ratio
-brew "xz"
-# Image format providing lossless and lossy compression for web images
-brew "webp"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Code searching, linting, rewriting
 brew "ast-grep"
 # Library for command-line editing
 brew "readline"
+# General-purpose data compression with high compression ratio
+brew "xz"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # C library implementing the SSH2 protocol
@@ -33,6 +30,8 @@ brew "libgit2"
 brew "bat"
 # High performance key/value database
 brew "berkeley-db"
+# Library for manipulating PNG images
+brew "libpng"
 # Software library to render fonts
 brew "freetype"
 # OpenType text shaping engine
@@ -95,6 +94,8 @@ brew "fzf"
 brew "gcc"
 # GNU compiler collection
 brew "gcc@13"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
 # GitHub command-line tool
 brew "gh"
 # Interpreter for PostScript and PDF
@@ -135,6 +136,8 @@ brew "helm"
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Modern alternative to the watch command
+brew "hwatch"
 # Command-line benchmarking tool
 brew "hyperfine"
 # ISO/IEC 23008-12:2017 HEIF file format decoder and encoder
@@ -263,6 +266,8 @@ brew "zoxide"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode"
 # Packer
 brew "hashicorp/tap/packer"
 # Terraform
