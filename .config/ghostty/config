@@ -1,5 +1,5 @@
 font-family = "FiraCode Nerd Font"
-theme = dark:nightfox, light:dayfox
+theme = dark:nightfox
 font-size = 16
 mouse-hide-while-typing = true
 macos-option-as-alt = true
