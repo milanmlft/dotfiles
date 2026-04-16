@@ -25,6 +25,12 @@ disabled = true
 [git_branch]
 symbol = " "
 
+[git_commit]
+tag_symbol = ' '
+tag_disabled = false
+only_detached = false
+format = '[$tag]($style) '
+
 [golang]
 symbol = " "
 
