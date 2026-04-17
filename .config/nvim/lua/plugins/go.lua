@@ -1,5 +1,19 @@
 return {
-  -- Configure gopls with better defaults for Go development
+  -- ── Mason tools ──────────────────────────────────────────────────────────
+  {
+    "mason-org/mason.nvim",
+    opts = {
+      ensure_installed = {
+        "gopls",
+        "goimports",
+        "gofumpt",
+        "gomodifytags",
+        "delve",
+      },
+    },
+  },
+
+  -- ── LSP ──────────────────────────────────────────────────────────────────
   {
     "neovim/nvim-lspconfig",
     opts = {
@@ -14,16 +28,28 @@ return {
           },
           settings = {
             gopls = {
-              gofumpt = true,
-              staticcheck = false,
-              memoryMode = "DegradeClosed",
               directoryFilters = { "-.git", "-vendor", "-testdata", "-node_modules" },
+              ["formatting.gofumpt"] = true,
+              staticcheck = true,
+              semanticTokens = true,
+              completeUnimported = true,
               usePlaceholders = true,
-              completeFunctionCalls = true,
               analyses = {
-                shadow = true,
-                unusedvariable = true,
+                nilness = true,
                 unusedparams = true,
+                unusedvariable = true,
+                unusedwrite = true,
+                useany = true,
+              },
+              codelenses = {
+                gc_details = true,
+                generate = true,
+                regenerate_cgo = true,
+                run_govulncheck = true,
+                test = true,
+                tidy = true,
+                upgrade_dependency = true,
+                vendor = true,
               },
               hints = {
                 assignVariableTypes = true,
@@ -41,7 +67,7 @@ return {
     },
   },
 
-  -- Re-enable inlay hints for Go files only
+  -- Enable inlay hints for Go files only
   {
     "neovim/nvim-lspconfig",
     opts = function(_, opts)
@@ -57,32 +83,12 @@ return {
     end,
   },
 
-  -- Use goimports + gofumpt formatter chain for Go
+  -- ── Formatter ────────────────────────────────────────────────────────────
   {
     "stevearc/conform.nvim",
     opts = {
       formatters_by_ft = {
         go = { "goimports", "gofumpt" },
-      },
-    },
-  },
-
-  -- Ensure gomodifytags is installed via mason
-  {
-    "mason-org/mason.nvim",
-    opts = {
-      ensure_installed = { "gomodifytags" },
-    },
-  },
-
-  -- Configure neotest-golang with race detection and no caching
-  {
-    "nvim-neotest/neotest",
-    opts = {
-      adapters = {
-        ["neotest-golang"] = {
-          go_test_args = { "-v", "-race", "-count=1" },
-        },
       },
     },
   },
