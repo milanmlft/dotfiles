@@ -46,13 +46,9 @@
 [gpg]
 	program = /opt/homebrew/bin/gpg
 [maintenance]
-	repo = /Users/milan
-	repo = /Users/milan/github/milanmlft
-	repo = /Users/milan/Projects/SAFEHR-data/crdm-tools
-	repo = /Users/milan/Projects/CodeMiner/codemapper
 	repo = /Users/milan/talks
-	repo = /Users/milan/R-packages/enum
 	repo = /Users/milan/Projects/ucl-arc-tre/egress
+	repo = /Users/milan/Projects/ucl-arc-tre/TREu
 [rerere]
 	enabled = true
 [column]
