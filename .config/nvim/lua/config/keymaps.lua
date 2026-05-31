@@ -2,6 +2,12 @@
 -- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
 -- Add any additional keymaps here
 
+local map = vim.keymap.set
+
+map("n", "<leader><space>", function()
+  Snacks.picker.smart()
+end, { desc = "Smart Find Files" })
+
 -- Go-specific keymaps, set on LspAttach for Go files
 vim.api.nvim_create_autocmd("FileType", {
   pattern = "go",
@@ -10,7 +16,7 @@ vim.api.nvim_create_autocmd("FileType", {
     local opts = { buffer = buf, silent = true }
 
     -- Alternate between foo.go and foo_test.go
-    vim.keymap.set("n", "<leader>cga", function()
+    map("n", "<leader>cga", function()
       local file = vim.fn.expand("%:p")
       local alt
       if file:match("_test%.go$") then
@@ -26,7 +32,7 @@ vim.api.nvim_create_autocmd("FileType", {
     end, vim.tbl_extend("force", opts, { desc = "Go: alternate test file" }))
 
     -- GoIfErr: insert `if err != nil { return err }` below cursor
-    vim.keymap.set("n", "<leader>cge", function()
+    map("n", "<leader>cge", function()
       local row = vim.api.nvim_win_get_cursor(0)[1]
       vim.api.nvim_buf_set_lines(buf, row, row, false, {
         "if err != nil {",
@@ -37,7 +43,7 @@ vim.api.nvim_create_autocmd("FileType", {
     end, vim.tbl_extend("force", opts, { desc = "Go: if err != nil" }))
 
     -- GoFillStruct: use gopls "Fill struct" code action
-    vim.keymap.set("n", "<leader>cgs", function()
+    map("n", "<leader>cgs", function()
       vim.lsp.buf.code_action({
         apply = true,
         filter = function(action)
@@ -45,14 +51,17 @@ vim.api.nvim_create_autocmd("FileType", {
         end,
         on_list = function(list)
           if #list.items == 0 then
-            vim.notify("No 'fill struct' action available — place cursor on an incomplete struct literal", vim.log.levels.WARN)
+            vim.notify(
+              "No 'fill struct' action available — place cursor on an incomplete struct literal",
+              vim.log.levels.WARN
+            )
           end
         end,
       })
     end, vim.tbl_extend("force", opts, { desc = "Go: fill struct" }))
 
     -- GoAddTag: use gomodifytags to add json tags to struct under cursor
-    vim.keymap.set("n", "<leader>cgt", function()
+    map("n", "<leader>cgt", function()
       -- Find the enclosing struct name via treesitter
       local node = vim.treesitter.get_node()
       while node do
@@ -61,19 +70,26 @@ vim.api.nvim_create_autocmd("FileType", {
           if name_node then
             local struct_name = vim.treesitter.get_node_text(name_node, buf)
             local file = vim.fn.expand("%:p")
-            vim.system(
-              { "gomodifytags", "-file", file, "-struct", struct_name, "-add-tags", "json", "-transform", "snakecase", "-w" },
-              {},
-              function(result)
-                vim.schedule(function()
-                  if result.code == 0 then
-                    vim.cmd("edit!")
-                  else
-                    vim.notify("gomodifytags: " .. (result.stderr or "unknown error"), vim.log.levels.ERROR)
-                  end
-                end)
-              end
-            )
+            vim.system({
+              "gomodifytags",
+              "-file",
+              file,
+              "-struct",
+              struct_name,
+              "-add-tags",
+              "json",
+              "-transform",
+              "snakecase",
+              "-w",
+            }, {}, function(result)
+              vim.schedule(function()
+                if result.code == 0 then
+                  vim.cmd("edit!")
+                else
+                  vim.notify("gomodifytags: " .. (result.stderr or "unknown error"), vim.log.levels.ERROR)
+                end
+              end)
+            end)
             return
           end
         end

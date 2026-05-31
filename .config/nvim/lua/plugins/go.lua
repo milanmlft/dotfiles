@@ -30,7 +30,7 @@ return {
             gopls = {
               directoryFilters = { "-.git", "-vendor", "-testdata", "-node_modules" },
               ["formatting.gofumpt"] = true,
-              staticcheck = true,
+              staticcheck = false,
               semanticTokens = true,
               completeUnimported = true,
               usePlaceholders = true,
