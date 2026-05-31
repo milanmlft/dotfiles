@@ -113,8 +113,6 @@ brew "gitmoji"
 brew "glow"
 # GNU implementation of the famous stream editor
 brew "gnu-sed"
-# Validating, recursive, caching DNS resolver
-brew "unbound"
 # Passphrase entry dialog utilizing the Assuan protocol
 brew "pinentry"
 # GNU Privacy Guard (OpenPGP)
@@ -123,6 +121,8 @@ brew "gnupg"
 brew "gnuplot"
 # Fast linters runner for Go
 brew "golangci-lint"
+# Database client and tools for the Go vulnerability database
+brew "govulncheck"
 # Library to render SVG files using Cairo
 brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
@@ -183,6 +183,8 @@ brew "openblas"
 brew "pandoc"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Validating, recursive, caching DNS resolver
+brew "unbound"
 # Password manager
 brew "pass"
 # Pinentry for GPG on Mac
@@ -191,14 +193,12 @@ brew "pinentry-mac"
 brew "pipx"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
-# Tool for managing OCI containers and pods
-brew "podman"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Object-relational database system
 brew "postgresql@14"
-# Framework for managing multi-language pre-commit hooks
-brew "pre-commit"
+# Fast Git hook manager written in Rust, drop-in alternative to pre-commit
+brew "prek"
 # Code formatter for JavaScript, CSS, JSON, GraphQL, Markdown, YAML
 brew "prettier"
 # Secure and efficient FTP server
@@ -296,8 +296,6 @@ cask "font-rubik"
 cask "ghostty"
 # Free and open-source image editor
 cask "gimp"
-# Web browser
-cask "google-chrome"
 # Utility to hide menu bar items
 cask "hiddenbar"
 # Vector graphics editor
@@ -322,14 +320,15 @@ cask "rstudio"
 cask "slack"
 # Music streaming service
 cask "spotify"
-# Open-source code editor
-cask "visual-studio-code"
 # Multiplayer code editor
 cask "zed"
+go "github.com/ucl-arc-tre/actions-runner/cmd/age-backup-cleanup"
 go "github.com/ucl-arc-tre/actions-runner/cmd/agekeygen"
+go "github.com/ucl-arc-tre/actions-runner/cmd/agekeygen-protected"
 go "github.com/spf13/cobra-cli"
 go "github.com/dependabot/cli/cmd/dependabot"
 go "github.com/go-delve/delve/cmd/dlv"
+go "github.com/ucl-arc-tre/actions-runner/cmd/extend-backup-retention"
 go "golang.org/dl/go1.24.6"
 go "golang.org/dl/go1.25.0"
 go "mvdan.cc/gofumpt"
@@ -346,6 +345,7 @@ go "sigs.k8s.io/kind"
 go "github.com/oapi-codegen/oapi-codegen/v2/cmd/oapi-codegen"
 go "github.com/ucl-arc-tre/actions-runner/cmd/s3tagsfilter"
 go "honnef.co/go/tools/cmd/staticcheck"
+go "github.com/ucl-arc-tre/actions-runner/cmd/trivysum"
 cargo "cargo-cache"
 cargo "cargo-update"
 cargo "neocmakelsp"
@@ -355,10 +355,12 @@ uv "cmakelint"
 uv "cookiecutter"
 uv "ipython"
 uv "playwright"
-uv "pre-commit"
 uv "pyright"
 uv "pytest"
 uv "python-lsp-server[all]", with: ["pylsp-mypy"]
 uv "ruff"
 uv "streamlit"
 uv "watchdog"
+npm "@ansible/ansible-language-server"
+npm "@earendil-works/pi-coding-agent"
+npm "@getgrit/cli"
