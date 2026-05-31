@@ -20,7 +20,7 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Zsh plugins - turbo mode (deferred loading)
-zinit ice wait lucid
+# zinit ice wait lucid
 zinit light zsh-users/zsh-autosuggestions
 zinit ice wait lucid
 zinit light zsh-users/zsh-completions
@@ -110,6 +110,9 @@ fi
 echo "👋 Welcome, $USER!"
 
 # Shell integrations (fast — keep as direct eval)
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)" # needs to run last
+# only run in interactive shells
+if [[ $- == *i* ]] ; then
+    eval "$(fzf --zsh)"
+    eval "$(zoxide init --cmd cd zsh)" # needs to run last
+fi
 
