@@ -1,7 +1,7 @@
 # Start AeroSpace at login
 start-at-login = true
 
-# Normalisations. See ttps://nikitabobko.github.io/AeroSpace/guide#normalization
+# Normalisations. See https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
 
@@ -12,7 +12,7 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 0
+accordion-padding = 40
 
 [gaps]
 inner.horizontal = 6
@@ -49,6 +49,13 @@ alt-shift-j = 'move down'
 alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
+# alt-backslash = 'split horizontal'
+# alt-v = 'split vertical'
+
+alt-s = 'layout v_accordion' # 'layout stacking'
+alt-w = 'layout h_accordion' # 'layout tabbed'
+alt-e = 'layout tiles horizontal vertical' # 'layout toggle split'
+
 alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
@@ -74,14 +81,8 @@ alt-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
 alt-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
 alt-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
 
-alt-o = 'workspace O'
-alt-s = 'workspace S'
-# alt-t = 'workspace T'
-
-alt-shift-o = 'move-node-to-workspace O --focus-follows-window'
-alt-shift-s = 'move-node-to-workspace S --focus-follows-window'
-# alt-shift-t = 'move-node-to-workspace T --focus-follows-window'
-
+# alt-o = 'workspace O'
+# alt-s = 'workspace S'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
@@ -189,5 +190,5 @@ run = 'move-node-to-workspace S'
 [[on-window-detected]]
 if.app-id="com.mitchellh.ghostty"
 run= [
-  "layout floating",
+  "layout tiling",
 ]
