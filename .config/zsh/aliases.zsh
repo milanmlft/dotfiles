@@ -51,3 +51,5 @@ alias g++="g++-14"
 # kubectl
 alias k="kubectl"
 
+# glow: always use pager
+alias glow="glow -p"
