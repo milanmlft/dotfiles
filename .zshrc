@@ -87,24 +87,22 @@ _cached_source() {
 _cached_source uv "uv generate-shell-completion zsh"
 _cached_source uvx "uvx --generate-shell-completion zsh"
 _cached_source kubectl "kubectl completion zsh"
+# _cached_source terraform "complete -o nospace -C /opt/homebrew/bin/terraform terraform"
+_cached_source zmx "zmx completions zsh"
 
 # direnv https://direnv.net/docs/hook.html
 eval "$(direnv hook zsh)"
 
-# terraform
-complete -o nospace -C /opt/homebrew/bin/terraform terraform
 
 # Tab completion for cht.sh
 # https://github.com/chubin/cheat.sh?tab=readme-ov-file#zsh-tab-completion
-fpath=(~/.zsh.d/ $fpath)
+# fpath=(~/.zsh.d/ $fpath)
 
 # mcfly https://github.com/cantino/mcfly
 eval "$(mcfly init zsh)"
 
-# zmx completions (https://github.com/neurosnap/zmx)
-if command -v zmx &> /dev/null; then
-  eval "$(zmx completions zsh)"
-fi
+# Require trusted taps for homebrew
+export HOMEBREW_REQUIRE_TAP_TRUST=1
 
 # Welcome message
 echo "👋 Welcome, $USER!"
