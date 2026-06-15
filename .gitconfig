@@ -49,6 +49,7 @@
 	repo = /Users/milan/talks
 	repo = /Users/milan/Projects/ucl-arc-tre/egress
 	repo = /Users/milan/Projects/ucl-arc-tre/TREu
+	repo = /Users/milan/Projects/UCL-ARC/condenser-llms
 [rerere]
 	enabled = true
 [column]
