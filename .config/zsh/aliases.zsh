@@ -21,7 +21,7 @@ alias nvconf='cd ~/.config/nvim/ && nvim'
 alias zshconf='nvim ~/.zshrc'
 
 # Modern alternatives for classic unix commands
-alias cat='bat' # https://github.com/sharkdp/bat
+alias cat='bat -p' # https://github.com/sharkdp/bat
 alias du='dust' # https://github.com/bootandy/dust
 
 alias ff='fastfetch'
