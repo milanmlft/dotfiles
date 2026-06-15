@@ -15,12 +15,16 @@ brew "age"
 brew "air"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-# Code searching, linting, rewriting
-brew "ast-grep"
 # Library for command-line editing
 brew "readline"
 # General-purpose data compression with high compression ratio
 brew "xz"
+# Display directories as trees (with optional color/HTML output)
+brew "tree"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Code searching, linting, rewriting
+brew "ast-grep"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # C library implementing the SSH2 protocol
@@ -67,10 +71,12 @@ brew "cmatrix"
 brew "coreutils"
 # Static analysis of C and C++ code
 brew "cppcheck"
+# Enterprise friendly way of detecting and preventing secrets in code
+brew "detect-secrets"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Pack, ship and run any application as a lightweight container
-brew "docker"
+brew "docker", link: false
 # Isolated development environments using Docker
 brew "docker-compose"
 # More intuitive version of du in rust
@@ -181,8 +187,6 @@ brew "open-mpi"
 brew "openblas"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 # Password manager
@@ -354,6 +358,7 @@ cargo "tmux-sessionizer"
 uv "cmakelint"
 uv "cookiecutter"
 uv "ipython"
+uv "pip"
 uv "playwright"
 uv "pyright"
 uv "pytest"
