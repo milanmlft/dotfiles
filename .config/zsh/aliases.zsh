@@ -53,3 +53,6 @@ alias k="kubectl"
 
 # glow: always use pager
 alias glow="glow -p"
+
+# ghostty boo
+alias boo="ghostty +boo"
