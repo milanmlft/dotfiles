@@ -154,6 +154,10 @@ run = 'layout floating'
 if.app-id = 'com.microsoft.teams2'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = 'com.cisco.secureclient.gui'
+run = 'layout floating'
+
 # Move these apps to specific workspaces
 # 1: Obsidian
 [[on-window-detected]]
@@ -169,6 +173,10 @@ run = ['move-node-to-workspace 2']
 # 3: browser
 [[on-window-detected]]
 if.app-id = 'org.mozilla.firefox'
+run = 'move-node-to-workspace 3'
+
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
 run = 'move-node-to-workspace 3'
 
 # 4: Slack
