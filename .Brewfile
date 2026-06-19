@@ -1,12 +1,13 @@
 tap "anomalyco/tap"
-tap "hashicorp/tap"
+tap "asmvik/formulae"
+tap "hashicorp/tap", trusted: true
 tap "homebrew/bundle"
 tap "homebrew/services"
-tap "koekeishiya/formulae"
 tap "neurosnap/tap"
 tap "nikitabobko/tap"
-tap "r-lib/rig"
+tap "r-lib/rig", trusted: true
 tap "romkatv/powerlevel10k"
+tap "terraform-linters/tap"
 # Run your GitHub Actions locally
 brew "act"
 # Simple, modern, secure file encryption
@@ -76,7 +77,7 @@ brew "detect-secrets"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Pack, ship and run any application as a lightweight container
-brew "docker", link: false
+brew "docker"
 # Isolated development environments using Docker
 brew "docker-compose"
 # More intuitive version of du in rust
@@ -197,6 +198,8 @@ brew "pinentry-mac"
 brew "pipx"
 # Package compiler and linker metadata toolkit
 brew "pkgconf"
+# Tool for managing OCI containers and pods
+brew "podman"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Object-relational database system
@@ -233,8 +236,6 @@ brew "terraform-docs"
 brew "terragrunt"
 # Free software distribution for the TeX typesetting system
 brew "texlive"
-# Linter for Terraform files
-brew "tflint"
 # Update version constraints in your Terraform configurations
 brew "tfupdate"
 # Simplified and community-driven man pages
@@ -245,12 +246,16 @@ brew "tmux"
 brew "tokei"
 # Upgrade all the things
 brew "topgrade"
+# Extremely fast Python type checker, written in Rust
+brew "ty"
 # Source code spell checker
 brew "typos-cli"
 # Extremely fast Python package installer and resolver, written in Rust
 brew "uv"
 # Vi 'workalike' with many additional features
 brew "vim"
+# Simple terminal image viewer written in Rust
+brew "viu"
 # Executes a program periodically, showing output fullscreen
 brew "watch"
 # Watch files and take action when they change
@@ -271,20 +276,18 @@ brew "zoxide"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-# The AI coding agent built for the terminal.
-brew "anomalyco/tap/opencode"
 # Packer
-brew "hashicorp/tap/packer"
+brew "hashicorp/tap/packer", trusted: true
 # Terraform
-brew "hashicorp/tap/terraform"
-# Session persistence for terminal processes
-brew "neurosnap/tap/zmx"
+brew "hashicorp/tap/terraform", trusted: true
 # AeroSpace is an i3-like tiling window manager for macOS
 cask "nikitabobko/tap/aerospace"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Terminal-based AI coding assistant
-cask "claude-code"
+cask "claude-code@latest"
+# Web browser
+cask "firefox"
 # Web browser
 cask "firefox@developer-edition"
 # Clipboard manager for developers
@@ -317,15 +320,19 @@ cask "postman"
 # Control your tools with a few keystrokes
 cask "raycast"
 # The R Installation Manager
-cask "r-lib/rig/rig"
+cask "r-lib/rig/rig", trusted: true
 # Data science software focusing on R and Python
 cask "rstudio"
 # Team communication and collaboration software
 cask "slack"
 # Music streaming service
 cask "spotify"
+# Pluggable Terraform linter
+cask "terraform-linters/tap/tflint", trusted: true
 # Multiplayer code editor
 cask "zed"
+# Gecko based web browser
+cask "zen"
 go "github.com/ucl-arc-tre/actions-runner/cmd/age-backup-cleanup"
 go "github.com/ucl-arc-tre/actions-runner/cmd/agekeygen"
 go "github.com/ucl-arc-tre/actions-runner/cmd/agekeygen-protected"
@@ -358,9 +365,9 @@ cargo "tmux-sessionizer"
 uv "cmakelint"
 uv "cookiecutter"
 uv "ipython"
+uv "locust"
 uv "pip"
 uv "playwright"
-uv "pyright"
 uv "pytest"
 uv "python-lsp-server[all]", with: ["pylsp-mypy"]
 uv "ruff"
