@@ -4,6 +4,9 @@
 # Set default config directory
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 
+# Configure askpass helper
+export SUDO_ASKPASS="$HOME/.local/bin/sudo-askpass"
+
 # Set vi-mode as default for shell interaction
 set -o vi
 

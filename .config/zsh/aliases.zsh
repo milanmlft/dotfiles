@@ -56,3 +56,6 @@ alias glow="glow -p"
 
 # ghostty boo
 alias boo="ghostty +boo"
+
+# sudo
+alias sudo="sudo -A"
