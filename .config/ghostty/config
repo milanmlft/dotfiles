@@ -1,5 +1,5 @@
-font-family = "FiraCode Nerd Font"
-theme = nightfox
+font-family = "Hack Nerd Font"
+theme = terafox
 font-size = 16
 mouse-hide-while-typing = true
 macos-option-as-alt = true
@@ -9,8 +9,8 @@ macos-titlebar-style = hidden
 
 shell-integration=zsh
 
-background-opacity = 0.85
-background-blur-radius = 10
+background-opacity = 0.9
+background-blur-radius = 8
 
 cursor-style-blink = true
 
