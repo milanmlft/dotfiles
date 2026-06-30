@@ -1,5 +1,5 @@
 tap "anomalyco/tap"
-tap "asmvik/formulae"
+tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git"
 tap "hashicorp/tap", trusted: true
 tap "homebrew/bundle"
 tap "homebrew/services"
@@ -68,6 +68,8 @@ brew "cmake"
 brew "cmake-docs"
 # Console Matrix
 brew "cmatrix"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima", restart_service: :changed
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Static analysis of C and C++ code
@@ -78,8 +80,12 @@ brew "detect-secrets"
 brew "direnv"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
+# Docker CLI plugin for extended build capabilities with BuildKit
+brew "docker-buildx"
 # Isolated development environments using Docker
 brew "docker-compose"
+# Platform keystore credential helper for Docker
+brew "docker-credential-helper"
 # More intuitive version of du in rust
 brew "dust"
 # C++ template library for linear algebra
@@ -200,6 +206,8 @@ brew "pipx"
 brew "pkgconf"
 # Tool for managing OCI containers and pods
 brew "podman"
+# Alternative to docker-compose using podman
+brew "podman-compose"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Object-relational database system
@@ -276,6 +284,8 @@ brew "zoxide"
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode", trusted: true
 # Packer
 brew "hashicorp/tap/packer", trusted: true
 # Terraform
