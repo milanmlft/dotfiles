@@ -69,3 +69,6 @@ AGENTS.md
 
 # Zed
 .zed/
+
+# Go
+staticcheck.conf
