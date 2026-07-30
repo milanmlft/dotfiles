@@ -58,4 +58,4 @@ alias glow="glow -p"
 alias boo="ghostty +boo"
 
 # sudo
-alias sudo="sudo -A"
+# alias sudo="sudo -A"
