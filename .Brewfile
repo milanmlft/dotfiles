@@ -68,8 +68,6 @@ brew "cmake"
 brew "cmake-docs"
 # Console Matrix
 brew "cmatrix"
-# Container runtimes on MacOS (and Linux) with minimal setup
-brew "colima", restart_service: :changed
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Static analysis of C and C++ code
