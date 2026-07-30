@@ -12,8 +12,6 @@ tap "terraform-linters/tap"
 brew "act"
 # Simple, modern, secure file encryption
 brew "age"
-# Fast and opinionated formatter for R code
-brew "air"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
 # Library for command-line editing
@@ -24,6 +22,8 @@ brew "xz"
 brew "tree"
 # Automate deployment, configuration, and upgrading
 brew "ansible"
+# Checks ansible playbooks for practices and behaviour
+brew "ansible-lint"
 # Code searching, linting, rewriting
 brew "ast-grep"
 # Official Amazon AWS command-line interface
@@ -42,6 +42,8 @@ brew "libpng"
 brew "freetype"
 # OpenType text shaping engine
 brew "harfbuzz"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
 # Remove large files or passwords from Git history like git-filter-branch
 brew "bfg"
 # Open-source, cross-platform JavaScript runtime environment
@@ -72,6 +74,8 @@ brew "cmatrix"
 brew "coreutils"
 # Static analysis of C and C++ code
 brew "cppcheck"
+# Tool for testing and debugging Dependabot update jobs
+brew "dependabot"
 # Enterprise friendly way of detecting and preventing secrets in code
 brew "detect-secrets"
 # Load/unload environment variables based on $PWD
@@ -106,8 +110,6 @@ brew "fzf"
 brew "gcc"
 # GNU compiler collection
 brew "gcc@13"
-# Image format providing lossless and lossy compression for web images
-brew "webp"
 # GitHub command-line tool
 brew "gh"
 # Interpreter for PostScript and PDF
@@ -148,6 +150,8 @@ brew "helm"
 brew "htop"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# Review-first terminal diff viewer for agent-authored changesets
+brew "hunk"
 # Modern alternative to the watch command
 brew "hwatch"
 # Command-line benchmarking tool
@@ -288,12 +292,13 @@ brew "anomalyco/tap/opencode", trusted: true
 brew "hashicorp/tap/packer", trusted: true
 # Terraform
 brew "hashicorp/tap/terraform", trusted: true
-# AeroSpace is an i3-like tiling window manager for macOS
-cask "nikitabobko/tap/aerospace"
+cask "aerospace"
 # Anthropic's official Claude AI desktop app
 cask "claude"
 # Terminal-based AI coding assistant
 cask "claude-code@latest"
+# App to build and share containerised applications and microservices
+cask "docker-desktop"
 # Web browser
 cask "firefox"
 # Web browser
@@ -344,6 +349,7 @@ cask "zen"
 go "github.com/ucl-arc-tre/actions-runner/cmd/age-backup-cleanup"
 go "github.com/ucl-arc-tre/actions-runner/cmd/agekeygen"
 go "github.com/ucl-arc-tre/actions-runner/cmd/agekeygen-protected"
+go "github.com/air-verse/air"
 go "github.com/spf13/cobra-cli"
 go "github.com/dependabot/cli/cmd/dependabot"
 go "github.com/go-delve/delve/cmd/dlv"
