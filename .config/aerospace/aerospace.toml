@@ -52,10 +52,6 @@ alt-shift-l = 'move right'
 # alt-backslash = 'split horizontal'
 # alt-v = 'split vertical'
 
-alt-s = 'layout v_accordion' # 'layout stacking'
-alt-w = 'layout h_accordion' # 'layout tabbed'
-alt-e = 'layout tiles horizontal vertical' # 'layout toggle split'
-
 alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
@@ -81,8 +77,8 @@ alt-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
 alt-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
 alt-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
 
-# alt-o = 'workspace O'
-# alt-s = 'workspace S'
+alt-o = 'workspace O'
+alt-s = 'workspace S'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
