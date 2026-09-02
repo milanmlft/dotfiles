@@ -17,7 +17,7 @@ alias grep='grep -E --color' # force grep to always use extended regexp
 alias cl='clear'
 
 alias conf='cd ~/.config'
-alias nvconf='cd ~/.config/nvim/ && nvim'
+alias nvconf='nvim ~/.config/nvim/'
 alias zshconf='nvim ~/.zshrc'
 
 # Modern alternatives for classic unix commands

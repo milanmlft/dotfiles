@@ -5,7 +5,7 @@
 export XDG_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}"
 
 # Configure askpass helper
-export SUDO_ASKPASS="$HOME/.local/bin/sudo-askpass"
+# export SUDO_ASKPASS="$HOME/.local/bin/sudo-askpass"
 
 # Set vi-mode as default for shell interaction
 set -o vi
@@ -23,13 +23,11 @@ fi
 source "${ZINIT_HOME}/zinit.zsh"
 
 # Zsh plugins - turbo mode (deferred loading)
-# zinit ice wait lucid
-zinit light zsh-users/zsh-autosuggestions
 zinit ice wait lucid
+zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
 zinit ice wait lucid atload'zicompinit; zicdreplay'
 zinit light zsh-users/zsh-syntax-highlighting
-zinit ice wait lucid
 zinit light Aloxaf/fzf-tab
 
 # Load starship prompt (must be eager)
@@ -37,13 +35,8 @@ eval "$(starship init zsh)"
 
 # Completions - single compinit, cached for 24h
 autoload -Uz compinit
-if [[ -n ~/.zcompdump(#qN.mh+24) ]]; then
-    compinit
-else
-    compinit -C
-fi
+compinit -C
 autoload -U +X bashcompinit && bashcompinit
-zinit cdreplay -q
 
 # Track zsh history
 HISTSIZE=5000
@@ -70,36 +63,8 @@ export TMS_CONFIG_FILE="$XDG_CONFIG_HOME/tms/config.toml"
 # pipx
 export PATH="$PATH:/Users/milan/.local/bin"
 
-# --- Cached shell init ---
-# Caches eval output and regenerates when the binary is updated.
-# To force regeneration: rm ~/.cache/zsh/*.zsh
-_zsh_cache="$HOME/.cache/zsh"
-[[ -d "$_zsh_cache" ]] || mkdir -p "$_zsh_cache"
-
-_cached_source() {
-    local name=$1; shift
-    local cache="$_zsh_cache/${name}.zsh"
-    local bin_path="${commands[$name]}"
-    if [[ ! -f "$cache" ]] || [[ -n "$bin_path" && "$bin_path" -nt "$cache" ]]; then
-        eval "$@" > "$cache" 2>/dev/null
-    fi
-    source "$cache"
-}
-
-# Slow completions — cached
-_cached_source uv "uv generate-shell-completion zsh"
-_cached_source uvx "uvx --generate-shell-completion zsh"
-_cached_source kubectl "kubectl completion zsh"
-# _cached_source terraform "complete -o nospace -C /opt/homebrew/bin/terraform terraform"
-_cached_source zmx "zmx completions zsh"
-
 # direnv https://direnv.net/docs/hook.html
 eval "$(direnv hook zsh)"
-
-
-# Tab completion for cht.sh
-# https://github.com/chubin/cheat.sh?tab=readme-ov-file#zsh-tab-completion
-# fpath=(~/.zsh.d/ $fpath)
 
 # mcfly https://github.com/cantino/mcfly
 eval "$(mcfly init zsh)"
@@ -110,7 +75,6 @@ export HOMEBREW_REQUIRE_TAP_TRUST=1
 # Welcome message
 echo "👋 Welcome, $USER!"
 
-# Shell integrations (fast — keep as direct eval)
 # only run in interactive shells
 if [[ $- == *i* ]] ; then
     eval "$(fzf --zsh)"
@@ -122,3 +86,4 @@ fpath=(/Users/milan/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
