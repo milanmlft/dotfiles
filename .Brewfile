@@ -162,6 +162,8 @@ brew "libheif"
 brew "imagemagick"
 # GNU utilities for networking
 brew "inetutils"
+# Optimized BLAS library
+brew "openblas"
 # Just Another Gibbs Sampler for Bayesian MCMC simulation
 brew "jags"
 # Image manipulation library
@@ -192,8 +194,6 @@ brew "minikube"
 brew "neovim"
 # High performance message passing library
 brew "open-mpi"
-# Optimized BLAS library
-brew "openblas"
 # Swiss-army knife of markup format conversion
 brew "pandoc"
 # Validating, recursive, caching DNS resolver
@@ -220,6 +220,10 @@ brew "prek"
 brew "prettier"
 # Secure and efficient FTP server
 brew "pure-ftpd"
+# Generic machine emulator and virtualizer
+brew "qemu"
+# R Installation Manager
+brew "r-rig"
 # Messaging and streaming broker
 brew "rabbitmq"
 # Rsync for cloud storage
@@ -322,6 +326,8 @@ cask "hiddenbar"
 cask "inkscape"
 # Open-source keystroke visualiser
 cask "keycastr"
+# Free cross-platform office suite, fresh version
+cask "libreoffice"
 # Full TeX Live distribution with GUI applications
 cask "mactex"
 # VPN client for secure internet access and private browsing
@@ -332,8 +338,6 @@ cask "obsidian"
 cask "postman"
 # Control your tools with a few keystrokes
 cask "raycast"
-# The R Installation Manager
-cask "r-lib/rig/rig", trusted: true
 # Data science software focusing on R and Python
 cask "rstudio"
 # Team communication and collaboration software
@@ -342,6 +346,8 @@ cask "slack"
 cask "spotify"
 # Pluggable Terraform linter
 cask "terraform-linters/tap/tflint", trusted: true
+# Open-source code editor
+cask "visual-studio-code"
 # Multiplayer code editor
 cask "zed"
 # Gecko based web browser
@@ -378,6 +384,7 @@ cargo "rustlings"
 cargo "tmux-sessionizer"
 uv "cmakelint"
 uv "cookiecutter"
+uv "docx2pdf"
 uv "ipython"
 uv "locust"
 uv "pip"
