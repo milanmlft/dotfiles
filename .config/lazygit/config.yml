@@ -3,6 +3,6 @@ os:
 git:
   overrideGpg: true
   parseEmoji: true
-  pagers:
+  diffRenderers:
     - colorArg: always
-      pager: delta --paging=never --line-numbers --features=arctic-fox
+      command: delta --paging=never --line-numbers --features=arctic-fox
