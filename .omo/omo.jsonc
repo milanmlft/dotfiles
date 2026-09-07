@@ -1,0 +1,77 @@
+// OMO configuration
+// Model mappings target the self-hosted LiteLLM gateway declared in
+// ~/.config/opencode/opencode.jsonc. The installer's auto-generated defaults
+// pointed every agent at `opencode/gpt-5-nano` (OpenCode Zen), which is not
+// available on this machine, so they are overridden here.
+{
+  "[opencode]": {
+    "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json",
+    "telemetry": false,
+    "agents": {
+      // Claude-optimized agents: prompts are tuned for the Claude family.
+      "sisyphus": {
+        "model": "litellm/claude-opus-5"
+      },
+      "metis": {
+        "model": "litellm/claude-opus-5"
+      },
+      "prometheus": {
+        "model": "litellm/claude-opus-5"
+      },
+      "atlas": {
+        "model": "litellm/claude-sonnet-5"
+      },
+      "sisyphus-junior": {
+        "model": "litellm/claude-sonnet-5"
+      },
+      // GPT-native agents: guide warns against overriding these to Claude.
+      "hephaestus": {
+        "model": "litellm/openai/gpt-5.6-terra"
+      },
+      "oracle": {
+        "model": "litellm/openai/gpt-5.6-terra"
+      },
+      "momus": {
+        "model": "litellm/openai/gpt-5.6-terra"
+      },
+      // Utility agents: speed over intelligence, do not "upgrade" these.
+      "explore": {
+        "model": "litellm/qwen/qwen3.7-flash"
+      },
+      "librarian": {
+        "model": "litellm/qwen/qwen3.7-flash"
+      },
+      // Needs image input support.
+      "multimodal-looker": {
+        "model": "litellm/claude-sonnet-5"
+      }
+    },
+    "categories": {
+      "ultrabrain": {
+        "model": "litellm/claude-opus-5"
+      },
+      "artistry": {
+        "model": "litellm/claude-opus-5"
+      },
+      "unspecified-high": {
+        "model": "litellm/claude-opus-5"
+      },
+      "deep": {
+        "model": "litellm/openai/gpt-5.6-terra"
+      },
+      "visual-engineering": {
+        "model": "litellm/claude-sonnet-5"
+      },
+      "writing": {
+        "model": "litellm/claude-sonnet-5"
+      },
+      "unspecified-low": {
+        "model": "litellm/claude-haiku-4-5"
+      },
+      "quick": {
+        "model": "litellm/claude-haiku-4-5"
+      }
+    }
+  },
+  "telemetry": false
+}
