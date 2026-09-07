@@ -1,5 +1,7 @@
 {
+  "plugin": ["oh-my-openagent@latest"],
   "$schema": "https://opencode.ai/config.json",
+  "lsp": true,
   "provider": {
     "litellm": {
       "npm": "@ai-sdk/openai-compatible",
@@ -8,11 +10,34 @@
         "baseURL": "https://litellm.arc-llm.condenser.arc.ucl.ac.uk/"
       },
       "models": {
-        "qwen2.5-0.5b": {
-          "name": "qwen-2.5",
-          "experimental": true
-        }
+        "claude-opus-5": {
+          "name": "Claude Opus 5"
+        },
+        "claude-sonnet-5": {
+          "name": "Claude Sonnet 5"
+        },
+        "claude-haiku-4-5": {
+          "name": "Claude Haiku 4.5"
+        },
+        "openai/gpt-5.6-terra": {
+          "name": "GPT-5.6 Terra"
+        },
+        "openai/gpt-5.6-luna": {
+          "name": "GPT-5.6 Luna"
+        },
+        "moonshot/kimi-k3": {
+          "name": "Kimi K3"
+        },
+        "zai/glm-5.3": {
+          "name": "GLM 5.3"
+        },
+        "qwen/qwen3.7-flash": {
+          "name": "Qwen 3.7 Flash"
+        },
+        "condenser-poc/qwen-3.6-35b-a3b-fp8": {
+          "name": "Condenser Qwen 3.6 35b"
+        },
       }
     }
-  }
+  },
 }
