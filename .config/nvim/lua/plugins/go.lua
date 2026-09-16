@@ -29,7 +29,7 @@ return {
           settings = {
             gopls = {
               directoryFilters = { "-.git", "-vendor", "-testdata", "-node_modules" },
-              ["formatting.gofumpt"] = true,
+              gofumpt = true,
               staticcheck = false,
               semanticTokens = true,
               completeUnimported = true,
@@ -42,7 +42,7 @@ return {
                 useany = true,
               },
               codelenses = {
-                gc_details = true,
+                gc_details = false,
                 generate = true,
                 regenerate_cgo = true,
                 run_govulncheck = true,
@@ -83,22 +83,43 @@ return {
     end,
   },
 
-  -- ── Linter ───────────────────────────────────────────────────────────────
+  -- code actions and formatting with none-ls
   {
-    "mfussenegger/nvim-lint",
+    "nvimtools/none-ls.nvim",
     optional = true,
     dependencies = {
       {
         "mason-org/mason.nvim",
-        opts = { ensure_installed = { "golangci-lint" } },
+        opts = { ensure_installed = { "gomodifytags", "impl" } },
       },
     },
-    opts = {
-      linters_by_ft = {
-        go = { "golangcilint" },
-      },
-    },
+    opts = function(_, opts)
+      local nls = require("null-ls")
+      opts.sources = vim.list_extend(opts.sources or {}, {
+        nls.builtins.code_actions.gomodifytags,
+        nls.builtins.code_actions.impl,
+        nls.builtins.formatting.goimports,
+        nls.builtins.formatting.gofumpt,
+      })
+    end,
   },
+
+  -- ── Linter ───────────────────────────────────────────────────────────────
+  -- {
+  --   "mfussenegger/nvim-lint",
+  --   optional = true,
+  --   dependencies = {
+  --     {
+  --       "mason-org/mason.nvim",
+  --       opts = { ensure_installed = { "golangci-lint" } },
+  --     },
+  --   },
+  --   opts = {
+  --     linters_by_ft = {
+  --       go = { "golangcilint" },
+  --     },
+  --   },
+  -- },
 
   -- ── Formatter ────────────────────────────────────────────────────────────
   {
