@@ -3,75 +3,104 @@
 // ~/.config/opencode/opencode.jsonc. The installer's auto-generated defaults
 // pointed every agent at `opencode/gpt-5-nano` (OpenCode Zen), which is not
 // available on this machine, so they are overridden here.
+//
+// NOTE: telemetry must be the boolean form inside the [opencode] block.
+// A base-scope `"telemetry": { "enabled": false }` object appears in the
+// published JSON schema but is REJECTED by the runtime config validator
+// (doctor reports "Invalid configuration"). Do not add it back.
 {
   "[opencode]": {
     "$schema": "https://raw.githubusercontent.com/code-yeongyu/oh-my-openagent/dev/assets/omo.schema.json",
     "telemetry": false,
+    "team_mode": {
+      "enabled": true,
+      "max_parallel_members": 4,
+      "max_members": 8,
+      "tmux_visualization": true,
+      "max_messages_per_run": 10000,
+      "max_wall_clock_minutes": 120,
+      "max_member_turns": 500,
+      "message_payload_max_bytes": 32768,
+      "recipient_unread_max_bytes": 262144,
+      "mailbox_poll_interval_ms": 3000
+    },
     "agents": {
-      // Claude-optimized agents: prompts are tuned for the Claude family.
+      // Main orchestrator: Claude Opus or Kimi K3 work best
       "sisyphus": {
-        "model": "litellm/claude-opus-5"
+        "model": "anthropic/claude-opus-5"
       },
-      "metis": {
-        "model": "litellm/claude-opus-5"
-      },
+      // Strategic planner: interviews and explores codebase to make a plan
       "prometheus": {
-        "model": "litellm/claude-opus-5"
+        "model": "anthropic/claude-opus-5"
       },
+      // Master executor: read plans and delegates tasks
       "atlas": {
-        "model": "litellm/claude-sonnet-5"
+        "model": "anthropic/claude-sonnet-5"
       },
-      "sisyphus-junior": {
-        "model": "litellm/claude-sonnet-5"
-      },
-      // GPT-native agents: guide warns against overriding these to Claude.
+      // Specialist developer, GPT-optimised
       "hephaestus": {
         "model": "litellm/openai/gpt-5.6-terra"
       },
+      // Architecture consultation: GPT or Claude Opus
       "oracle": {
-        "model": "litellm/openai/gpt-5.6-terra"
+        "model": "anthropic/claude-opus-5",
+        "variant": "high"
       },
+      // Plan consultant: catches ambiguities in plans
+      "metis": {
+        "model": "litellm/qwen/kimi-k3"
+      },
+      // Plan reviewer
       "momus": {
-        "model": "litellm/openai/gpt-5.6-terra"
+        "model": "litellm/qwen/kimi-k3"
       },
-      // Utility agents: speed over intelligence, do not "upgrade" these.
+      // Focused task executor
+      "sisyphus-junior": {
+        "model": "anthropic/claude-haiku-4-5"
+      },
+      // Research agents: cheaper models are fine
       "explore": {
-        "model": "litellm/qwen/qwen3.7-flash"
+        "model": "anthropic/claude-haiku-4-5"
       },
       "librarian": {
-        "model": "litellm/qwen/qwen3.7-flash"
+        "model": "anthropic/claude-haiku-4-5"
       },
-      // Needs image input support.
+      // Media analysis
       "multimodal-looker": {
-        "model": "litellm/claude-sonnet-5"
+        "model": "litellm/openai/gpt-5.6-terra"
       }
     },
     "categories": {
       "ultrabrain": {
-        "model": "litellm/claude-opus-5"
+        "model": "anthropic/claude-opus-5"
       },
       "artistry": {
-        "model": "litellm/claude-opus-5"
+        "model": "anthropic/claude-opus-5"
       },
       "unspecified-high": {
-        "model": "litellm/claude-opus-5"
+        "model": "anthropic/claude-opus-5"
       },
       "deep": {
         "model": "litellm/openai/gpt-5.6-terra"
       },
       "visual-engineering": {
-        "model": "litellm/claude-sonnet-5"
+        "model": "anthropic/claude-sonnet-5"
       },
       "writing": {
-        "model": "litellm/claude-sonnet-5"
+        "model": "anthropic/claude-sonnet-5"
       },
       "unspecified-low": {
-        "model": "litellm/claude-haiku-4-5"
+        "model": "anthropic/claude-haiku-4-5"
       },
       "quick": {
-        "model": "litellm/claude-haiku-4-5"
+        "model": "anthropic/claude-haiku-4-5"
       }
+    },
+    "tmux": {
+      "enabled": false
     }
   },
-  "telemetry": false
+  "_migrations": [
+    "2026-08-reasoning-unification"
+  ]
 }
