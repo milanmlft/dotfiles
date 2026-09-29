@@ -1,3 +1,7 @@
+# The following lines were added by Docker Desktop to add commands to your PATH.
+export PATH="$PATH:/Users/milan/.docker/bin"
+# End of Docker Desktop section.
+
 # set default text editor to nvim
 export EDITOR='/opt/homebrew/bin/nvim'
 export VISUAL='/opt/homebrew/bin/nvim'
