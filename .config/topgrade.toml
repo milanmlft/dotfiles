@@ -21,7 +21,7 @@ disable = ["node", "uv", "ruby_gems", "gem", "vscode"]
 
 # Commands to run after anything
 [post_commands]
-"Brewfile drift" = "brew bundle check --file ~/.Brewfile || echo 'Brewfile drift'"
+"Brewfile drift" = "brew bundle check --verbose --file ~/.Brewfile || echo 'Brewfile drift'"
 
 [brew]
 autoremove = true
