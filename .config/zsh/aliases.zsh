@@ -1,61 +1,46 @@
-alias ls='ls --color=auto'
-
-# eza aliases
-alias ls='eza'
+# ---- listing (eza) -----------------------------------------------------
 alias ezaa='eza --icons --git --group-directories-first'
-alias ld='ezaa -lD' # only list directories
-alias lf='ezaa -lf' # only list files
+alias ls='eza'
 alias l='ezaa --oneline'
 alias ll='ezaa -l'
-alias la='ezaa -la' # list all files including hidden
-alias lh='ezaa -dl .*' # list hidden files
-alias lt='ezaa -T' # tree view
-alias lr='ezaa --reverse --sort size' # sort files by size
+alias la='ezaa -la'
+alias ld='ezaa -lD'              # directories only
+alias lf='ezaa -lf'              # files only
+alias lh='ezaa -dl .*'           # hidden files only
+alias lt='ezaa -T'               # tree
+alias lr='ezaa -l --reverse --sort size'
 
+# ---- safer / modern defaults -------------------------------------------
 alias cp='cp -i'
-alias grep='grep -E --color' # force grep to always use extended regexp
+alias grep='grep -E --color=auto'
+alias cat='bat -p'
+alias du='dust'
 alias cl='clear'
+alias cdtemp='cd "$(mktemp -d)"'
 
-alias conf='cd ~/.config'
-alias nvconf='nvim ~/.config/nvim/'
-alias zshconf='nvim ~/.zshrc'
-
-# Modern alternatives for classic unix commands
-alias cat='bat -p' # https://github.com/sharkdp/bat
-alias du='dust' # https://github.com/bootandy/dust
-
-alias ff='fastfetch'
-
-# Always use nvim
+# ---- editors & config --------------------------------------------------
 alias vim='nvim'
 alias v='nvim'
+alias conf='cd $XDG_CONFIG_HOME'
+alias nvconf='nvim $XDG_CONFIG_HOME/nvim/'
+alias zshconf='nvim ~/.zshrc'
+alias zjconf='nvim $XDG_CONFIG_HOME/zellij/config.kdl'
 
-## R
-alias R='R -q --no-save --no-restore-data'	# never save or restore R workspace
-alias bioc-devel='R_LIBS_USER=~/Library/R/x86_64/4.1-Bioc-3.14/library radian' # launch R with bioc-devel library
+# ---- zellij ------------------------------------------------------------
+alias zja='zellij attach'
+alias zjl='zellij list-sessions'
+alias zjk='zellij kill-session'
+
+# ---- R -----------------------------------------------------------------
+alias R='R -q --no-save --no-restore-data'
 alias rcheck='Rscript -e "devtools::check()"'
 alias rtest='Rscript -e "devtools::test()"'
 alias rdoc='Rscript -e "devtools::document()"'
 alias rinstall='Rscript -e "devtools::install()"'
 
-# GitHub
-alias tasks='gh issue list --assignee @me' # list all issues assigned to me
-
-# Create a temp dir and change into it
-alias cdtemp='cd $(mktemp -d)'
-
-## Use Homebrew gcc compilers
-alias gcc="gcc-14"
-alias g++="g++-14"
-
-# kubectl
-alias k="kubectl"
-
-# glow: always use pager
-alias glow="glow -p"
-
-# ghostty boo
-alias boo="ghostty +boo"
-
-# sudo
-# alias sudo="sudo -A"
+# ---- misc tools --------------------------------------------------------
+alias k='kubectl'
+alias tasks='gh issue list --assignee @me'
+alias glow='glow -p'
+alias ff='fastfetch'
+alias boo='ghostty +boo'

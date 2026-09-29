@@ -1,0 +1,117 @@
+#!/usr/bin/env bash
+# zj — zellij sessionizer (replaces tmux-sessionizer / tms)
+#
+#   zj              fuzzy-pick a running session or a project and switch to it
+#   zj <dir>        open (or switch to) the session for <dir>, e.g. `zj .`
+#   zj -l dev ...   use a layout from ~/.config/zellij/layouts when creating
+#
+# Works outside zellij (attaches) and inside it (switches the current
+# client), so it's bound to `Alt a` + `o` as a floating popup.
+set -euo pipefail
+
+# ---- config (was ~/.config/tms/config.toml) --------------------------
+SEARCH_DIRS=(            # "<dir>:<max depth of repos below it>"
+  "$HOME/Projects:3"
+  "$HOME/Teaching:3"
+  "$HOME/R-packages:3"
+  "$HOME/website:1"
+  "$HOME/talks:1"
+  "$HOME/obsidian:1"
+)
+BOOKMARKS=("$HOME/.config" "$HOME/scratch")
+LAYOUT_DIR="${XDG_CONFIG_HOME:-$HOME/.config}/zellij/layouts"
+# -----------------------------------------------------------------------
+
+# internal hooks used by the fzf bindings
+case ${1:-} in
+  --list) LIST_ONLY=1 ;;
+  --kill) [[ ${2:-} == session:* ]] && zellij delete-session --force "${2#session:}" >/dev/null 2>&1; exit 0 ;;
+esac
+
+layout=""
+if [[ -z ${LIST_ONLY:-} ]]; then
+  while getopts ":l:h" opt; do
+    case $opt in
+      l) layout=$OPTARG ;;
+      h) sed -n '2,9p' "$0" | sed 's/^# \{0,1\}//'; exit 0 ;;
+      *) echo "zj: unknown option -$OPTARG" >&2; exit 2 ;;
+    esac
+  done
+  shift $((OPTIND - 1))
+fi
+
+# Bare layout names -> files (zellij resolves CLI layout names against the
+# cwd, not layout_dir, so pass an absolute path).
+if [[ -n $layout && $layout != */* ]]; then
+  layout="$LAYOUT_DIR/${layout%.kdl}.kdl"
+fi
+if [[ -n $layout && ! -f $layout ]]; then
+  echo "zj: layout not found: $layout" >&2; exit 1
+fi
+
+session_name() {  # zellij dislikes dots/colons/spaces in names
+  local base; base=$(basename "$1")
+  printf '%s' "${base//[.: ]/_}"
+}
+
+sessions() { zellij list-sessions --short --no-formatting 2>/dev/null || true; }
+
+candidates() {
+  # 1. existing sessions (live or resurrectable)
+  sessions | while IFS= read -r s; do printf '● %s\tsession:%s\n' "$s" "$s"; done
+  # 2. bookmarks + git repos under the search dirs
+  {
+    for b in "${BOOKMARKS[@]}"; do [[ -d $b ]] && printf '%s\n' "$b"; done
+    for entry in "${SEARCH_DIRS[@]}"; do
+      local dir=${entry%:*} depth=${entry##*:}
+      [[ -d $dir ]] || continue
+      fd --hidden --no-ignore-vcs --prune --exclude node_modules --exclude .venv --max-depth "$((depth + 1))" \
+         --type d --type f '^\.git$' "$dir" --exec-batch dirname
+    done
+  } | awk '!seen[$0]++' | while IFS= read -r d; do
+      printf '  %s\t%s\n' "${d/#"$HOME"/\~}" "$d"
+    done
+}
+
+open_session() {  # open_session <name> [dir]
+  local name=$1 dir=${2:-$PWD}
+  local -a layout_opt=()
+  if [[ -n ${ZELLIJ:-} ]]; then
+    [[ $name == "${ZELLIJ_SESSION_NAME:-}" ]] && return 0
+    # Create or resurrect it in the background, rooted at $dir, then switch
+    # this client over. Fails harmlessly if the session is already running.
+    [[ -n $layout ]] && layout_opt=(options --default-layout "$layout")
+    ( cd "$dir" && zellij attach --create-background "$name" ${layout_opt[@]+"${layout_opt[@]}"} ) >/dev/null 2>&1 || true
+    zellij action switch-session "$name"
+  elif sessions | grep -qxF -- "$name"; then
+    exec zellij attach "$name"
+  else
+    [[ -n $layout ]] && layout_opt=(--layout "$layout")
+    cd "$dir" && exec zellij --session "$name" ${layout_opt[@]+"${layout_opt[@]}"}
+  fi
+}
+
+if [[ -n ${LIST_ONLY:-} ]]; then candidates; exit 0; fi
+
+if [[ $# -gt 0 ]]; then
+  dir=$(cd "$1" && pwd)
+  open_session "$(session_name "$dir")" "$dir"
+  exit
+fi
+
+fzf_opts=(
+  --delimiter=$'\t' --with-nth=1 --reverse --prompt='zj> '
+  --header='enter: open · ctrl-x: delete session'
+  --preview='[[ {2} == session:* ]] || eza -1 --icons --group-directories-first {2}'
+  --bind="ctrl-x:execute-silent($0 --kill {2})+reload($0 --list)"
+)
+[[ -z ${ZELLIJ:-} ]] && fzf_opts+=(--height=60%)
+
+choice=$(candidates | fzf "${fzf_opts[@]}") || exit 0
+target=${choice#*$'\t'}
+
+if [[ $target == session:* ]]; then
+  open_session "${target#session:}"
+else
+  open_session "$(session_name "$target")" "$target"
+fi

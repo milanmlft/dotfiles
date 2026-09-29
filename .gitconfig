@@ -5,68 +5,74 @@
 [core]
 	autocrlf = false
 	safecrlf = true
-	excludesfile = /Users/milan/.gitignore_global
-    pager = delta
+	excludesfile = ~/.gitignore_global
+	pager = delta
 [alias]
-    co = checkout
-    st = status
-    br = branch
-    hist = "log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short"
-    type = cat-file -t
-    dump = cat-file -p
-    unstage = reset HEAD --
-    last = log -p -n 1
-    ci = commit -v
-    can = commit -v --amend --no-edit
-    staash = stash --all
-    bb = !better-git-branch.sh
-    pushfwl = push --force-with-lease
-    rpo = remote prune origin
+	co = checkout
+	sw = switch
+	st = status
+	br = branch
+	hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+	type = cat-file -t
+	dump = cat-file -p
+	unstage = restore --staged
+	last = log -p -n 1
+	ci = commit -v
+	can = commit -v --amend --no-edit
+	staash = stash --all
+	bb = !better-git-branch.sh
+	pushfwl = push --force-with-lease
+	rpo = remote prune origin
 [commit]
-	template = /Users/milan/.stCommitMsg
 	gpgsign = true
+	verbose = true
+[tag]
+	gpgSign = true
+	sort = version:refname
+[gpg]
+	program = gpg
+[init]
+	defaultBranch = main
 [push]
 	default = current
+	autoSetupRemote = true
+	followTags = true
+[pull]
+	rebase = false
+[fetch]
+	prune = true
+	pruneTags = true
 [merge]
-	tool = vimdiff
+	tool = nvimdiff
+	conflictstyle = zdiff3
 [diff]
-	tool = vimdiff
+	tool = nvimdiff
+	algorithm = histogram
+	colorMoved = plain
+	mnemonicPrefix = true
+	renames = true
+[rerere]
+	enabled = true
+	autoupdate = true
+[column]
+	ui = auto
+[branch]
+	sort = -committerdate
+[help]
+	autocorrect = prompt
+[interactive]
+	diffFilter = delta --color-only
+[delta]
+	navigate = true
+	dark = true
+	features = arctic-fox
 [filter "lfs"]
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
 	clean = git-lfs clean -- %f
-[filesystem "AdoptOpenJDK|1.8.0_232|/dev/disk1s2"]
-	timestampResolution = 1001 milliseconds
-	minRacyThreshold = 0 nanoseconds
-[pull]
-	rebase = false
-[init]
-	defaultBranch = main
-[gpg]
-	program = /opt/homebrew/bin/gpg
-[maintenance]
-	repo = /Users/milan/talks
-	repo = /Users/milan/Projects/ucl-arc-tre/egress
-	repo = /Users/milan/Projects/ucl-arc-tre/TREu
-	repo = /Users/milan/Projects/UCL-ARC/condenser-llms
-[rerere]
-	enabled = true
-[column]
-	ui = auto
-[branch]
-	sort = -committerdate
-[fetch]
-	prune = true
-[interactive]
-    diffFilter = delta --color-only
-[delta]
-    navigate = true  # use n and N to move between diff sections
-    dark = true      # or light = true, or omit for auto-detection
-    features = arctic-fox
 [include]
-    path = ~/.config/delta/themes.gitconfig
-[merge]
-    conflictstyle = zdiff3
-[tag]
-	gpgSign = true
+	path = ~/.config/delta/themes.gitconfig
+	# machine-local, untracked (e.g. `git maintenance register --config-file ~/.gitconfig.local`)
+	# keeps private repo paths out of the public repo
+	path = ~/.gitconfig.local

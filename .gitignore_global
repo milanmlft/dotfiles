@@ -1,6 +1,7 @@
 *~
 .DS_Store
-.*.swp  # vim backup files
+# vim swap files
+.*.swp
 
 # MS Office files
 ~$*

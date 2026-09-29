@@ -18,6 +18,7 @@ confirm-close-surface = false
 copy-on-select = clipboard
 keybind = shift+enter=text:\x1b\r
 
+# Ghostty-native splits (zellij panes use Alt a + h/j/k/l)
 keybind = cmd+h=goto_split:left
 keybind = cmd+j=goto_split:bottom
 keybind = cmd+k=goto_split:top
