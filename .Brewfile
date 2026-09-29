@@ -1,12 +1,9 @@
 tap "anomalyco/tap"
 tap "asmvik/formulae", "https://github.com/asmvik/homebrew-formulae.git"
 tap "hashicorp/tap", trusted: true
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "neurosnap/tap"
 tap "nikitabobko/tap"
 tap "r-lib/rig", trusted: true
-tap "romkatv/powerlevel10k"
 tap "terraform-linters/tap"
 # Run your GitHub Actions locally
 brew "act"
@@ -189,7 +186,6 @@ brew "luarocks"
 # Language Server Protocol for Markdown
 brew "marksman"
 # Fly through your shell history
-brew "mcfly"
 # Run a Kubernetes cluster locally
 brew "minikube"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -257,7 +253,6 @@ brew "tfupdate"
 # Simplified and community-driven man pages
 brew "tldr"
 # Terminal multiplexer
-brew "tmux"
 # Program that allows you to count code, quickly
 brew "tokei"
 # Upgrade all the things
@@ -291,7 +286,6 @@ brew "zoxide"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Fish shell like syntax highlighting for zsh
-brew "zsh-syntax-highlighting"
 # The AI coding agent built for the terminal.
 brew "anomalyco/tap/opencode", trusted: true
 # Packer
@@ -383,7 +377,6 @@ cargo "cargo-cache"
 cargo "cargo-update"
 cargo "neocmakelsp"
 cargo "rustlings"
-cargo "tmux-sessionizer"
 uv "cmakelint"
 uv "cookiecutter"
 uv "docx2pdf"
