@@ -54,6 +54,8 @@ brew "bitwarden-cli"
 brew "boost"
 # Resource monitor. C++ version and continuation of bashtop and bpytop
 brew "btop"
+# Incredibly fast JavaScript runtime, bundler, test runner, and package manager
+brew "bun"
 # Powerful, enterprise-ready, open source web server with automatic HTTPS
 brew "caddy"
 # Modern, C++-native, test framework
