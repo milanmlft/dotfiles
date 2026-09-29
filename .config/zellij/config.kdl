@@ -18,9 +18,8 @@
 //   [         scroll mode         /       search scrollback
 //   r         resize mode         m       move mode
 //   o         sessionizer (zj)    s       session manager
-//   L         layout manager      i       cht.sh popup
-//   g         lazygit popup       d       detach
-//   Alt a     send a literal Alt-a to the app
+//   L         layout manager      g       lazygit popup      
+//   d         detach
 // ------------------------------------------------------------------
 
 keybinds clear-defaults=true {
@@ -69,7 +68,7 @@ keybinds clear-defaults=true {
         bind "r" { SwitchToMode "resize"; }
         bind "m" { SwitchToMode "move"; }
 
-        // sessions & popups (replaces tms + display-popup)
+        // sessions & popups
         bind "o" {
             Run "zj" {
                 floating true
@@ -89,14 +88,6 @@ keybinds clear-defaults=true {
             LaunchOrFocusPlugin "zellij:layout-manager" {
                 floating true
                 move_to_focused_tab true
-            }
-            SwitchToMode "locked"
-        }
-        bind "i" {
-            Run "cht" {
-                floating true
-                close_on_exit true
-                name "cht.sh"
             }
             SwitchToMode "locked"
         }
@@ -141,9 +132,6 @@ keybinds clear-defaults=true {
         bind "Esc" "Enter" "Ctrl c" { SwitchToMode "locked"; }
     }
 
-    // Scroll mode ≈ tmux copy-mode. There is no keyboard visual
-    // selection in zellij: use the mouse, `m`/`c` (needs OSC 133, set up
-    // in .zshrc), or `e` to open the whole scrollback in nvim and yank there.
     shared_among "scroll" "search" {
         bind "j" "Down" { ScrollDown; }
         bind "k" "Up"   { ScrollUp; }
@@ -209,15 +197,15 @@ load_plugins {
 // ---- behaviour -----------------------------------------------------
 default_mode "locked"
 default_layout "compact-top"
-theme "terafox"                // matches Ghostty + nvim (nightfox family)
+theme "terafox"
 pane_frame_style "titles"      // 0.45 default, stated explicitly
-show_startup_tips false
-show_release_notes true        // offers to add new default binds on upgrade — review before accepting
+show_startup_tips true
+show_release_notes true
 scroll_buffer_size 50000
 copy_command "pbcopy"
 copy_on_select true
 scrollback_editor "nvim"
 on_force_close "detach"
-session_serialization true     // resurrect sessions after reboot (≈ tmux-resurrect)
+session_serialization true
 serialize_pane_viewport true
 mouse_mode true
