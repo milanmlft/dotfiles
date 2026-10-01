@@ -1,7 +1,7 @@
 # ~/.Brewfile — hand-curated, the source of truth for this Mac.
 #
-#   brew bundle install --file ~/.Brewfile          # install what's listed
-#   brew bundle check   --file ~/.Brewfile          # anything missing?
+#   brew bundle ugprade --file ~/.Brewfile          # install and upgrade what's listed
+#   brew bundle check --verbose --file ~/.Brewfile  # anything missing?
 #   brew bundle cleanup --file ~/.Brewfile          # preview what isn't listed
 #   brew bundle cleanup --file ~/.Brewfile --force  # ...and remove it
 #
