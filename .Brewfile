@@ -11,7 +11,6 @@
 tap "anomalyco/tap"                           # opencode
 tap "hashicorp/tap", trusted: true
 tap "nikitabobko/tap"                         # aerospace
-tap "r-lib/rig", trusted: true
 tap "terraform-linters/tap"
 
 # ---- Shell & terminal --------------------------------------------------
@@ -152,7 +151,6 @@ brew "catch2"
 brew "cppcheck"
 
 # ---- R -----------------------------------------------------------------
-brew "r-lib/rig/r-rig", trusted: true         # R versions
 cask "rstudio"
 # Needed to compile common R packages from source:
 brew "gsl"
