@@ -68,7 +68,7 @@ compile_commands.json
 CLAUDE.md
 AGENTS.md
 .omo/
-!/.omo/
+!${HOME}/.omo/
 
 # Zed
 .zed/
