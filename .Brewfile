@@ -1,6 +1,6 @@
 # ~/.Brewfile — hand-curated, the source of truth for this Mac.
 #
-#   brew bundle ugprade --file ~/.Brewfile          # install and upgrade what's listed
+#   brew bundle upgrade --file ~/.Brewfile          # install and upgrade what's listed
 #   brew bundle check --verbose --file ~/.Brewfile  # anything missing?
 #   brew bundle cleanup --file ~/.Brewfile          # preview what isn't listed
 #   brew bundle cleanup --file ~/.Brewfile --force  # ...and remove it
@@ -10,7 +10,7 @@
 # ---- Taps --------------------------------------------------------------
 tap "anomalyco/tap"                           # opencode
 tap "hashicorp/tap", trusted: true
-tap "nikitabobko/tap"                         # aerospace
+tap "nikitabobko/tap", trusted: true          # aerospace
 tap "terraform-linters/tap"
 
 # ---- Shell & terminal --------------------------------------------------
@@ -150,12 +150,13 @@ brew "catch2"
 brew "cppcheck"
 
 # ---- R -----------------------------------------------------------------
-cask "rstudio"
+brew "R"
 # Needed to compile common R packages from source:
 brew "gsl"
 brew "jags"
 brew "libxml2"
 brew "openblas"
+cask "rstudio"
 
 # ---- Docs & publishing -------------------------------------------------
 brew "pandoc"
