@@ -62,11 +62,13 @@ compile_commands.json
 
 .envrc
 
-# AI Agens
+# AI Agents
 .rules
 .claude/
 CLAUDE.md
 AGENTS.md
+.omo/
+!/.omo/
 
 # Zed
 .zed/
