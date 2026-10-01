@@ -58,7 +58,6 @@ brew "prek"                                   # pre-commit hooks
 brew "gitmoji"
 brew "typos-cli"
 brew "ast-grep"
-brew "bfg"
 brew "detect-secrets"
 brew "marksman"                               # markdown LSP
 brew "prettier"
@@ -88,6 +87,7 @@ cask "terraform-linters/tap/tflint", trusted: true
 brew "ansible"
 brew "ansible-lint"
 brew "rclone"
+brew "watchman"
 
 # ---- Kubernetes --------------------------------------------------------
 brew "kubectl"
@@ -96,7 +96,7 @@ brew "k9s"
 brew "k3d"
 brew "cilium-cli"
 
-# ---- Containers (pick ONE stack) ---------------------------------------
+# ---- Containers --------------------------------------------------------
 cask "docker-desktop"                         # bundles docker, compose, buildx
 brew "hadolint"
 # brew "podman"
@@ -137,7 +137,6 @@ go "github.com/dependabot/cli/cmd/dependabot"
 go "github.com/nao1215/gup"                   # updates the go-installed tools
 
 # ---- Rust --------------------------------------------------------------
-# (rustup/cargo itself comes from rustup, see .profile)
 cargo "cargo-update"
 cargo "cargo-cache"
 cargo "neocmakelsp"
