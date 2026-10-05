@@ -1,3 +1,5 @@
+config-version = 2
+
 # Start AeroSpace at login
 start-at-login = true
 
