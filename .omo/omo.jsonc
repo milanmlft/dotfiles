@@ -16,7 +16,6 @@
       "enabled": true,
       "max_parallel_members": 4,
       "max_members": 8,
-      "tmux_visualization": true,
       "max_messages_per_run": 10000,
       "max_wall_clock_minutes": 120,
       "max_member_turns": 500,
@@ -27,73 +26,73 @@
     "agents": {
       // Main orchestrator: Claude Opus or Kimi K3 work best
       "sisyphus": {
-        "model": "anthropic/claude-opus-5"
+        "model": "litellm/unifiedai-poc/deepseek-v4.1-flash"
       },
       // Strategic planner: interviews and explores codebase to make a plan
       "prometheus": {
-        "model": "anthropic/claude-opus-5"
+        "model": "litellm/anthropic/claude-sonnet-5"
       },
       // Master executor: read plans and delegates tasks
       "atlas": {
-        "model": "anthropic/claude-sonnet-5"
+        "model": "litellm/unifiedai-poc/deepseek-v4.1-flash"
       },
       // Specialist developer, GPT-optimised
       "hephaestus": {
-        "model": "litellm/openai/gpt-5.6-terra"
+        "model": "litellm/unifiedai-poc/deepseek-v4.1-flash"
       },
-      // Architecture consultation: GPT or Claude Opus
+      // Architecture consultation
       "oracle": {
-        "model": "anthropic/claude-opus-5",
+        "model": "litellm/qwen/kimi-k3",
         "variant": "high"
       },
       // Plan consultant: catches ambiguities in plans
       "metis": {
-        "model": "litellm/qwen/kimi-k3"
+        "model": "litellm/unifiedai-poc/deepseek-v4.1-flash"
       },
       // Plan reviewer
       "momus": {
-        "model": "litellm/qwen/kimi-k3"
+        "model": "litellm/unifiedai-poc/deepseek-v4.1-flash"
       },
       // Focused task executor
       "sisyphus-junior": {
-        "model": "anthropic/claude-haiku-4-5"
+        "model": "litellm/condenser-poc/qwen-3.8-27b-int4-redhatai"
       },
       // Research agents: cheaper models are fine
       "explore": {
-        "model": "anthropic/claude-haiku-4-5"
+        "model": "litellm/condenser-poc/qwen-3.8-27b-int4-redhatai"
       },
       "librarian": {
-        "model": "anthropic/claude-haiku-4-5"
+        "model": "litellm/condenser-poc/qwen-3.8-27b-int4-redhatai"
       },
       // Media analysis
       "multimodal-looker": {
-        "model": "litellm/openai/gpt-5.6-terra"
+        "model": "litellm/unifiedai-poc/deepseek-v4.1-flash"
       }
     },
     "categories": {
       "ultrabrain": {
-        "model": "anthropic/claude-opus-5"
+        "model": "litellm/anthropic/claude-opus-5"
       },
       "artistry": {
-        "model": "anthropic/claude-opus-5"
+        "model": "litellm/qwen/kimi-k3"
       },
       "unspecified-high": {
-        "model": "anthropic/claude-opus-5"
+        "model": "litellm/anthropic/claude-sonnet-5"
       },
       "deep": {
-        "model": "litellm/openai/gpt-5.6-terra"
+        "model": "anthropic/claude-sonnet-5"
       },
       "visual-engineering": {
         "model": "anthropic/claude-sonnet-5"
       },
       "writing": {
-        "model": "anthropic/claude-sonnet-5"
+        "model": "litellm/condenser-poc/qwen-3.8-27b-int4-redhatai"
       },
       "unspecified-low": {
-        "model": "anthropic/claude-haiku-4-5"
+        "model": "litellm/qwen/qwen3.7-flash"
       },
       "quick": {
-        "model": "anthropic/claude-haiku-4-5"
+        "model": "litellm/anthropic/claude-haiku-4-5"
       }
     },
     "tmux": {

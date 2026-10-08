@@ -13,21 +13,21 @@
         "baseURL": "https://litellm.arc-llm.condenser.arc.ucl.ac.uk/"
       },
       "models": {
-        // "claude-opus-5": {
-        //   "name": "Claude Opus 5"
-        // },
-        // "claude-sonnet-5": {
-        //   "name": "Claude Sonnet 5"
-        // },
-        // "claude-haiku-4-5": {
-        //   "name": "Claude Haiku 4.5"
-        // },
-        "openai/gpt-5.6-terra": {
-          "name": "GPT-5.6 Terra"
+        "anthropic/claude-opus-5": {
+          "name": "Claude Opus 5"
         },
-        "openai/gpt-5.6-luna": {
-          "name": "GPT-5.6 Luna"
+        "anthropic/claude-sonnet-5": {
+          "name": "Claude Sonnet 5"
         },
+        "anthropic/claude-haiku-4-5": {
+          "name": "Claude Haiku 4.5"
+        },
+        // "openai/gpt-5.6-terra": {
+        //   "name": "GPT-5.6 Terra"
+        // },
+        // "openai/gpt-5.6-luna": {
+        //   "name": "GPT-5.6 Luna"
+        // },
         // "moonshot/kimi-k3": {
         //   "name": "Moonshot Kimi K3"
         // },
@@ -40,11 +40,11 @@
         "qwen/qwen3.7-flash": {
           "name": "Qwen 3.7 Flash"
         },
-        "condenser-poc/qwen-3.6-35b-a3b-fp8": {
-          "name": "Condenser Qwen 3.6 35b"
+        "condenser-poc/qwen-3.8-27b-int4-redhatai": {
+          "name": "Condenser Qwen 3.8 27b"
         },
-        "condenser-poc/gemma-4-26b-a4b-it-fp8-dynamic-redhatai": {
-          "name": "Condenser Gemma 4 26b"
+        "unifiedai-poc/deepseek-v4.1-flash": {
+          "name": "UnifiedAI DeepSeek v4.1 flash"
         }
       }
     }
