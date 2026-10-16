@@ -1,8 +1,12 @@
+gui:
+  mouseEvents: false
 os:
   editPreset: "nvim"
+commit:
+  signOff: true
 git:
   overrideGpg: true
   parseEmoji: true
   diffRenderers:
     - colorArg: always
-      command: delta --paging=never --line-numbers --features=arctic-fox
+      command: delta --dark --paging=never --line-numbers --features=arctic-fox
