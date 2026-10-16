@@ -29,8 +29,9 @@
 	gpgsign = true
 	sort = version:refname
 [gpg]
-	program = gpg
 	format = ssh
+[gpg "ssh"]
+	allowedSignersFile = /Users/milan/.ssh/allowed_signers
 [init]
 	defaultBranch = main
 [push]
@@ -76,5 +77,3 @@
 	# machine-local, untracked (e.g. `git maintenance register --config-file ~/.gitconfig.local`)
 	# keeps private repo paths out of the public repo
 	path = ~/.gitconfig.local
-[gpg "ssh"]
-	allowedSignersFile = /Users/milan/.ssh/allowed_signers
