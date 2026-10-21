@@ -63,7 +63,6 @@ brew "marksman"                               # markdown LSP
 brew "prettier"
 brew "stylua"
 cask "zed"
-cask "claude"
 cask "claude-code@latest"
 brew "anomalyco/tap/opencode", trusted: true
 
