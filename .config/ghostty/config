@@ -29,3 +29,5 @@ quick-terminal-size=100%
 
 # Save window state
 window-save-state=always
+
+#custom-shader = ~/.config/ghostty/shaders/space.glsl
