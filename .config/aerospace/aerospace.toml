@@ -3,6 +3,14 @@ config-version = 2
 # Start AeroSpace at login
 start-at-login = true
 
+after-startup-command = ['exec-and-forget sketchybar']
+
+# Notify Sketchybar about workspace change
+exec-on-workspace-change = ['/bin/bash', '-c',
+  'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE=$AEROSPACE_FOCUSED_WORKSPACE',
+  'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=0'
+]
+
 # Normalisations. See https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
 enable-normalization-opposite-orientation-for-nested-containers = true
@@ -14,16 +22,20 @@ on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 # See: https://nikitabobko.github.io/AeroSpace/guide#layouts
 # The 'accordion-padding' specifies the size of accordion padding
 # You can set 0 to disable the padding feature
-accordion-padding = 40
+accordion-padding = 300
+
+# You can effectively turn off macOS "Hide application" (cmd-h) feature by toggling this flag
+# Useful if you don't use this macOS feature, but accidentally hit cmd-h or cmd-alt-h key
+# Also see: https://nikitabobko.github.io/AeroSpace/goodness#disable-hide-app
+automatically-unhide-macos-hidden-apps = true
 
 [gaps]
-inner.horizontal = 6
-inner.vertical = 6
+inner.horizontal = 2
+inner.vertical = 2
 outer.left = 0
 outer.bottom = 0
 outer.top = 0
 outer.right = 0
-
 
 # Keybindings
 # 'main' binding mode declaration
@@ -32,7 +44,7 @@ outer.right = 0
 # Fallback value (if you omit the key): mode.main.binding = {}
 [mode.main.binding]
 
-alt-shift-f = 'fullscreen'
+# alt-shift-f = 'fullscreen'
 
 alt-tab = 'workspace-back-and-forth'
 alt-shift-tab = 'move-node-to-monitor --focus-follows-window --wrap-around next'
@@ -79,8 +91,10 @@ alt-shift-8 = 'move-node-to-workspace 8 --focus-follows-window'
 alt-shift-9 = 'move-node-to-workspace 9 --focus-follows-window'
 alt-shift-0 = 'move-node-to-workspace 0 --focus-follows-window'
 
-alt-o = 'workspace O'
-alt-s = 'workspace S'
+alt-o = 'exec-and-forget open -a /Applications/Obsidian.app'
+alt-m = 'exec-and-forget open -a /Applications/Microsoft\ Outlook.app'
+alt-s = 'exec-and-forget open -a /Applications/Slack.app'
+alt-g = 'exec-and-forget open -a /Applications/Ghostty.app'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
@@ -153,7 +167,15 @@ if.app-id = 'com.microsoft.teams2'
 run = 'layout floating'
 
 [[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = 'layout floating'
+
+[[on-window-detected]]
 if.app-id = 'com.cisco.secureclient.gui'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
 run = 'layout floating'
 
 # Move these apps to specific workspaces
@@ -177,24 +199,7 @@ run = 'move-node-to-workspace 3'
 if.app-id = 'app.zen-browser.zen'
 run = 'move-node-to-workspace 3'
 
-# 4: Slack
-[[on-window-detected]]
-if.app-id = 'com.tinyspeck.slackmacgap'
-run = 'move-node-to-workspace 4'
-
-# O: Outlook
-[[on-window-detected]]
-if.app-id = 'com.microsoft.Outlook'
-run = 'move-node-to-workspace O'
-
-# S: Slack
-[[on-window-detected]]
-if.app-id = 'com.spotify.client'
-run = 'move-node-to-workspace S'
-
 # https://ghostty.org/docs/help/macos-tiling-wms#aerospace
 [[on-window-detected]]
 if.app-id="com.mitchellh.ghostty"
-run= [
-  "layout tiling",
-]
+run= ["layout tiling"]
