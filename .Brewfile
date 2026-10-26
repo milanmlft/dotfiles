@@ -12,8 +12,10 @@ tap "anomalyco/tap"                           # opencode
 tap "hashicorp/tap", trusted: true
 tap "nikitabobko/tap", trusted: true          # aerospace
 tap "terraform-linters/tap"
+tap "FelixKratz/formulae"                     # sketchybar
 
 # ---- Shell & terminal --------------------------------------------------
+brew "sketchybar"
 brew "zsh"
 brew "starship"
 brew "zellij"
@@ -48,6 +50,7 @@ cask "flycut"
 
 # ---- Editors & git -----------------------------------------------------
 brew "neovim"
+brew "jj"
 brew "git"
 brew "git-lfs"
 brew "git-delta"
