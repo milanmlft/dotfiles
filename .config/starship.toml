@@ -1,8 +1,14 @@
 # Get editor completions based on the config schema
 "$schema" = 'https://starship.rs/config-schema.json'
 
+add_newline = false
+format = """$directory$character"""
+right_format = """$all"""
+command_timeout = 1000
+
 [aws]
-symbol = "  "
+symbol = " "
+format = '[$symbol($profile )(\($region\) )]($style)'
 
 [c]
 symbol = " "
@@ -16,6 +22,7 @@ disabled = true
 
 [git_branch]
 symbol = " "
+format =  '[$symbol$branch(:$remote_branch)]($style)'
 
 [git_commit]
 tag_symbol = ' '
@@ -24,37 +31,23 @@ only_detached = false
 format = '[$tag]($style) '
 
 [golang]
-symbol = " "
-
-[hostname]
-ssh_symbol = " "
-
-[julia]
-symbol = " "
-
-[lua]
-symbol = " "
-
-[memory_usage]
-symbol = "󰍛 "
-
-[os.symbols]
-Linux = " "
-Macos = " "
-
-[package]
-symbol = "󰏗 "
+symbol = ""
+format = '[$symbol $version ]($style)'
 
 [python]
 symbol = " "
 pyenv_version_name = false
 pyenv_prefix = ""
+format = '[$symbol $version ]($style)'
 
 [rlang]
-symbol = "󰟔 "
-
-[ruby]
-symbol = " "
+symbol = "󰟔"
+format = '[$symbol $version ]($style)'
 
 [rust]
-symbol = " "
+symbol = ""
+format = '[$symbol $version ]($style)'
+
+[package]
+symbol = "󰏗"
+format = '[$symbol $version ]($style)'
