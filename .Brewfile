@@ -18,6 +18,7 @@ tap "FelixKratz/formulae"                     # sketchybar
 brew "sketchybar"
 brew "zsh"
 brew "starship"
+brew "tmux"
 brew "zellij"
 brew "fzf"
 brew "zoxide"
