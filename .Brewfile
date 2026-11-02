@@ -98,6 +98,7 @@ brew "helm"
 brew "k9s"
 brew "k3d"
 brew "cilium-cli"
+brew "minikube"
 
 # ---- Containers --------------------------------------------------------
 cask "docker-desktop"                         # bundles docker, compose, buildx
